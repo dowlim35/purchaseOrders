@@ -10,9 +10,14 @@ import {ContractorComponent} from './components/contractors/contractor.component
 import {PurchaseOrdersComponent} from './components/purchaseOrders/purchase-orders.component';
 import {TravelComponent} from './components/travel/travel.component';
 import {ExpensesComponent} from './components/expenses/expenses.component';
+import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ArchiveComponent } from './archive/archive.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
+    AppComponent,
+    ArchiveComponent,
     AppComponent,
     WelcomeComponent,
     ContractorComponent,
@@ -21,6 +26,9 @@ import {ExpensesComponent} from './components/expenses/expenses.component';
     ExpensesComponent
   ],
   imports: [
+    BrowserModule,
+    NgbModule,
+    FormsModule,
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpClientModule
