@@ -11,19 +11,21 @@ import {PurchaseOrdersComponent} from './components/purchaseOrders/purchase-orde
 import {TravelComponent} from './components/travel/travel.component';
 import {ExpensesComponent} from './components/expenses/expenses.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { ArchiveComponent } from './archive/archive.component';
+// import { ArchiveComponent } from './components/archive/archive.component';
 import {FormsModule} from '@angular/forms';
+import {NavbarComponent} from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArchiveComponent,
+    // ArchiveComponent,
     AppComponent,
     WelcomeComponent,
     ContractorComponent,
     PurchaseOrdersComponent,
     TravelComponent,
-    ExpensesComponent
+    ExpensesComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

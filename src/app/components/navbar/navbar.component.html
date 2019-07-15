@@ -1,0 +1,19 @@
+<div>
+
+  <a href="#">
+    <img src="#"  />
+  </a>
+  <h3>{{pageName}}</h3>
+  <div class="row">
+    <div class="col">
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Menu</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem routerLink="/travel">Travel </button>
+          <button ngbDropdownItem routerLink="/expenses">Purchase Orders</button>
+          <button ngbDropdownItem routerLink="/contractor">Training</button>
+          <button ngbDropdownItem routerLink="/purchaseOrders">Contractors</button>
+        </div>
+      </div>
+    </div>
+</div>

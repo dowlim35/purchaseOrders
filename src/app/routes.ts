@@ -7,7 +7,7 @@ import {TravelComponent} from './components/travel/travel.component';
 import {ExpensesComponent} from './components/expenses/expenses.component';
 
 export const routes: Routes = [
-  {path: '', component: AppComponent},
+  {path: '', component: WelcomeComponent},
   {path: 'welcome', component: WelcomeComponent},
   {path: 'contractor', component: ContractorComponent},
   {path: 'purchaseOrders', component: PurchaseOrdersComponent},
