@@ -9,22 +9,20 @@ import {HttpClientModule} from '@angular/common/http';
 import {ContractorComponent} from './components/contractors/contractor.component';
 import {PurchaseOrdersComponent} from './components/purchaseOrders/purchase-orders.component';
 import {TravelComponent} from './components/travel/travel.component';
-import {ExpensesComponent} from './components/expenses/expenses.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
-// import { ArchiveComponent } from './components/archive/archive.component';
 import {FormsModule} from '@angular/forms';
+import {TrainingComponent} from './components/training/training.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    // ArchiveComponent,
     AppComponent,
     WelcomeComponent,
     ContractorComponent,
     PurchaseOrdersComponent,
     TravelComponent,
-    ExpensesComponent,
+    TrainingComponent,
     NavbarComponent
   ],
   imports: [
