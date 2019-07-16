@@ -17,6 +17,7 @@ import {FlightDetailsComponent} from './components/travel/flightdetails/flightde
 import {HotelCarDetailsComponent} from './components/travel/hotelcardetails/hotelcardetails.component';
 import {TravelOverviewComponent} from './components/travel/traveloverview/traveloverview.component';
 import { ArchiveComponent } from './components/archive/archive.component';
+import { ProgressionButtonsComponent } from './components/progression-buttons/progression-buttons.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { ArchiveComponent } from './components/archive/archive.component';
     FlightDetailsComponent,
     HotelCarDetailsComponent,
     TravelOverviewComponent,
-    ArchiveComponent
+    ArchiveComponent,
+    ProgressionButtonsComponent
   ],
   imports: [
     BrowserModule,

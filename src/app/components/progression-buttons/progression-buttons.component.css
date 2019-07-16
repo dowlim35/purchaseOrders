@@ -1,0 +1,14 @@
+div {
+  position: absolute;
+  top: 92%;
+  font-size: 70pt;
+}
+div.previousButton {
+  left: 2%;
+}
+div.saveButton {
+  left: 50%;
+}
+div.continueButton {
+  right: 2%;
+}
