@@ -1,0 +1,80 @@
+<html>
+<style>
+  button {
+    background-color:cornflowerblue;
+    border: gray();
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+</style>
+
+<body>
+<form>
+  <div>
+    <fieldset>
+      <legend>Flight Details
+      </legend>
+
+      Departure Airport:
+      <br><input type="text"><br>
+      <br>
+
+      Arrival Airport:
+      <br><input type="text"><br>
+      <br>
+
+      Airline:
+      <br><input type="text"><br>
+      <br>
+
+      Cost:
+      <br><input type="text"><br>
+      <br>
+
+      Dates:
+      <br><input type="text"><br>
+      <br>
+
+
+      Least Expensive Option:
+
+      <br><select>
+      <option value="1">Yes</option>
+      <option value="2">No</option>
+      </select>
+      <br>
+      <br>
+
+      Brief Explanation for No:
+      <br><input type="text"><br>
+      <br>
+
+      Add Passengers to Flight:
+      <table>
+        passenger 1
+        passenger 2
+        passenger 3
+        passenger 4
+      </table>
+
+      <button class = "btn" routerLink = "/flightdetails"> Add Passengers </button>
+
+      <div class = "container">
+        <button class = "btn" routerLink = "/hotelcardetails"> Continue </button>
+
+        <button class = "btn" routerLink = "/flightdetails"> New Flight </button>
+      </div>
+
+
+    </fieldset>
+  </div>
+</form>
+</body>
+</html>

@@ -13,6 +13,9 @@ import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
 import {TrainingComponent} from './components/training/training.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
+import {FlightDetailsComponent} from './components/travel/flightdetails/flightdetails.component';
+import {HotelCarDetailsComponent} from './components/travel/hotelcardetails/hotelcardetails.component';
+import {TravelOverviewComponent} from './components/travel/traveloverview/traveloverview.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import {NavbarComponent} from './components/navbar/navbar.component';
     PurchaseOrdersComponent,
     TravelComponent,
     TrainingComponent,
-    NavbarComponent
+    NavbarComponent,
+    FlightDetailsComponent,
+    HotelCarDetailsComponent,
+    TravelOverviewComponent
   ],
   imports: [
     BrowserModule,
