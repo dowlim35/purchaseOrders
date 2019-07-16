@@ -16,4 +16,6 @@ export class ProgressionButtonsComponent implements OnInit {
   }
   nextPage() {
   }
+  save() {
+  }
 }
