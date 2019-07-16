@@ -1,0 +1,91 @@
+
+<form>
+  <div>
+    <fieldset>
+      <legend>Hotel and Car Details
+      </legend>
+
+      Hotel Name:
+      <br><input type="text"><br>
+      <br>
+
+      Cost:
+      <br><input type="text"><br>
+      <br>
+
+      Dates:
+      <br><input type="text"><br>
+      <br>
+
+      Add Guests to Hotel:
+      <table>
+        passenger 1
+        passenger 2
+        passenger 3
+        passenger 4
+      </table>
+
+      <button class = "btn"  routerLink = "/flightdetails"> Add to Hotel </button>
+
+      <br>
+      <br>
+      Enterprise Car:
+      <br><input type="button" class='test' id="enterprise" (click)="toggleEnterpriseCar()"><br>
+      <br>
+      <div *ngIf="enterpriseCar">
+
+
+
+        Collection at:
+        <br><input type="text"><br>
+        <br>
+
+        Dates:
+        <br><input type="text"><br>
+        <br>
+
+        Return to:
+        <br><input type="text"><br>
+        <br>
+
+        Cost per Day:
+        <br><input type="text"><br>
+        <br>
+      </div>
+
+      Other Car:
+      <br><input class='test' type="button" id="othercar" (click)="toggleOtherCar()"><br>
+      <br>
+
+      <div *ngIf="otherCar">
+
+
+
+      Collection at:
+      <br><input type="text"><br>
+      <br>
+
+      Dates:
+      <br><input type="text"><br>
+      <br>
+
+      Return to:
+      <br><input type="text"><br>
+      <br>
+
+      Cost per Day:
+      <br><input type="text"><br>
+      <br>
+      </div>
+
+
+      <div class = "container">
+        <button class = "btn" routerLink = "/traveloverview"> Continue </button>
+
+        <button class = "btn" routerLink = "/hotelcardetails"> New Hotel </button>
+      </div>
+
+
+    </fieldset>
+  </div>
+</form>

@@ -13,8 +13,12 @@ import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
 import {TrainingComponent} from './components/training/training.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
+import {FlightDetailsComponent} from './components/travel/flightdetails/flightdetails.component';
+import {HotelCarDetailsComponent} from './components/travel/hotelcardetails/hotelcardetails.component';
+import {TravelOverviewComponent} from './components/travel/traveloverview/traveloverview.component';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { ProgressionButtonsComponent } from './components/progression-buttons/progression-buttons.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +30,9 @@ import { ProgressionButtonsComponent } from './components/progression-buttons/pr
     TravelComponent,
     TrainingComponent,
     NavbarComponent,
+    FlightDetailsComponent,
+    HotelCarDetailsComponent,
+    TravelOverviewComponent,
     ArchiveComponent,
     ProgressionButtonsComponent
   ],
