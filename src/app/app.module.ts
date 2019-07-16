@@ -14,6 +14,7 @@ import {FormsModule} from '@angular/forms';
 import {TrainingComponent} from './components/training/training.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import { ArchiveComponent } from './components/archive/archive.component';
+import { ArchiveRowComponent } from './components/archive/archive-row/archive-row.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ArchiveComponent } from './components/archive/archive.component';
     TravelComponent,
     TrainingComponent,
     NavbarComponent,
-    ArchiveComponent
+    ArchiveComponent,
+    ArchiveRowComponent
   ],
   imports: [
     BrowserModule,
