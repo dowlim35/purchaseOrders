@@ -13,6 +13,7 @@ import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
 import {TrainingComponent} from './components/training/training.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
+import { ArchiveComponent } from './components/archive/archive.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {NavbarComponent} from './components/navbar/navbar.component';
     PurchaseOrdersComponent,
     TravelComponent,
     TrainingComponent,
-    NavbarComponent
+    NavbarComponent,
+    ArchiveComponent
   ],
   imports: [
     BrowserModule,
