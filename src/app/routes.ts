@@ -8,6 +8,7 @@ import {TrainingComponent} from './components/training/training.component';
 import {FlightDetailsComponent} from './components/travel/flightdetails/flightdetails.component';
 import {HotelCarDetailsComponent} from './components/travel/hotelcardetails/hotelcardetails.component';
 import {TravelOverviewComponent} from './components/travel/traveloverview/traveloverview.component';
+import {ArchiveComponent} from './components/archive/archive.component';
 
 export const routes: Routes = [
   {path: '', component: WelcomeComponent},
@@ -18,5 +19,6 @@ export const routes: Routes = [
   {path: 'training', component: TrainingComponent},
   {path: 'flightdetails', component: FlightDetailsComponent},
   {path: 'hotelcardetails', component: HotelCarDetailsComponent},
-  {path: 'traveloverview', component: TravelOverviewComponent}
+  {path: 'traveloverview', component: TravelOverviewComponent},
+  {path: 'archive', component: ArchiveComponent}
 ];

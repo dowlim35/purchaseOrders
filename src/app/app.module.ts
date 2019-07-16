@@ -16,6 +16,8 @@ import {NavbarComponent} from './components/navbar/navbar.component';
 import {FlightDetailsComponent} from './components/travel/flightdetails/flightdetails.component';
 import {HotelCarDetailsComponent} from './components/travel/hotelcardetails/hotelcardetails.component';
 import {TravelOverviewComponent} from './components/travel/traveloverview/traveloverview.component';
+import { ArchiveComponent } from './components/archive/archive.component';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import {TravelOverviewComponent} from './components/travel/traveloverview/travel
     NavbarComponent,
     FlightDetailsComponent,
     HotelCarDetailsComponent,
-    TravelOverviewComponent
+    TravelOverviewComponent,
+    ArchiveComponent
   ],
   imports: [
     BrowserModule,
