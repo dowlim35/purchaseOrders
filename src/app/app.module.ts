@@ -14,6 +14,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {TrainingComponent} from './components/training/training.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {PurchaseOrderViewerComponent} from "./components/purchase-order-viewer/purchase-order-viewer.component";
+import {FlightDetailsComponent} from './components/travel/flightdetails/flightdetails.component';
+import {HotelCarDetailsComponent} from './components/travel/hotelcardetails/hotelcardetails.component';
+import {TravelOverviewComponent} from './components/travel/traveloverview/traveloverview.component';
+import { ArchiveComponent } from './components/archive/archive.component';
+import { ProgressionButtonsComponent } from './components/progression-buttons/progression-buttons.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +30,11 @@ import {PurchaseOrderViewerComponent} from "./components/purchase-order-viewer/p
     TrainingComponent,
     NavbarComponent,
     PurchaseOrderViewerComponent
+    FlightDetailsComponent,
+    HotelCarDetailsComponent,
+    TravelOverviewComponent,
+    ArchiveComponent,
+    ProgressionButtonsComponent
   ],
   imports: [
     BrowserModule,
