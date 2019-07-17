@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {History} from '../../assets/model/history';
+import {History} from '../model/history';
 import {DATA} from '../../assets/mock/mockHistoryData';
 import {Observable, of } from 'rxjs';
 
