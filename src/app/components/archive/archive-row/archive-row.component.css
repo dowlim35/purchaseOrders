@@ -1,0 +1,8 @@
+.approved{
+  color:green;
+  font-weight: bold;
+}
+.denied{
+  color:red;
+  font-weight: bold;
+}

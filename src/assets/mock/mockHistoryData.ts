@@ -15,6 +15,62 @@ export const DATA: History[] = [{
   desc: 'Two Laptop',
     date: 'test',
   status: 'Denied'
+},{
+  poNumber: 2,
+  formType: 'Contractor',
+  subAccount: 'Accountant',
+  desc: 'Two Laptop',
+    date: 'test',
+  status: 'Denied'
+},{
+  poNumber: 2,
+  formType: 'Contractor',
+  subAccount: 'Accountant',
+  desc: 'Two Laptop',
+    date: 'test',
+  status: 'Denied'
+},{
+  poNumber: 2,
+  formType: 'Contractor',
+  subAccount: 'Accountant',
+  desc: 'Two Laptop',
+    date: 'test',
+  status: 'Denied'
+},{
+  poNumber: 2,
+  formType: 'Contractor',
+  subAccount: 'Accountant',
+  desc: 'Two Laptop',
+    date: 'test',
+  status: 'Denied'
+},{
+  poNumber: 2,
+  formType: 'Contractor',
+  subAccount: 'Accountant',
+  desc: 'Two Laptop',
+    date: 'test',
+  status: 'Denied'
+},{
+  poNumber: 2,
+  formType: 'Contractor',
+  subAccount: 'Accountant',
+  desc: 'Two Laptop',
+    date: 'test',
+  status: 'Denied'
+},{
+  poNumber: 2,
+  formType: 'Contractor',
+  subAccount: 'Accountant',
+  desc: 'Two Laptop',
+    date: 'test',
+  status: 'Denied'
+},{
+  poNumber: 2,
+  formType: 'Contractor',
+  subAccount: 'Accountant',
+  desc: 'Two Laptop',
+    date: 'test',
+  status: 'Denied'
 },
   {
   poNumber: 3,
