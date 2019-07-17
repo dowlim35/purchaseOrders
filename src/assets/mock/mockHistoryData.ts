@@ -1,4 +1,4 @@
-import {History} from '../model/history';
+import {History} from '../../app/model/history';
 
 export const DATA: History[] = [{
   poNumber: 1,

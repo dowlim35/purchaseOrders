@@ -19,6 +19,9 @@ import {HotelCarDetailsComponent} from './components/travel/hotelcardetails/hote
 import {TravelOverviewComponent} from './components/travel/traveloverview/traveloverview.component';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { ProgressionButtonsComponent } from './components/progression-buttons/progression-buttons.component';
+import { ArchiveRowComponent } from './components/archive/archive-row/archive-row.component';
+import { DraftArchiveComponent } from './components/draft-archive/draft-archive.component';
+import { DraftArchiveRowComponent } from './components/draft-archive/draft-archive-row/draft-archive-row.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { ProgressionButtonsComponent } from './components/progression-buttons/pr
     HotelCarDetailsComponent,
     TravelOverviewComponent,
     ArchiveComponent,
-    ProgressionButtonsComponent
+    ProgressionButtonsComponent,
+    ArchiveRowComponent,
+    DraftArchiveComponent,
+    DraftArchiveRowComponent
   ],
   imports: [
     BrowserModule,

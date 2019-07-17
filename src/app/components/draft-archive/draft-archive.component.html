@@ -7,9 +7,7 @@
       <th *ngFor="let head of header">{{head}}</th>
     </tr>
   </thead>
-  <tbody><tr *ngFor="let item of history"
-      app-archive-row [history]="item"></tr>
+  <tbody><tr *ngFor="let item of draftHistory"
+             app-draft-archive-row [draftHistory]="item"></tr>
   </tbody>
 </table>
-
-
