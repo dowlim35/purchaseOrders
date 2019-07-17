@@ -11,7 +11,7 @@ import {PurchaseOrderFormComponent} from './components/purchase-order-form/purch
 import {TravelComponent} from './components/travel/travel.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {TrainingComponent} from './components/training/training.component';
+import {CompanyDetailsComponent} from './components/training/company-details/company-details.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {PurchaseOrderViewerComponent} from "./components/purchase-order-viewer/purchase-order-viewer.component";
 import {FlightDetailsComponent} from './components/travel/flightdetails/flightdetails.component';
@@ -19,6 +19,11 @@ import {HotelCarDetailsComponent} from './components/travel/hotelcardetails/hote
 import {TravelOverviewComponent} from './components/travel/traveloverview/traveloverview.component';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { ProgressionButtonsComponent } from './components/progression-buttons/progression-buttons.component';
+import { CourseDetailsComponent } from './components/training/course-details/course-details.component';
+import {MatRadioModule} from '@angular/material/radio';
+import { PaymentDetailsComponent } from './components/training/payment-details/payment-details.component';
+
+
 
 @NgModule({
   declarations: [
@@ -27,14 +32,16 @@ import { ProgressionButtonsComponent } from './components/progression-buttons/pr
     ContractorComponent,
     PurchaseOrderFormComponent,
     TravelComponent,
-    TrainingComponent,
+    CompanyDetailsComponent,
     NavbarComponent,
     PurchaseOrderViewerComponent,
     FlightDetailsComponent,
     HotelCarDetailsComponent,
     TravelOverviewComponent,
     ArchiveComponent,
-    ProgressionButtonsComponent
+    ProgressionButtonsComponent,
+    CourseDetailsComponent,
+    PaymentDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +51,7 @@ import { ProgressionButtonsComponent } from './components/progression-buttons/pr
     RouterModule.forRoot(routes),
     HttpClientModule,
     ReactiveFormsModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
