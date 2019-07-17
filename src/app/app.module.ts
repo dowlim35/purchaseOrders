@@ -29,7 +29,7 @@ import { ProgressionButtonsComponent } from './components/progression-buttons/pr
     TravelComponent,
     TrainingComponent,
     NavbarComponent,
-    PurchaseOrderViewerComponent
+    PurchaseOrderViewerComponent,
     FlightDetailsComponent,
     HotelCarDetailsComponent,
     TravelOverviewComponent,

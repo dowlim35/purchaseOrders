@@ -1,36 +1,42 @@
-const historyData = [{
-  poNumber: '1',
+import {History} from '../model/history';
+
+export const DATA: History[] = [{
+  poNumber: 1,
   formType: 'Travel',
   subAccount: 'Accountant',
   desc: '4 Trvaling to london',
-  date: Date(),
+  date: 'test',
   status: 'Approved'
-},{
-  poNumber: '2',
+},
+  {
+  poNumber: 2,
   formType: 'Contractor',
   subAccount: 'Accountant',
   desc: 'Two Laptop',
-  date: Date(),
+    date: 'test',
   status: 'Denied'
-},{
-  poNumber: '3',
+},
+  {
+  poNumber: 3,
   formType: 'Travel',
   subAccount: 'Accountant',
   desc: '4 Trvaling to london',
-  date: Date(),
+    date: 'test',
   status: 'Approved'
-},{
-  poNumber: '4',
+},
+  {
+  poNumber: 4,
   formType: 'Travel',
   subAccount: 'Accountant',
   desc: '4 Trvaling to london',
-  date: Date(),
+    date: 'test',
   status: 'Pending'
-},{
-  poNumber: '5',
+},
+  {
+  poNumber: 5,
   formType: 'Travel',
   subAccount: 'Accountant',
   desc: '4 Trvaling to london',
-  date: Date(),
+    date: 'test',
   status: 'Pending'
 }];
