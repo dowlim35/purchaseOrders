@@ -12,6 +12,29 @@ button {
   cursor: pointer;
 }
 
+form {
+  border-radius: 5%;
+  background: #F7F74C;
+  padding: 2%;
+  width: 25%;
+  height: 75%;
+
+}
+
+input {
+  height: 8%;
+  width: 70%;
+}
+
+.courseDates {
+  height: 35%;
+  width: 90%;
+}
+
+.numberField {
+  width: 25%;
+}
+
 .hotelButton {
   border-radius: 30%;
   width: 10%;
@@ -20,14 +43,5 @@ button {
 
 .note {
   font-size: 10pt;
-
-}
-
-form {
-  border-radius: 5%;
-  background: #F7F74C;
-  padding: 2%;
-  width: 25%;
-  height: 75%;
 
 }
