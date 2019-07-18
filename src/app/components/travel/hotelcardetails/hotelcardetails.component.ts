@@ -1,4 +1,6 @@
-import { Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {TravelModel} from '../../../model/travelmodel';
 
 @Component({
   selector: 'app-hotelcardetails',
@@ -6,11 +8,39 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./hotelcardetails.component.css']
 })
 export class HotelCarDetailsComponent implements OnInit {
+  hotelForm: FormGroup;
+  @Input() hotel: TravelModel;
+  @Output() updateComplete = new EventEmitter<TravelModel>();
+
+
   otherCar = false;
   enterpriseCar = false;
-  constructor() { }
-  ngOnInit() {
+  name = 'TheHotelForm';
+
+  constructor(private formBuilder: FormBuilder) {
+    this.hotelForm = formBuilder.group({
+      hotelname: ['', Validators.required],
+      Cost: ['', Validators.required],
+      arrivaldate: ['', Validators.required],
+      departuredate: ['', Validators.required],
+      enterprisecar: ['', Validators.required],
+      car: ['', Validators.required],
+      pickupdate: ['', Validators.required],
+      dropdate: ['', Validators.required],
+      returnto: ['', Validators.required],
+      costperday: ['', Validators.required]
+
+    });
   }
+  ngOnInit() {
+    this.hotelForm.setValue({
+      departureairport: this.hotel.departureairport
+    }); }
+
+  updateHotel() {
+    this.updateComplete.emit(this.hotel);
+  }
+
 
   toggleOtherCar() {
     console.log('TOGGLE IS WORKIN');

@@ -28,7 +28,7 @@ export class FlightDetailsComponent implements OnInit {
       arrivalairport: ['', Validators.required],
       departuredate: ['', Validators.required],
       arrivaldate: ['', Validators.required],
-      cost: ['', Validators.required],
+      cost: ['0', Validators.required],
       leastexpensive: ['', Validators.required],
       explanation: ['', Validators.required]
 

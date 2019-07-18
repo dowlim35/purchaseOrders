@@ -11,7 +11,8 @@ export class TravelModel {
               public hoteldates: Date,
               public car: string,
               public collectionat: Date,
-              public cardates: Date,
+              public carpickup: Date,
+              public cardropoff: Date,
               public returnto: string,
               public costperday: number){
   }

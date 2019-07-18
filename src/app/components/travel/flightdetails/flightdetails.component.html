@@ -51,7 +51,7 @@
   <fieldset>
     <label>Cost:</label>
     <br>
-    <input type="number" formControlName="Cost">
+    <input type="number" min="0" formControlName="Cost">
     <span class="error-msg"
           *ngIf="flightForm.controls.cost.errors">
             Please enter the cost
