@@ -1,6 +1,6 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
-body {
+.bodyMain {
   margin:auto;
   max-width:90%;
 
