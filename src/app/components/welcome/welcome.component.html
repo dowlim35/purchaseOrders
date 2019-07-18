@@ -2,18 +2,37 @@
 <p>
   This is where you can complete all your purchase orders.
 </p>
-<div class = "container">
-  <button class = "btn" routerLink = "/travel"> Travel </button>
+<div class="row">
+
+  <div class = "col">
+    <a type="button" class = "btn imgFeature" routerLink = "/travel"><div class="container imgFeature">
+      <img class="imgFeature" src="{{imgTravel}}">
+      <div class="centered">Travel</div>
+    </div></a>
+  </div>
+
+  <div class = "col">
+    <a type="button" class = "btn imgFeature" routerLink = "/training"><div class="container imgFeature">
+      <img class="imgFeature" src="{{imgTraining}}">
+      <div class="centered">Archive</div>
+    </div></a>
+  </div>
+
+  <div class = "col">
+    <a class="btn imgFeature"  routerLink = "/contractor"><div class="container imgFeature">
+      <img class="imgFeature" src="{{imgContractors}}"><div class="centered"> Contractor </div>
+  </div></a>
+  </div>
+
+  <div class = "col">
+    <a class = "btn imgFeature" routerLink = "/purchaseOrders"><div class="container imgFeature">
+      <img class="imgFeature" src="{{imgPO}}"><div class="centered"> Purchase Order </div>
+  </div></a>
+  </div>
+
+  <div class = "col">
+    <a class = "btn imgFeature" routerLink = "/archive"><div class="container imgFeature">
+      <img class="imgFeature" src="{{imgTraining}}"><div class="centered"> Archive </div></div></a>
+  </div>
 </div>
-<div class = "container">
-  <button class = "btn" routerLink = "/training"> Training </button>
-</div>
-<div class = "container">
-  <button class = "btn" routerLink = "/contractor"> Contractor </button>
-</div>
-<div class = "container">
-  <button class = "btn" routerLink = "/purchaseOrders"> Purchase Order </button>
-</div>
-<div class = "container">
-  <button class = "btn" routerLink = "/archive"> Archive </button>
-</div>
+
