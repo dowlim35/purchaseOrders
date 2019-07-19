@@ -2,6 +2,9 @@ img {
 
   height: 350px;
   width: 300px;
+  border-style: solid;
+  border-width: 2px ;
+  border-color:rgba(17,12,103,1);
 }
 .imgFeature {
   min-height: 350px;
@@ -46,5 +49,5 @@ img {
   border-width: 2px;
   border-color: rgba(17,12,103,1) ;
   background: rgb(255,248,98);
-  background: linear-gradient(190deg, rgba(255,248,98,1) 0%, rgba(230,238,0,1) 47%, rgba(255,250,102,1) 100%);
+  background: linear-gradient(190deg, rgba(255,248,98,1) 0%, rgba(230,238,0,.75) 47%, rgba(255,250,102,1) 100%);
 }
