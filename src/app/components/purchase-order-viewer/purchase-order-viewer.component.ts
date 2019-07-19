@@ -17,7 +17,6 @@ export class PurchaseOrderViewerComponent {
   date: Date;
   price: number;
 
-
   constructor(private poService: PurchaseOrdersService) {
     this.supplierName = poService.supplierName;
     this.itemName = poService.itemName;

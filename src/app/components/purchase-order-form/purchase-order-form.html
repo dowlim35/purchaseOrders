@@ -1,25 +1,59 @@
-<h1></h1>
-<table>
-  <thead>
-  <tr>
-    <th>Purchase Order</th>
-  </tr>
-  </thead>
+<h1>
+  Purchase Order Request
+</h1>
 
-</table>
+<body>
 
-<hr/>
-
-<form name="quotesForm">
+<form name="purchaseOrderForm">
   <div>
-    <label>Supplier name:</label>
-    <input type="supplier name" size="60" name="supplier name" [(ngModel)]="supplierName"/>
+    <label>Supplier name:</label><br>
+    <input type="text" size="20" name="supplier name" [(ngModel)]="supplierName"/>
   </div>
-  <div>
-    <label>Item name:</label>
-    <input type="item name" size="20" name="item name" [(ngModel)]="itemName"/>
+
+  <div class="row">
+
+  <div class="col itemName">
+    Item name:<br>
+    <input type="text" size="20" name ="item name" [(ngModel)]="itemName" />
   </div>
+
+  <div class="col quantity">
+    Quantity:<br>
+    <input type="number" size="20" name = "quantity" required  min ="0" max="1000" [(ngModel)]="quantity"/>
+  </div>
+  </div>
+  <div class = "row">
+  <div class="col currency">
+    Currency:<br>
+    <input value="€" type="button" (click)="inEuro()" />
+    <input value="$" type="button" (click)="inDollar()" />
+    <input value="£" type="button" (click)="inPound()" />
+  </div>
+
+  <div class = "col price">
+    Price: <br>
+    <input type="number" size="20" name = "price" [(ngModel)]="price" />
+  </div>
+
+  </div>
+
+
+<div>
+  <p>
+    <label>Sub Account: </label><br>
+    <select id = "subAccountList">
+      <option value = "a">A</option>
+      <option value = "b">B</option>
+      <option value = "c">C</option>
+      <option value = "d">D</option>
+    </select>
+  </p>
+</div>
+<br>
+
   <div>
     <input value="Submit Purchase Order" type="button" (click)="updatePurchaseOrder()" routerLink="/purchaseOrderSummary"/>
   </div>
+
 </form>
+</body>

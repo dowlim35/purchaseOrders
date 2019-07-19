@@ -63,4 +63,14 @@ setSupplierName(supplierName)
     this.date = date;
   }
 
+  getPrice()
+  {
+    return this.price;
+  }
+
+  setPrice(price)
+  {
+    this.price = price;
+  }
+
 }
