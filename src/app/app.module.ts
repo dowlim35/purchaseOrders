@@ -11,7 +11,7 @@ import {PurchaseOrderFormComponent} from './components/purchase-order-form/purch
 import {TravelComponent} from './components/travel/travel.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {TrainingComponent} from './components/training/training.component';
+import {CompanyDetailsComponent} from './components/training/company-details/company-details.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {PurchaseOrderViewerComponent} from "./components/purchase-order-viewer/purchase-order-viewer.component";
 import {FlightDetailsComponent} from './components/travel/flightdetails/flightdetails.component';
@@ -19,6 +19,9 @@ import {HotelCarDetailsComponent} from './components/travel/hotelcardetails/hote
 import {TravelOverviewComponent} from './components/travel/traveloverview/traveloverview.component';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { ProgressionButtonsComponent } from './components/progression-buttons/progression-buttons.component';
+import { CourseDetailsComponent } from './components/training/course-details/course-details.component';
+import {MatRadioModule} from '@angular/material/radio';
+import { PaymentDetailsComponent } from './components/training/payment-details/payment-details.component';
 import { ArchiveRowComponent } from './components/archive/archive-row/archive-row.component';
 import { DraftArchiveComponent } from './components/draft-archive/draft-archive.component';
 import { DraftArchiveRowComponent } from './components/draft-archive/draft-archive-row/draft-archive-row.component';
@@ -30,7 +33,7 @@ import { DraftArchiveRowComponent } from './components/draft-archive/draft-archi
     ContractorComponent,
     PurchaseOrderFormComponent,
     TravelComponent,
-    TrainingComponent,
+    CompanyDetailsComponent,
     NavbarComponent,
     PurchaseOrderViewerComponent,
     FlightDetailsComponent,
@@ -38,9 +41,11 @@ import { DraftArchiveRowComponent } from './components/draft-archive/draft-archi
     TravelOverviewComponent,
     ArchiveComponent,
     ProgressionButtonsComponent,
+    CourseDetailsComponent,
+    PaymentDetailsComponent,
     ArchiveRowComponent,
     DraftArchiveComponent,
-    DraftArchiveRowComponent
+    DraftArchiveRowComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +55,7 @@ import { DraftArchiveRowComponent } from './components/draft-archive/draft-archi
     RouterModule.forRoot(routes),
     HttpClientModule,
     ReactiveFormsModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
