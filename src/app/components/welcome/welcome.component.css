@@ -26,3 +26,25 @@ img {
   color: black ;
   font-weight: bold;
 }
+
+
+.infoMsg{
+  background: rgb(17,12,103);
+  background: linear-gradient(191deg, rgba(17,12,103,1) 0%, rgba(67,67,148,1) 47%, rgba(16,33,51,1) 100%);
+  border-radius:20px;
+  text-align: center;
+  color:whitesmoke;
+  padding: 5px;
+  margin: 15px 150px;
+  border-style:solid;
+  border-color: #FDF737;
+  border-width: 1px;
+}
+.rowtest{
+  padding:75px 0px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(17,12,103,1) ;
+  background: rgb(255,248,98);
+  background: linear-gradient(190deg, rgba(255,248,98,1) 0%, rgba(230,238,0,1) 47%, rgba(255,250,102,1) 100%);
+}
