@@ -1,6 +1,7 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 .bodyMain {
+  padding-top: 100px;
   margin:auto;
   max-width:90%;
 
@@ -18,3 +19,9 @@
   border-width: 1px;
 }
 
+.titleStyle{
+  font-size: 230%;
+  font-weight: bold;
+  text-align: center;
+  display:inline-block;
+}
