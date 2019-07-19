@@ -1,4 +1,3 @@
 export interface Training {
-  name: string;
-
+  companyName: string;
 }

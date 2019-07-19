@@ -25,6 +25,7 @@ import { PaymentDetailsComponent } from './components/training/payment-details/p
 import { ArchiveRowComponent } from './components/archive/archive-row/archive-row.component';
 import { DraftArchiveComponent } from './components/draft-archive/draft-archive.component';
 import { DraftArchiveRowComponent } from './components/draft-archive/draft-archive-row/draft-archive-row.component';
+import { SubmissionOverviewComponent } from './components/training/submission-overview/submission-overview.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { DraftArchiveRowComponent } from './components/draft-archive/draft-archi
     ArchiveRowComponent,
     DraftArchiveComponent,
     DraftArchiveRowComponent,
+    SubmissionOverviewComponent,
   ],
   imports: [
     BrowserModule,

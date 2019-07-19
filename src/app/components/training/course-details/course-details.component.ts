@@ -1,17 +1,35 @@
 import { Component, OnInit } from '@angular/core';
+import {TrainingService} from '../../../services/training.service';
 
 
 @Component({
   selector: 'app-course-details',
   templateUrl: './course-details.component.html',
-  styleUrls: ['./course-details.component.css']
+  styleUrls: ['./course-details.component.css'],
+  providers: [CourseDetailsComponent]
 })
 export class CourseDetailsComponent implements OnInit {
+  courseName: string;
+  startDate: Date;
+  endDate: Date;
+  location: string;
+  hotelFee: number;
+  delegates: number;
+  unitCost: number;
+  totalCost: number;
 
   hotelIncluded = true;
-  constructor() { }
+  constructor(private tService: TrainingService) {
+    this.tService.setCourseDetails(this.courseName, this.startDate, this.endDate, this.location,
+      this.hotelFee, this.delegates, this.unitCost, this.totalCost);
+  }
 
   ngOnInit() {
+  }
+
+  saveCourseDetails() {
+    this.tService.setCourseDetails(this.courseName, this.startDate, this.endDate, this.location,
+      this.hotelFee, this.delegates, this.unitCost, this.totalCost);
   }
 
 

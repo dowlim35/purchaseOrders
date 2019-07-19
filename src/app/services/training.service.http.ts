@@ -11,10 +11,10 @@ export class TrainingServiceHttp extends TrainingService {
     super();
   }
 
-  fetchTraining(): Observable<Training[]> {
-    console.log('Fetching training via service...');
-
-    // change json
-    return this.http.get<Training[]>('assets/data/training.json');
-  }
+  // fetchTraining(): Observable<Training[]> {
+  //   console.log('Fetching training via service...');
+  //
+  //   // change json
+  //   return this.http.get<Training[]>('assets/data/training.json');
+  // }
 }
