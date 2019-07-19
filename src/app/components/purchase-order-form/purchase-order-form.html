@@ -1,25 +1,10 @@
-<h1></h1>
-<table>
-  <thead>
-  <tr>
-    <th>Purchase Order</th>
-  </tr>
-  </thead>
-
-</table>
-
-<hr/>
-
-<form name="quotesForm">
-  <div>
-    <label>Supplier name:</label>
-    <input type="supplier name" size="60" name="supplier name" [(ngModel)]="supplierName"/>
-  </div>
-  <div>
-    <label>Item name:</label>
-    <input type="item name" size="20" name="item name" [(ngModel)]="itemName"/>
-  </div>
+<div>
+  <label>Supplier name:</label>
+  <input type="supplier name" size="60" name="supplier name" [(ngModel)]="supplierName"/>
+</div>
   <div>
     <input value="Submit Purchase Order" type="button" (click)="updatePurchaseOrder()" routerLink="/purchaseOrderSummary"/>
   </div>
-</form>
+<div>
+    <input value="GetName" type="button" (click)="getName()"/>
+  </div>

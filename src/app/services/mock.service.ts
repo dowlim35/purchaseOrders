@@ -11,6 +11,9 @@ export class MockService {
   constructor() { }
   getHistory(): Observable<History[]> {
     return of(DATA);
-
+  }
+  addToArchive(data) {
+    DATA.push(data);
+    this.getHistory();
   }
 }
