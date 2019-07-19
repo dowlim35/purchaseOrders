@@ -1,4 +1,6 @@
-import { Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {TravelModel} from '../../model/travelmodel';
 
 @Component({
   selector: 'app-travel',
@@ -6,9 +8,30 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./travel.component.css']
 })
 export class TravelComponent implements OnInit {
-  constructor() { }
-  ngOnInit() {
+  travelForm: FormGroup;
+  @Input() travel: TravelModel;
+  @Output() updateComplete = new EventEmitter<TravelModel>();
 
+  name = 'TheTravelForm';
+
+  constructor(private formBuilder: FormBuilder) {
+    this.travelForm = formBuilder.group({
+      unitname: ['', Validators.required],
+      sdl: ['', Validators.required],
+      numberofpassengers: ['', Validators.required],
+      paymentmethod: ['', Validators.required],
+      subaccount: ['', Validators.required],
+      reasonfortravel: ['', Validators.required],
+      creditcard: ['', Validators.required],
+    });
+  }
+  ngOnInit() {
+    this.travelForm.setValue({
+      departureairport: this.travel.unitname
+    }); }
+
+  updateTravel() {
+    this.updateComplete.emit(this.travel);
   }
 }
 

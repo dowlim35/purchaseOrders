@@ -1,5 +1,12 @@
 export class TravelModel {
   constructor(public departureairport: string,
+              public unitname: string,
+              public sdk: string,
+              public numberofpassengers: string,
+              public paymentmethod: string,
+              public subaccount: string,
+              public reasonfortravel: string,
+              public creditcard: string,
               public arrivalairport: string,
               public departuredate: Date,
               public arrivaldate: Date,
