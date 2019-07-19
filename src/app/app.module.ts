@@ -22,8 +22,9 @@ import { ProgressionButtonsComponent } from './components/progression-buttons/pr
 import { CourseDetailsComponent } from './components/training/course-details/course-details.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { PaymentDetailsComponent } from './components/training/payment-details/payment-details.component';
-
-
+import { ArchiveRowComponent } from './components/archive/archive-row/archive-row.component';
+import { DraftArchiveComponent } from './components/draft-archive/draft-archive.component';
+import { DraftArchiveRowComponent } from './components/draft-archive/draft-archive-row/draft-archive-row.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,10 @@ import { PaymentDetailsComponent } from './components/training/payment-details/p
     ArchiveComponent,
     ProgressionButtonsComponent,
     CourseDetailsComponent,
-    PaymentDetailsComponent
+    PaymentDetailsComponent,
+    ArchiveRowComponent,
+    DraftArchiveComponent,
+    DraftArchiveRowComponent,
   ],
   imports: [
     BrowserModule,

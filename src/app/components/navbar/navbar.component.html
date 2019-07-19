@@ -1,20 +1,25 @@
-<div>
-
+<div class="nav">
   <a href="#">
-    <img src="#"  />
+    <img class="logo" src="{{imgLogo}}"  />
   </a>
-  <h3>{{pageName}}</h3>
-  <div class="row">
-    <div class="col">
-      <div ngbDropdown class="d-inline-block">
-        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Menu</button>
-        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-          <button ngbDropdownItem routerLink="/travel">Travel </button>
-          <button ngbDropdownItem routerLink="/purchaseOrders">Purchase Orders</button>
-          <button ngbDropdownItem routerLink="/training">Training</button>
-          <button ngbDropdownItem routerLink="/contractor">Contractors</button>
-          <button ngbDropdownItem routerLink="/archive">Archive</button>
-        </div>
+
+  <div class="container">
+      <h3>{{pageName}}</h3>
+  </div>
+
+
+  <div  class="dropDownMenu">
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-primary" id="dropdownBasic1" ngbDropdownToggle>Menu</button>
+      <div class="options" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem routerLink="/travel">Travel </button>
+        <button ngbDropdownItem routerLink="/purchaseOrders">Purchase Orders</button>
+        <button ngbDropdownItem routerLink="/training">Training</button>
+        <button ngbDropdownItem routerLink="/contractor">Contractors</button>
+        <button ngbDropdownItem routerLink="/archive">Archive</button>
       </div>
     </div>
+  </div>
+  </div>
 </div>

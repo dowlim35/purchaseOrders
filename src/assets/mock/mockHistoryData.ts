@@ -1,4 +1,4 @@
-import {History} from '../model/history';
+import {History} from '../../app/model/history';
 
 export const DATA: History[] = [{
   poNumber: 1,
@@ -9,6 +9,62 @@ export const DATA: History[] = [{
   status: 'Approved'
 },
   {
+  poNumber: 2,
+  formType: 'Contractor',
+  subAccount: 'Accountant',
+  desc: 'Two Laptop',
+    date: 'test',
+  status: 'Denied'
+},{
+  poNumber: 2,
+  formType: 'Contractor',
+  subAccount: 'Accountant',
+  desc: 'Two Laptop',
+    date: 'test',
+  status: 'Denied'
+},{
+  poNumber: 2,
+  formType: 'Contractor',
+  subAccount: 'Accountant',
+  desc: 'Two Laptop',
+    date: 'test',
+  status: 'Denied'
+},{
+  poNumber: 2,
+  formType: 'Contractor',
+  subAccount: 'Accountant',
+  desc: 'Two Laptop',
+    date: 'test',
+  status: 'Denied'
+},{
+  poNumber: 2,
+  formType: 'Contractor',
+  subAccount: 'Accountant',
+  desc: 'Two Laptop',
+    date: 'test',
+  status: 'Denied'
+},{
+  poNumber: 2,
+  formType: 'Contractor',
+  subAccount: 'Accountant',
+  desc: 'Two Laptop',
+    date: 'test',
+  status: 'Denied'
+},{
+  poNumber: 2,
+  formType: 'Contractor',
+  subAccount: 'Accountant',
+  desc: 'Two Laptop',
+    date: 'test',
+  status: 'Denied'
+},{
+  poNumber: 2,
+  formType: 'Contractor',
+  subAccount: 'Accountant',
+  desc: 'Two Laptop',
+    date: 'test',
+  status: 'Denied'
+},{
   poNumber: 2,
   formType: 'Contractor',
   subAccount: 'Accountant',

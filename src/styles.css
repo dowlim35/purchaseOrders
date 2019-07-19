@@ -1,5 +1,20 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
-body {
-  margin-left: 30px;
+.bodyMain {
+  margin:auto;
+  max-width:90%;
+
 }
+.infoMsg{
+  background: rgb(17,12,103);
+  background: linear-gradient(191deg, rgba(17,12,103,1) 0%, rgba(67,67,148,1) 47%, rgba(16,33,51,1) 100%);
+  border-radius:20px;
+  text-align: center;
+  color:whitesmoke;
+  padding: 5px;
+  margin: 15px 150px;
+  border-style:solid;
+  border-color: #FDF737;
+  border-width: 1px;
+}
+

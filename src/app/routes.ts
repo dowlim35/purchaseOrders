@@ -12,6 +12,7 @@ import {TravelOverviewComponent} from './components/travel/traveloverview/travel
 import {ArchiveComponent} from './components/archive/archive.component';
 import {CourseDetailsComponent} from './components/training/course-details/course-details.component';
 import {PaymentDetailsComponent} from './components/training/payment-details/payment-details.component';
+import {DraftArchiveComponent} from './components/draft-archive/draft-archive.component';
 
 export const routes: Routes = [
   {path: '', component: WelcomeComponent},
@@ -28,7 +29,7 @@ export const routes: Routes = [
   {path: 'trainingCompanyDetails', component: CompanyDetailsComponent},
   {path: 'trainingCourseDetails', component: CourseDetailsComponent},
   {path: 'trainingPaymentDetails', component: PaymentDetailsComponent},
-
+  {path: 'draft-archive', component: DraftArchiveComponent},
 
 
 ];
