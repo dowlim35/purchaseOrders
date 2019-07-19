@@ -38,11 +38,7 @@ export class PurchaseOrderFormComponent implements OnInit {
     };
 
     updatePurchaseOrder(){
-    this.poService.setSupplierName(this.supplierName);
-      this.poService.setItemName(this.itemName);
-      this.poService.setQuantity(this.quantity);
-      this.poService.setDate(this.date);
-      this.poService.setPrice(this.price);
+    this.poService.setDetails(this.supplierName, this.itemName, this.quantity, this.price, this.currency, this.date);
     }
 
     inEuro() {

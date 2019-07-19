@@ -13,24 +13,23 @@ price: number;
 currency:' ';
 date: Date;
 
+setDetails(supplierName, itemName, quantity, price, currency, date)
+{
+  this.supplierName = supplierName;
+  this.itemName = itemName;
+  this.quantity = quantity;
+  this.price = price;
+  this.date = date;
+}
 getSupplierName()
 {
   return this.supplierName;
 }
 
-setSupplierName(supplierName)
-{
-  this.supplierName = supplierName;
-}
 
   getItemName()
   {
     return this.itemName;
-  }
-
-  setItemName(itemName)
-  {
-    this.itemName = itemName;
   }
 
   getCurrency()
@@ -48,29 +47,14 @@ setSupplierName(supplierName)
     return this.quantity;
   }
 
-  setQuantity(quantity)
-  {
-    this.quantity = quantity;
-  }
-
   getDate()
   {
     return this.date;
   }
 
-  setDate(date)
-  {
-    this.date = date;
-  }
-
   getPrice()
   {
     return this.price;
-  }
-
-  setPrice(price)
-  {
-    this.price = price;
   }
 
 }
