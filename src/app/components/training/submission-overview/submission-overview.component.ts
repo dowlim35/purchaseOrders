@@ -27,6 +27,11 @@ export class SubmissionOverviewComponent {
   unitCost: number;
   totalCost: number;
 
+  // Payment details
+  creditCard: string;
+  subAccount: string;
+  delegatesPaid: number;
+
   constructor(private tService: TrainingService) {
     // Company details
     this.contactName = tService.contactName;
@@ -38,14 +43,17 @@ export class SubmissionOverviewComponent {
     this.website = tService.website;
     // Course details
     this.courseName = tService.courseName;
-   // this.startDate = tService.startDate;
-   // this.endDate = tService.endDate;
+    this.startDate = tService.startDate;
+    this.endDate = tService.endDate;
     this.location = tService.location;
     this.hotelFee = tService.hotelFee;
     this.delegates = tService.delegates;
     this.unitCost = tService.unitCost;
     this.totalCost = tService.totalCost;
-
+    // Payment details
+    this.creditCard = tService.creditCard;
+    this.subAccount = tService.subAccount;
+    this.delegatesPaid = tService.delegatesPaid;
 
   }
 

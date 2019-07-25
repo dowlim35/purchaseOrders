@@ -2,10 +2,32 @@
   Training Form - Submission Overview
 </h3>
 
+<h4>
+  Company Details
+</h4>
 Contact Name: {{contactName}} <br>
 Company Name: {{companyName}} <br>
 Address: {{address}} <br>
 Email: {{email}} <br>
 Telephone: {{telephoneNo}} <br>
 Mobile No: {{mobileNo}} <br>
-Website: {{website}}
+Website: {{website}} <br>
+<h4>
+  Course Details
+</h4>
+Course Name: {{courseName}} <br>
+Start Date: {{startDate}} <br>
+End Date: {{endDate}} <br>
+Location {{location}} <br>
+<div *ngIf="hotelFee > 0" >
+  Hotel Fee: {{hotelFee}} <br>
+</div>
+Delegates: {{delegates}} <br>
+Unit Cost: {{unitCost}} <br>
+Total Cost: {{totalCost}} <br>
+<h4>
+  Payment Details
+</h4>
+Company Credit Card: {{creditCard}} <br>
+Sub Account {{subAccount}} <br>
+Delegates Charged to Card: {{delegatesPaid}} <br>

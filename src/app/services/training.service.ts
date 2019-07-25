@@ -16,13 +16,18 @@ export class TrainingService {
   website = '';
   // Course details
   courseName = '';
-  startDate = Date;
-  endDate = Date;
+  startDate = new Date();
+  endDate = new Date();
   location = '';
   hotelFee = 0;
   delegates = 0;
   unitCost = 0;
   totalCost = 0;
+  // Payment details
+  creditCard = '';
+  subAccount = '';
+  delegatesPaid = 0;
+
 
   setCompanyDetails(contactName, companyName, address, email, telephoneNo, mobileNo, website) {
     this.companyName = contactName;
@@ -43,6 +48,12 @@ export class TrainingService {
     this.delegates = delegates;
     this.unitCost = unitCost;
     this.totalCost = totalCost;
+  }
+
+  setPaymentDetails(creditCard, subAccount, delegatesPaid) {
+    this.creditCard = creditCard;
+    this.subAccount = subAccount;
+    this.delegatesPaid = delegatesPaid;
   }
 
 

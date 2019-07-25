@@ -4,13 +4,14 @@
 <body>
 <form>
   Company Credit Card:<br>
-  <input type="text" name="bookingMethod"><br>
+  <input type="text" name="creditCard" [(ngModel)]="creditCard"><br>
   Sub Account:<br>
-  <input type="text" name="subAccount"><br>
+  <input type="text" name="subAccount" [(ngModel)]="subAccount"><br>
   Delegates Charged to this Card:<br>
-  <input type="number" class="numberField" name="numOfCreditCards" min="0" max="999" placeholder="0" step="1"><br>
+  <input type="number" class="numberField" name="delegates" min="0" max="999" placeholder="0" step="1" [(ngModel)]="delegates"><br>
   <br>
-  <button class = "btn" routerLink = "/trainingCourseDetails"> Continue </button>
+<!--  <button class = "btn" routerLink = "/trainingCourseDetails"> Continue </button>-->
+  <button type="button" class = "btn" (click)="saveContactDetails()" routerLink = "/trainingSubmission"> Continue </button>
 
 </form>
 </body>
