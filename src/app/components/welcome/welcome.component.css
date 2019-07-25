@@ -30,7 +30,9 @@ img {
   font-weight: bold;
 }
 .previewTemplate{
-  margin-top: 75px;
+  /*margin-top: 75px;*/
+  width: 80%;
+  margin:50px auto;
 }
 
 .infoMsg{
