@@ -1,0 +1,13 @@
+<div class="infoMsg">
+<h2>Submitted requests preview</h2>
+</div>
+<table class="table table-bordered table-hover table-striped">
+  <thead>
+  <tr>
+    <th scope="col" *ngFor="let head of header">{{head}}</th>
+  </tr>
+  </thead>
+  <tbody><tr *ngFor="let item of history"
+             app-archive-preview-row [history]="item"></tr>
+  </tbody>
+</table>

@@ -25,6 +25,8 @@ import { PaymentDetailsComponent } from './components/training/payment-details/p
 import { ArchiveRowComponent } from './components/archive/archive-row/archive-row.component';
 import { DraftArchiveComponent } from './components/draft-archive/draft-archive.component';
 import { DraftArchiveRowComponent } from './components/draft-archive/draft-archive-row/draft-archive-row.component';
+import { ArchivePreviewComponent } from './components/archive-preview/archive-preview.component';
+import { ArchivePreviewRowComponent } from './components/archive-preview/archive-preview-row/archive-preview-row.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { DraftArchiveRowComponent } from './components/draft-archive/draft-archi
     ArchiveRowComponent,
     DraftArchiveComponent,
     DraftArchiveRowComponent,
+    ArchivePreviewComponent,
+    ArchivePreviewRowComponent,
   ],
   imports: [
     BrowserModule,
