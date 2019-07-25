@@ -3,13 +3,13 @@ import {PurchaseOrder} from "../../model/purchaseOrder";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {filter} from "rxjs/operators";
 import {NgModel} from "@angular/forms";
-import {PropertiesService} from "../../services/properties.service";
+import {PurchaseOrdersService} from "../../services/purchase-orders.service";
 
 @Component({
   selector: 'app-purchase-orders',
   templateUrl: './purchase-order-form.html',
   styleUrls: ['./purchase-order-form.component.css'],
-  providers: [PropertiesService]
+  providers: [PurchaseOrderFormComponent]
 })
 export class PurchaseOrderFormComponent implements OnInit {
   updateForm: FormGroup;
@@ -17,48 +17,47 @@ export class PurchaseOrderFormComponent implements OnInit {
   quantity: number;
   itemName: string;
   date: Date;
-  currency: symbol;
+  currency: string;
+  price: number;
+  companyCreditCardUsed: boolean;
 
-  purchaseorders: PurchaseOrder[];
-  @Input() purchaseOrder: PurchaseOrder;
-  @Output() updateComplete = new EventEmitter<PurchaseOrder>();
-
-  subAccounts: any = [
-    {name: 'A', value: 'A'},
-    {name: 'B', value: 'B'},
-    {name: 'C', value: 'C'},
-    {name: 'D', value: 'D'},
-  ]
   name = "PurchaseOrderUpdateForm";
 
 
-  constructor(private formBuilder: FormBuilder ) {
-    this.updateForm = formBuilder.group({
-      supplierName: ['', Validators.required],
-      itemName: ['', Validators.required],
-      quantity: [' ', Validators.required],
-      currency: [' ', Validators.required],
-      dates : [' ', Validators.required],
-    })
+  constructor(private poService: PurchaseOrdersService) {
+
+  this.supplierName = poService.getSupplierName();
+  this.itemName = poService.getItemName();
+  this.quantity = poService.getQuantity();
+  this.currency = poService.getCurrency();
+  this.date = poService.getDate();
+  this.price = poService.getPrice();
+  this.companyCreditCardUsed = poService.getCompanyCreditCardUsed();
   }
 
   ngOnInit() {
-    this.updateForm.valueChanges.pipe(filter(values => this.updateForm.valid)).subscribe(values => {
-      console.log('Updating purchase order object via Observable');
-      this.purchaseOrder.supplierName = values.supplierName;
-      this.purchaseOrder.itemName = values.itemName;
-      this.purchaseOrder.quantity = values.quantity;
-      this.purchaseOrder.currency = values.quantity;
-      this.purchaseOrder.dates = values.dates;
 
-    });
-  }
+    };
+
     updatePurchaseOrder(){
-    this.purchaseorders.push({
-      supplierName: this.supplierName,
-      itemName: this.itemName, currency: this.currency, quantity: this.quantity, dates:this.date
-    })
+    this.poService.setDetails(this.supplierName, this.itemName, this.quantity, this.price, this.currency, this.date, this.companyCreditCardUsed);
     }
 
+    inEuro() {
+      this.poService.setCurrency("€");
+    }
+
+   inDollar() {
+      this.poService.setCurrency("$");
+    }
+
+    inPound() {
+      this.poService.setCurrency("£");
+    }
+
+    setCompanyCreditCardUsedTrue()
+    {
+      this.poService.setCompanyCreditCardUsed(true);
+    }
 
 }

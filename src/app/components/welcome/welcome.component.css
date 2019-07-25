@@ -29,7 +29,11 @@ img {
   color: black ;
   font-weight: bold;
 }
-
+.previewTemplate{
+  /*margin-top: 75px;*/
+  width: 80%;
+  margin:50px auto;
+}
 
 .infoMsg{
   background: rgb(17,12,103);
