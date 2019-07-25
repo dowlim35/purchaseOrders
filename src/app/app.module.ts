@@ -49,7 +49,6 @@ import { ArchivePreviewRowComponent } from './components/archive-preview/archive
     ArchiveRowComponent,
     DraftArchiveComponent,
     DraftArchiveRowComponent,
-    trainingForm,
     SubmissionOverviewComponent,
     ArchivePreviewComponent,
     ArchivePreviewRowComponent,
