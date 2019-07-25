@@ -16,6 +16,7 @@ export class PurchaseOrderViewerComponent {
   currency: string;
   date: Date;
   price: number;
+  companyCreditCardUsed: boolean;
 
   constructor(private poService: PurchaseOrdersService) {
     this.supplierName = poService.supplierName;
@@ -24,6 +25,7 @@ export class PurchaseOrderViewerComponent {
     this.quantity = poService.quantity;
     this.date = poService.date;
     this.price = poService.price;
+    this.companyCreditCardUsed = poService.companyCreditCardUsed;
 
   }
 

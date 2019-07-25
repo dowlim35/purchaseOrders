@@ -12,19 +12,22 @@ quantity: number;
 price: number;
 currency:' ';
 date: Date;
+companyCreditCardUsed: boolean;
 
-setDetails(supplierName, itemName, quantity, price, currency, date)
+setDetails(supplierName, itemName, quantity, price, currency, date, companyCreditCardUsed)
 {
   this.supplierName = supplierName;
   this.itemName = itemName;
   this.quantity = quantity;
   this.price = price;
   this.date = date;
+  this.companyCreditCardUsed = companyCreditCardUsed;
 }
-getSupplierName()
-{
+
+  getSupplierName()
+  {
   return this.supplierName;
-}
+  }
 
 
   getItemName()
@@ -55,6 +58,16 @@ getSupplierName()
   getPrice()
   {
     return this.price;
+  }
+
+  getCompanyCreditCardUsed()
+  {
+    return this.companyCreditCardUsed;
+  }
+
+  setCompanyCreditCardUsed(companyCreditCardUsed)
+  {
+    this.companyCreditCardUsed = companyCreditCardUsed;
   }
 
 }

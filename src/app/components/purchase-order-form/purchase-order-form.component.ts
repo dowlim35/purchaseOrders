@@ -19,6 +19,7 @@ export class PurchaseOrderFormComponent implements OnInit {
   date: Date;
   currency: string;
   price: number;
+  companyCreditCardUsed: boolean;
 
   name = "PurchaseOrderUpdateForm";
 
@@ -31,6 +32,7 @@ export class PurchaseOrderFormComponent implements OnInit {
   this.currency = poService.getCurrency();
   this.date = poService.getDate();
   this.price = poService.getPrice();
+  this.companyCreditCardUsed = poService.getCompanyCreditCardUsed();
   }
 
   ngOnInit() {
@@ -38,7 +40,7 @@ export class PurchaseOrderFormComponent implements OnInit {
     };
 
     updatePurchaseOrder(){
-    this.poService.setDetails(this.supplierName, this.itemName, this.quantity, this.price, this.currency, this.date);
+    this.poService.setDetails(this.supplierName, this.itemName, this.quantity, this.price, this.currency, this.date, this.companyCreditCardUsed);
     }
 
     inEuro() {
@@ -51,6 +53,11 @@ export class PurchaseOrderFormComponent implements OnInit {
 
     inPound() {
       this.poService.setCurrency("£");
+    }
+
+    setCompanyCreditCardUsedTrue()
+    {
+      this.poService.setCompanyCreditCardUsed(true);
     }
 
 }

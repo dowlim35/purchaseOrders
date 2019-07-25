@@ -13,9 +13,14 @@ form{
   border-color: yellow;
 }
 
-button{
+button
+{
   background-color: yellow;
+  color: #00c;
+  visited: #ccc;
+
 }
+
 h2{
   color: blue;
 }
