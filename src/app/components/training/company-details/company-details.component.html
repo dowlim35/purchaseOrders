@@ -1,4 +1,4 @@
-<div class="infoMsg">
+<div>
 <h2>
   Welcome to the training page.
 </h2>
@@ -9,22 +9,28 @@
 <body>
 <form>
   Contact Name:<br>
-  <input type="text" name="contactName"><br>
+  <input type="text" name="contactName" [(ngModel)]="contactName"><br>
   Company Name:<br>
-  <input type="text" name="companyName"><br>
+  <input type="text" name="companyName" [(ngModel)]="companyName"><br>
   Address:<br>
-  <input type="text" name="address"><br>
+  <input type="text" name="address" [(ngModel)]="address"><br>
   Email:<br>
-  <input type="email" name="email" placeholder="name@example.com"><br>
+  <input type="email" name="email" placeholder="name@example.com" [(ngModel)]="email"><br>
   Telephone No:<br>
-  <input type="text" class="numberField" name="telephoneNo"><br>
+  <input type="text" class="numberField" name="telephoneNo" [(ngModel)]="telephoneNo"><br>
   Mobile No:<br>
-  <input type="text" class="numberField" name="mobileNo"><br>
+  <input type="text" class="numberField" name="mobileNo" [(ngModel)]="mobileNo"><br>
   Website:<br>
-  <input type="text" name="website"><br>
+  <input type="text" name="website" [(ngModel)]="website"><br>
 
 
-  <button class = "btn" routerLink = "/trainingCourseDetails"> Continue </button>
+  <button type="button" class = "btn" (click)="saveContactDetails()" routerLink = "/trainingCourseDetails"> Continue </button>
+  <div>
+    <input value="GetName" type="button" (click)="getName()" routerLink="/trainingSubmission"/>
+  </div>
 
 </form>
 </body>
+
+
+routerLink="/trainingSubmission"
