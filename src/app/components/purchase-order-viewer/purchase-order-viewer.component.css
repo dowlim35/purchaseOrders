@@ -1,0 +1,18 @@
+aside{
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: 250px;
+  margin-right: 250px;
+  margin-left: 250px;
+  font-size: 20pt;
+  font-family: ital;
+}
+h1{
+  text-align: center;
+  font-family: ital;
+}
+
+button{
+  background-color: yellow;
+  font-family: ital;
+}
