@@ -10,6 +10,7 @@ export class WelcomeComponent implements OnInit {
   imgTraining = '../../../assets/images/training.jpeg';
   imgPO = '../../../assets/images/purchaseOrders.jpg';
   imgContractors = '../../../assets/images/contractors.jpeg';
+  imgArchive = '../../../assets/images/archive.jpeg'
   constructor() { }
   ngOnInit() {
 
