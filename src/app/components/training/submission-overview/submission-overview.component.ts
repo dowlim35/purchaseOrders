@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {TrainingService} from '../../../services/training.service';
-import {NavBarService} from 'src/app/services/navBarService';
 
 @Component({
   selector: 'app-submission-overview',
@@ -33,8 +32,7 @@ export class SubmissionOverviewComponent {
   subAccount: string;
   delegatesPaid: number;
 
-  constructor(private tService: TrainingService, private navBarService: NavBarService) {
-     navBarService.setPageName("Submission Overview");
+  constructor(private tService: TrainingService) {
 
     // Company details
     this.contactName = tService.contactName;

@@ -12,11 +12,11 @@
     <div ngbDropdown class="d-inline-block">
       <button class="btn btn-primary" id="dropdownBasic1" ngbDropdownToggle>Menu</button>
       <div class="options" ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button ngbDropdownItem routerLink="/travel">Travel </button>
-        <button ngbDropdownItem routerLink="/purchaseOrders">Purchase Orders</button>
-        <button ngbDropdownItem routerLink="/training">Training</button>
-        <button ngbDropdownItem routerLink="/contractor">Contractors</button>
-        <button ngbDropdownItem routerLink="/archive">Archive</button>
+        <button ngbDropdownItem routerLink="/travel" (click) = "updateNameToTravel()">Travel </button>
+        <button ngbDropdownItem routerLink="/purchaseOrders" (click) = "updateNameToPO()">Purchase Orders</button>
+        <button ngbDropdownItem routerLink="/training" (click) = "updateNameToTraining()">Training</button>
+        <button ngbDropdownItem routerLink="/contractor" (click) = "updateNameToContractor()">Contractors</button>
+        <button ngbDropdownItem routerLink="/archive" (click) = "updateNameToArchive()">Archive</button>
       </div>
     </div>
   </div>

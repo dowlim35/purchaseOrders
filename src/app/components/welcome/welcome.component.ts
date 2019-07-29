@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import {NavBarService} from 'src/app/services/navBarService';
+
 
 @Component({
   selector: 'app-welcome',
@@ -14,10 +14,8 @@ export class WelcomeComponent implements OnInit {
   imgPO = '../../../assets/images/purchaseOrders.jpg';
   imgContractors = '../../../assets/images/contractors.jpeg';
   imgArchive = '../../../assets/images/archive.jpeg'
-  constructor(private navBarService: NavBarService)
+  constructor()
   {
-    this.navBarService = navBarService;
-    navBarService.setPageName("Welcome");
     this.ngOnInit();
   }
   ngOnInit() {

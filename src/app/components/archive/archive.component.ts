@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MockService} from '../../services/mock.service';
 import {History} from '../../model/history';
-import {NavBarService} from 'src/app/services/navBarService';
 
 @Component({
   selector: 'app-archive',
@@ -10,8 +9,8 @@ import {NavBarService} from 'src/app/services/navBarService';
 })
 export class ArchiveComponent implements OnInit {
   header = ['PO Number', 'Form Type', 'Sub-account', 'Description', 'Date', 'Status'];
-  constructor(private dataService: MockService, private navBarService: NavBarService) {
-    this.navBarService.setPageName("Archive");
+  constructor(private dataService: MockService) {
+
   }
   history: History[];
   statusType: any = [

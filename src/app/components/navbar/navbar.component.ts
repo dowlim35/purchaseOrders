@@ -3,7 +3,6 @@ import {PurchaseOrder} from 'src/app/model/purchaseOrder';
 import {FlightDetailsComponent} from '../travel/flightdetails/flightdetails.component';
 import {HotelCarDetailsComponent} from '../travel/hotelcardetails/hotelcardetails.component';
 import {PurchaseOrdersService} from "../../services/purchase-orders.service";
-import {NavBarService} from 'src/app/services/navBarService';
 
 @Component({
   selector: 'app-navbar',
@@ -19,15 +18,36 @@ export class NavbarComponent implements OnInit {
 
 
 
-  constructor(private navBarService : NavBarService)
+  constructor()
   {
-  this.pageName = navBarService.getPageName();
-
+  this.pageName = "Welcome";
   }
 
   ngOnInit() {
   }
-  setName (name) {
-    this.pageName = this.navBarService.getPageName();
+
+  updateNameToTravel(name)
+  {
+    this.pageName = "Travel";
+  }
+
+  updateNameToPO(name)
+  {
+    this.pageName = "Purchase Order";
+  }
+
+  updateNameToContractor(name)
+  {
+    this.pageName = "Contractor";
+  }
+
+  updateNameToTraining(name)
+  {
+    this.pageName = "Training";
+  }
+
+  updateNameToArchive(name)
+  {
+    this.pageName = "Archive";
   }
 }

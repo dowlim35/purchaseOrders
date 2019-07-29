@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {TrainingService} from '../../../services/training.service';
-import {NavBarService} from 'src/app/services/navBarService';
 
 @Component({
   selector: 'app-payment-details',
@@ -14,9 +13,9 @@ export class PaymentDetailsComponent implements OnInit {
   subAccount: string;
   delegates: number;
 
-  constructor(private tService: TrainingService, private navBarService: NavBarService) {
+  constructor(private tService: TrainingService) {
     this.tService.setPaymentDetails(this.creditCard, this.subAccount, this.delegates);
-    this.navBarService.setPageName("Payment Details");
+
   }
 
   ngOnInit() {
