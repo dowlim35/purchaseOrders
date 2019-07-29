@@ -11,7 +11,7 @@ import {PurchaseOrderFormComponent} from './components/purchase-order-form/purch
 import {TravelComponent} from './components/travel/travel.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {TrainingComponent} from './components/training/training.component';
+import {CompanyDetailsComponent} from './components/training/company-details/company-details.component';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {PurchaseOrderViewerComponent} from "./components/purchase-order-viewer/purchase-order-viewer.component";
 import {FlightDetailsComponent} from './components/travel/flightdetails/flightdetails.component';
@@ -19,6 +19,17 @@ import {HotelCarDetailsComponent} from './components/travel/hotelcardetails/hote
 import {TravelOverviewComponent} from './components/travel/traveloverview/traveloverview.component';
 import { ArchiveComponent } from './components/archive/archive.component';
 import { ProgressionButtonsComponent } from './components/progression-buttons/progression-buttons.component';
+import { CourseDetailsComponent } from './components/training/course-details/course-details.component';
+import {MatRadioModule} from '@angular/material/radio';
+import { PaymentDetailsComponent } from './components/training/payment-details/payment-details.component';
+import { ArchiveRowComponent } from './components/archive/archive-row/archive-row.component';
+import { DraftArchiveComponent } from './components/draft-archive/draft-archive.component';
+import { DraftArchiveRowComponent } from './components/draft-archive/draft-archive-row/draft-archive-row.component';
+import { SubmissionOverviewComponent } from './components/training/submission-overview/submission-overview.component';
+import { ArchivePreviewComponent } from './components/archive-preview/archive-preview.component';
+import { ArchivePreviewRowComponent } from './components/archive-preview/archive-preview-row/archive-preview-row.component';
+import {HistoryService} from './services/history.service';
+import {HistoryServiceHttp} from './services/history.service.http';
 
 @NgModule({
   declarations: [
@@ -27,14 +38,22 @@ import { ProgressionButtonsComponent } from './components/progression-buttons/pr
     ContractorComponent,
     PurchaseOrderFormComponent,
     TravelComponent,
-    TrainingComponent,
+    CompanyDetailsComponent,
     NavbarComponent,
     PurchaseOrderViewerComponent,
     FlightDetailsComponent,
     HotelCarDetailsComponent,
     TravelOverviewComponent,
     ArchiveComponent,
-    ProgressionButtonsComponent
+    ProgressionButtonsComponent,
+    CourseDetailsComponent,
+    PaymentDetailsComponent,
+    ArchiveRowComponent,
+    DraftArchiveComponent,
+    DraftArchiveRowComponent,
+    SubmissionOverviewComponent,
+    ArchivePreviewComponent,
+    ArchivePreviewRowComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,8 +63,9 @@ import { ProgressionButtonsComponent } from './components/progression-buttons/pr
     RouterModule.forRoot(routes),
     HttpClientModule,
     ReactiveFormsModule,
+    MatRadioModule
   ],
-  providers: [],
+  providers: [{provide: HistoryService, useClass: HistoryServiceHttp}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

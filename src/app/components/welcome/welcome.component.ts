@@ -6,6 +6,11 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
+  imgTravel = '../../../assets/images/Planes.jpeg';
+  imgTraining = '../../../assets/images/training.jpeg';
+  imgPO = '../../../assets/images/purchaseOrders.jpg';
+  imgContractors = '../../../assets/images/contractors.jpeg';
+  imgArchive = '../../../assets/images/archive.jpeg'
   constructor() { }
   ngOnInit() {
 

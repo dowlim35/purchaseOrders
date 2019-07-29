@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  pageName = 'Homepage of the header'
+  pageName = 'Homepage of the header';
+  imgLogo = '../../../assets/images/logo.png';
+
   constructor() { }
 
   ngOnInit() {

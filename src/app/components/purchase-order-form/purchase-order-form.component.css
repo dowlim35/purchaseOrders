@@ -1,0 +1,39 @@
+body {
+  color: black;
+  margin-top: 100px;
+  margin-bottom: 250px;
+  margin-right: 250px;
+  margin-left: 250px;
+  font-size: 20pt;
+  font-family: ital;
+
+}
+
+form{
+  border-color: yellow;
+}
+
+button
+{
+  background-color: yellow;
+  color: #00c;
+  visited: #ccc;
+
+}
+
+h2{
+  color: blue;
+}
+.a{
+  background-color:yellow;
+}
+h1{
+  font-family: ital;
+  text-align:center;
+}
+/*.quantity{*/
+/*  top: 29.5%;*/
+/*  left:50%;*/
+/*  position: relative;*/
+/*}*/
+
