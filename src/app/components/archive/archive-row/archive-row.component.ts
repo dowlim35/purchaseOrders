@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { History} from '../../../model/history';
+import {PurchaseOrdersService} from "../../../services/purchase-orders.service";
+import {TrainingService} from "../../../services/training.service";
 
 @Component({
   selector: '[app-archive-row]',
@@ -9,9 +11,12 @@ import { History} from '../../../model/history';
 export class ArchiveRowComponent implements OnInit {
   @Input()
   history: History;
-  constructor() { }
+  constructor(poService: PurchaseOrdersService, trainingService: TrainingService) { }
 
   ngOnInit() {
   }
 
+  getArchiveItem( )
+  {
+  }
 }

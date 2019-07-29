@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import {TrainingService} from '../../../services/training.service';
+import {NavBarService} from 'src/app/services/navBarService';
 
 @Component({
   selector: 'app-training',
@@ -17,9 +18,10 @@ export class CompanyDetailsComponent implements OnInit {
   mobileNo: string;
   website: string;
 
-  constructor(private tService: TrainingService) {
+  constructor(private tService: TrainingService, private navBarService: NavBarService) {
     this.tService.setCompanyDetails(this.contactName, this.companyName, this.address, this.email,
       this.telephoneNo, this.mobileNo, this.website);
+    this.navBarService.setPageName("Company Details");
   }
 
   ngOnInit() {

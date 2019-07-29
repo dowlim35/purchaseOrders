@@ -1,6 +1,7 @@
 import {PurchaseOrder} from '../model/purchaseOrder';
 import {Observable} from 'rxjs';
 import {Injectable} from '@angular/core';
+import {NavBarService} from './navBarService';
 
 @Injectable({
   providedIn: 'root'})
@@ -13,15 +14,21 @@ price: number;
 currency:' ';
 date: Date;
 companyCreditCardUsed: boolean;
+pageName: string;
+navBarService: NavBarService;
 
-setDetails(supplierName, itemName, quantity, price, currency, date, companyCreditCardUsed)
+
+setDetails(supplierName, itemName, quantity, price, currency, date, companyCreditCardUsed,pageName,navBarService)
 {
+
   this.supplierName = supplierName;
   this.itemName = itemName;
   this.quantity = quantity;
   this.price = price;
   this.date = date;
   this.companyCreditCardUsed = companyCreditCardUsed;
+  this.pageName = "Purchase Orders";
+  this.navBarService.setPageName(this.pageName);
 }
 
   getSupplierName()
@@ -70,4 +77,8 @@ setDetails(supplierName, itemName, quantity, price, currency, date, companyCredi
     this.companyCreditCardUsed = companyCreditCardUsed;
   }
 
+  getPageName()
+  {
+    return this.pageName;
+  }
 }

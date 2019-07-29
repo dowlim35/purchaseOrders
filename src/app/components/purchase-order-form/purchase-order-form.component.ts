@@ -4,6 +4,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {filter} from "rxjs/operators";
 import {NgModel} from "@angular/forms";
 import {PurchaseOrdersService} from "../../services/purchase-orders.service";
+import {NavBarService} from 'src/app/services/navBarService';
 
 @Component({
   selector: 'app-purchase-orders',
@@ -20,12 +21,14 @@ export class PurchaseOrderFormComponent implements OnInit {
   currency: string;
   price: number;
   companyCreditCardUsed: boolean;
+  pageName : string;
 
   name = "PurchaseOrderUpdateForm";
 
 
-  constructor(private poService: PurchaseOrdersService) {
+  constructor(private poService: PurchaseOrdersService, private navBarService: NavBarService) {
 
+  navBarService.setPageName("Purchase Order")
   this.supplierName = poService.getSupplierName();
   this.itemName = poService.getItemName();
   this.quantity = poService.getQuantity();
@@ -37,10 +40,15 @@ export class PurchaseOrderFormComponent implements OnInit {
 
   ngOnInit() {
 
-    };
 
+  };
+
+  // public getPageName()
+  // {
+  //   return this.pageName;
+  // }
     updatePurchaseOrder(){
-    this.poService.setDetails(this.supplierName, this.itemName, this.quantity, this.price, this.currency, this.date, this.companyCreditCardUsed);
+    this.poService.setDetails(this.supplierName, this.itemName, this.quantity, this.price, this.currency, this.date, this.companyCreditCardUsed, this.navBarService, this.pageName);
     }
 
     inEuro() {

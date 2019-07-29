@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TrainingService} from '../../../services/training.service';
+import {NavBarService} from 'src/app/services/navBarService';
 
 
 @Component({
@@ -19,9 +20,10 @@ export class CourseDetailsComponent implements OnInit {
   totalCost: number;
 
   hotelIncluded = true;
-  constructor(private tService: TrainingService) {
+  constructor(private tService: TrainingService, private navBarService: NavBarService) {
     this.tService.setCourseDetails(this.courseName, this.startDate, this.endDate, this.location,
       this.hotelFee, this.delegates, this.unitCost, this.totalCost);
+    this.navBarService.setPageName("Course Details");
   }
 
   ngOnInit() {

@@ -2,7 +2,7 @@ import {History} from '../../app/model/history';
 
 export const DATA: History[] = [{
   poNumber: 1,
-  formType: 'Travel',
+  formType: 'travel',
   subAccount: 'Accountant',
   desc: '4 Trvaling to london',
   date: 'test',
@@ -10,63 +10,63 @@ export const DATA: History[] = [{
 },
   {
   poNumber: 2,
-  formType: 'Contractor',
+  formType: 'purchaseOrderSummary',
   subAccount: 'Accountant',
   desc: 'Two Laptop',
     date: 'test',
   status: 'Denied'
 },{
   poNumber: 2,
-  formType: 'Contractor',
+  formType: 'contractor',
   subAccount: 'Accountant',
   desc: 'Two Laptop',
     date: 'test',
   status: 'Denied'
 },{
   poNumber: 2,
-  formType: 'Contractor',
+  formType: 'contractor',
   subAccount: 'Accountant',
   desc: 'Two Laptop',
     date: 'test',
   status: 'Denied'
 },{
   poNumber: 2,
-  formType: 'Contractor',
+  formType: 'contractor',
   subAccount: 'Accountant',
   desc: 'Two Laptop',
     date: 'test',
   status: 'Denied'
 },{
   poNumber: 2,
-  formType: 'Contractor',
+  formType: 'contractor',
   subAccount: 'Accountant',
   desc: 'Two Laptop',
     date: 'test',
   status: 'Denied'
 },{
   poNumber: 2,
-  formType: 'Contractor',
+  formType: 'contractor',
   subAccount: 'Accountant',
   desc: 'Two Laptop',
     date: 'test',
   status: 'Denied'
 },{
   poNumber: 2,
-  formType: 'Contractor',
+  formType: 'contractor',
   subAccount: 'Accountant',
   desc: 'Two Laptop',
     date: 'test',
   status: 'Denied'
 },{
   poNumber: 2,
-  formType: 'Contractor',
+  formType: 'contractor',
   subAccount: 'Accountant',
   desc: 'Two Laptop',
     date: 'test',
   status: 'Denied'
 },{
   poNumber: 2,
-  formType: 'Contractor',
+  formType: 'contractor',
   subAccount: 'Accountant',
   desc: 'Two Laptop',
     date: 'test',
@@ -74,7 +74,7 @@ export const DATA: History[] = [{
 },
   {
   poNumber: 3,
-  formType: 'Travel',
+  formType: 'travel',
   subAccount: 'Accountant',
   desc: '4 Trvaling to london',
     date: 'test',
@@ -82,7 +82,7 @@ export const DATA: History[] = [{
 },
   {
   poNumber: 4,
-  formType: 'Travel',
+  formType: 'travel',
   subAccount: 'Accountant',
   desc: '4 Trvaling to london',
     date: 'test',
@@ -90,7 +90,7 @@ export const DATA: History[] = [{
 },
   {
   poNumber: 5,
-  formType: 'Travel',
+  formType: 'travel',
   subAccount: 'Accountant',
   desc: '4 Trvaling to london',
     date: 'test',
