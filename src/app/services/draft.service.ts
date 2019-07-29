@@ -7,7 +7,7 @@ import {DATA} from '../../assets/mock/mockDraftData';
   providedIn: 'root'
 })
 export class DraftService {
-
+z
   constructor() { }
   getDraftHistory(): Observable<any[]> {
     return of(DATA);
