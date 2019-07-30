@@ -9,3 +9,14 @@ table{
   margin-left:20%;
   padding-bottom: 1rem;
 }
+.btn-primary{
+  background: rgb(17,12,103);
+  background: linear-gradient(191deg, rgba(17,12,103,1) 0%, rgba(67,67,148,1) 47%, rgba(16,33,51,1) 100%);
+  border-color: rgb(17,12,103);
+
+}
+
+.btn-outline-primary{
+  color: rgb(17,12,103);
+  border-color: rgb(17,12,103);
+}
