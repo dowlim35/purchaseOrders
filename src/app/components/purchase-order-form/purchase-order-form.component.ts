@@ -1,9 +1,9 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {PurchaseOrder} from "../../model/purchaseOrder";
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {filter} from "rxjs/operators";
-import {NgModel} from "@angular/forms";
-import {PurchaseOrdersService} from "../../services/purchase-orders.service";
+import {PurchaseOrder} from '../../model/purchaseOrder';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {filter} from 'rxjs/operators';
+import {NgModel} from '@angular/forms';
+import {PurchaseOrdersService} from '../../services/purchase-orders.service';
 
 @Component({
   selector: 'app-purchase-orders',
@@ -21,56 +21,63 @@ export class PurchaseOrderFormComponent implements OnInit {
   price: number;
   companyCreditCardUsed: boolean;
   totalAmount: number;
-
-  name = "PurchaseOrderUpdateForm";
+  purchases: PurchaseOrder[];
+  name = 'PurchaseOrderUpdateForm';
+  results;
 
 
   constructor(private poService: PurchaseOrdersService) {
-
-  this.supplierName = poService.getSupplierName();
-  this.itemName = poService.getItemName();
-  this.quantity = poService.getQuantity();
-  this.currency = poService.getCurrency();
-  this.date = poService.getDate();
-  this.price = poService.getUnitPrice();
-  this.companyCreditCardUsed = poService.getCompanyCreditCardUsed();
+    this.results = this.poService.getDetails();
+    this.supplierName = poService.getSupplierName();
+    this.itemName = poService.getItemName();
+    this.quantity = poService.getQuantity();
+    this.currency = poService.getCurrency();
+    this.date = poService.getDate();
+    this.price = poService.getUnitPrice();
+    this.companyCreditCardUsed = poService.getCompanyCreditCardUsed();
   }
 
   ngOnInit() {
 
-    };
+  }
 
-    updatePurchaseOrder(){
+  updatePurchaseOrder() {
+    // tslint:disable-next-line:max-line-length
     this.poService.setDetails(this.supplierName, this.itemName, this.quantity, this.price, this.currency, this.date, this.companyCreditCardUsed);
-    }
+    this.postData();
+  }
 
-    inEuro() {
-      this.currency = "€";
-      this.poService.setCurrency("€");
-      this.getTotalAmount();
-    }
+  inEuro() {
+    this.currency = '€';
+    this.poService.setCurrency('€');
+    this.getTotalAmount();
+  }
 
-   inDollar() {
-      this.currency = "$";
-      this.poService.setCurrency("$");
-     this.getTotalAmount();
-    }
+  inDollar() {
+    this.currency = '$';
+    this.poService.setCurrency('$');
+    this.getTotalAmount();
+  }
 
-    inPound() {
-      this.currency = "£";
-      this.poService.setCurrency("£");
-      this.getTotalAmount();
-    }
+  inPound() {
+    this.currency = '£';
+    this.poService.setCurrency('£');
+    this.getTotalAmount();
+  }
 
-    setCompanyCreditCardUsedTrue()
-    {
-      this.poService.setCompanyCreditCardUsed(true);
-    }
+  setCompanyCreditCardUsedTrue() {
+    this.poService.setCompanyCreditCardUsed(true);
+  }
 
-    getTotalAmount()
-    {
-      this.totalAmount = this.quantity * this.price;
-    }
+  getTotalAmount() {
+    this.totalAmount = this.quantity * this.price;
+  }
+
+  postData(): void {
+    this.results = this.poService.getDetails();
+    this.poService.postPurchaseOrders(this.results)
+      .subscribe(purchases => this.purchases.push(purchases));
+  }
 
 
 }

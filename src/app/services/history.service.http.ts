@@ -12,15 +12,15 @@ import {error} from 'util';
 @Injectable()
 export class HistoryServiceHttp extends HistoryService {
 
-  pointer: number;
+  // pointer: number;
   header = new HttpHeaders({'Content-Type' : 'application/json'});
-  getpointer(): number {
-    return this.pointer;
-  }
+  // getpointer(): number {
+  //   return this.pointer;
+  // }
 
-  setpointer(value: number) {
-    this.pointer = this.pointer + value;
-  }
+  // setpointer(value: number) {
+  //   this.pointer = this.pointer + value;
+  // }
   constructor(private http: HttpClient) {
     super();
   }
@@ -30,16 +30,14 @@ export class HistoryServiceHttp extends HistoryService {
     return this.http.get<History[]>('http://localhost:8080/archive');
   }
   putHistory(history: History = {
-    pNo: this.pointer, formType: FormType.TRAINING,
+    pNo: 10, formType: FormType.TRAINING,
     subAccount: AccountType.MISC,
     desc: 'This is dummy Data',
     date: new Date() ,
     status: ArchiveStatus.ACCEPTED
   }): Observable<History> {
-    this.setpointer(1);
     return this.http.post<History>('http://localhost:8080/archive',
       history, {headers: this.header});
-       // .pipe(catchError(error()));
 
   }
 }

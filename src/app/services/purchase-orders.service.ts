@@ -5,23 +5,36 @@ import {Injectable} from '@angular/core';
 @Injectable({
   providedIn: 'root'})
 
-export class PurchaseOrdersService {
+export abstract class PurchaseOrdersService {
 supplierName: ' ';
 itemName: ' ';
 quantity: number;
 unitPrice: number;
-currency:' ';
+currency: ' ';
 date: Date;
 companyCreditCardUsed: boolean;
 totalAmount: number;
+results: PurchaseOrder;
+abstract fetchPurchaseOrders(): Observable<PurchaseOrder[]>;
+abstract postPurchaseOrders(purchases): Observable<PurchaseOrder>;
 
-setPaymentDetails(quantity, unitPrice, totalAmount)
-{
+
+setPaymentDetails(quantity, unitPrice, totalAmount) {
   this.quantity = quantity;
   this.unitPrice = unitPrice;
 }
-setDetails(supplierName, itemName, quantity, unitPrice, currency, date, companyCreditCardUsed)
-{
+getDetails() {
+  this.results = {
+    supplierName: this.supplierName,
+    itemName: this.itemName,
+    quantity: this.quantity,
+    currency: this.currency,
+    dates: new Date(),
+    price: this.unitPrice};
+
+  return this.results;
+}
+setDetails(supplierName, itemName, quantity, unitPrice, currency, date, companyCreditCardUsed) {
   this.supplierName = supplierName;
   this.itemName = itemName;
   this.quantity = quantity;
@@ -29,64 +42,52 @@ setDetails(supplierName, itemName, quantity, unitPrice, currency, date, companyC
   this.date = date;
   this.companyCreditCardUsed = companyCreditCardUsed;
 }
-setQuantity(quantity)
-{
+setQuantity(quantity) {
   this.quantity = quantity;
 }
 
-setUnitPrice(unitPrice)
-{
+setUnitPrice(unitPrice) {
   this.unitPrice = unitPrice;
 }
-getTotalAmount()
-{
+getTotalAmount() {
   this.totalAmount = this.quantity * this.unitPrice;
   return this.totalAmount;
 }
 
-  getSupplierName()
-  {
+  getSupplierName() {
   return this.supplierName;
   }
 
 
-  getItemName()
-  {
+  getItemName() {
     return this.itemName;
   }
 
-  getCurrency()
-  {
+  getCurrency() {
     return this.currency;
   }
 
-  setCurrency(currency)
-  {
+  setCurrency(currency) {
     this.currency = currency;
   }
 
-  getQuantity()
-  {
+  getQuantity() {
     return this.quantity;
   }
 
-  getDate()
-  {
+  getDate() {
     return this.date;
   }
 
-  getUnitPrice()
-  {
+  getUnitPrice() {
     return this.unitPrice;
   }
 
-  getCompanyCreditCardUsed()
-  {
+  getCompanyCreditCardUsed() {
     return this.companyCreditCardUsed;
   }
 
-  setCompanyCreditCardUsed(companyCreditCardUsed)
-  {
+  setCompanyCreditCardUsed(companyCreditCardUsed) {
     this.companyCreditCardUsed = companyCreditCardUsed;
   }
 

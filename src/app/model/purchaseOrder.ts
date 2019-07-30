@@ -2,7 +2,8 @@ export interface PurchaseOrder {
   supplierName: string;
   itemName: string;
   quantity: number;
-  currency: symbol;
+  currency: string;
   dates: Date;
+  price: number;
 
 }
