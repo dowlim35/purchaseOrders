@@ -2,7 +2,7 @@ import {FormType} from '../../assets/enums/FormType';
 import {ArchiveStatus} from '../../assets/enums/ArchiveStatus';
 import {AccountType} from '../../assets/enums/AccountType';
 
-export class History {
+export interface History {
   pNo: number;
   formType: FormType;
   subAccount: AccountType;
