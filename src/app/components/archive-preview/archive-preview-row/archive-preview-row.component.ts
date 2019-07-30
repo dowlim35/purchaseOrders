@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { History} from '../../../model/history';
+import {History} from '../../../model/history';
 
 @Component({
   selector: '[app-archive-preview-row]',
