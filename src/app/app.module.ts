@@ -29,8 +29,8 @@ import { SubmissionOverviewComponent } from './components/training/submission-ov
 import { ArchivePreviewComponent } from './components/archive-preview/archive-preview.component';
 import { ArchivePreviewRowComponent } from './components/archive-preview/archive-preview-row/archive-preview-row.component';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
-
+import {HistoryService} from './services/history.service';
+import {HistoryServiceHttp} from './services/history.service.http';
 
 @NgModule({
   declarations: [
@@ -67,6 +67,7 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatRadioModule,
     BrowserAnimationsModule
   ],
+  providers: [{provide: HistoryService, useClass: HistoryServiceHttp}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
