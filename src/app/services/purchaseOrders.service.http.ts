@@ -3,7 +3,7 @@ import {Injectable} from '@angular/core';
 
 import {PurchaseOrder} from '../model/purchaseOrder';
 import {Observable} from 'rxjs';
-import {PurchaseOrdersService} from "./purchase-orders.service";
+import {PurchaseOrdersService} from './purchase-orders.service';
 
 @Injectable()
 export class PurchaseOrdersServiceHttp extends PurchaseOrdersService {

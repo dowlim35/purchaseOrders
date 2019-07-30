@@ -1,39 +1,59 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {TravelModel} from '../../model/travelmodel';
+import {AccountType} from '../../../assets/enums/AccountType';
+import {ReasonforTravel} from '../../../assets/enums/ReasonforTravel';
+import {TravelService} from '../../services/travel.service';
 
 @Component({
   selector: 'app-travel',
   templateUrl: './travel.component.html',
-  styleUrls: ['./travel.component.css']
+  styleUrls: ['./travel.component.css'],
+  providers: [TravelComponent]
 })
 export class TravelComponent implements OnInit {
   travelForm: FormGroup;
+
+  unitname: string;
+  SDL: string;
+  numberofpassengers: number;
+  paymentmethod: string;
+  subaccount: AccountType;
+  reasonfortravel: ReasonforTravel;
+  creditcard: string;
+
+
   @Input() travel: TravelModel;
   @Output() updateComplete = new EventEmitter<TravelModel>();
 
   name = 'TheTravelForm';
 
-  constructor(private formBuilder: FormBuilder) {
-    this.travelForm = formBuilder.group({
-      unitname: ['', Validators.required],
-      sdl: ['', Validators.required],
-      numberofpassengers: ['', Validators.required],
-      paymentmethod: ['', Validators.required],
-      subaccount: ['', Validators.required],
-      reasonfortravel: ['', Validators.required],
-      creditcard: ['', Validators.required],
-    });
-  }
-  ngOnInit() {
-    this.travelForm.setValue({
-      departureairport: this.travel.unitname
-    }); }
+  constructor(private toService: TravelService){
+    this.unitname = toService.unitname;
+    this.SDL = toService.SDL;
+    this.numberofpassengers = toService.numberofpassengers;
+    this.paymentmethod = toService.paymentmethod;
+    this.creditcard = toService.creditcard;
 
-  updateTravel() {
-    this.updateComplete.emit(this.travel);
   }
-}
+
+  // {
+  //   this.travelForm = formBuilder.group({
+  //     unitname: ['', Validators.required],
+  //     sdl: ['', Validators.required],
+  //     numberofpassengers: ['', Validators.required],
+  //     paymentmethod: ['', Validators.required],
+  //     subaccount: ['', Validators.required],
+  //     reasonfortravel: ['', Validators.required],
+  //     creditcard: ['', Validators.required],
+  //   });
+  // }
+  ngOnInit() {};
+
+  updateTravel(){this.toService.setTravelDetails(this.unitname, this.SDL, this.numberofpassengers, this.paymentmethod, this.subaccount, this.reasonfortravel, this.creditcard )
+  }}
+
+
 
 // paymentMethod: any = [
 //   {name: 'Credit Card', value: 'CREDIT'},

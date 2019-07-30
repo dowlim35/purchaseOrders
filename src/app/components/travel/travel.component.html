@@ -1,114 +1,162 @@
 <hr/>
 <h2>Use the form below to update input your travel details</h2>
+<body>
+<form>
 
-
-<form [formGroup]="travelForm" (ngSubmit)="updateTravel()">
-
-  <fieldset>
-    <label>Unit Name:</label>
-    <br>
-    <input type="text" formControlName="unitname">
-    <span class="error-msg"
-          *ngIf="travelForm.controls.unitname.errors">
-            The Unit Name is Required
-        </span>
-  </fieldset>
+  <label>Unit Name</label>
+  <br>
+  <input type="text" name="unitName" [(ngModel)]="unitname">
   <br>
 
-  <fieldset>
-    <label>SDL:</label>
-    <br>
-    <input type="text" formControlName="SDL">
-    <span class="error-msg"
-          *ngIf="travelForm.controls.SDL.errors">
-            The Senior Dev Lead is Required
-        </span>
-  </fieldset>
+  <label>SDL</label>
+  <br>
+  <input type="text" name="SDL" [(ngModel)]="SDL">
   <br>
 
-
-  <fieldset>
-    <label>Departure Date:</label>
-    <br>
-    <input type="Date" formControlName="Departure Date">
-    <span class="error-msg"
-          *ngIf="travelForm.controls.departuredate.errors">
-            Please enter the date in DD/MM/YY format
-        </span>
-  </fieldset>
+  <label>Number of Passengers</label>
+  <br>
+  <input type="number" name="numberPassengers" min="0" placeholder="1" [(ngModel)]="numberofpassengers">
   <br>
 
-
-  <fieldset>
-    <label>Number of Passengers:</label>
-    <br>
-    <input type="number" min="0" formControlName="Cost">
-    <span class="error-msg"
-          *ngIf="travelForm.controls.numberofpassengers.errors">
-            Please enter the cost
-        </span>
-  </fieldset>
+  <label>Payment Method</label>
+  <br>
+  <input type="text" name="paymentMethod" [(ngModel)]="paymentmethod">
   <br>
 
-  <fieldset>
-    <label>Enterprise Car:</label>
-    <br>
-    <input type="checkbox" formControlName="enterprisecar">
-  </fieldset>
+  <label>Sub Account</label>
+  <br>
+  <select id = "subAccountList">
+    <option value = "a">A</option>
+    <option value = "b">B</option>
+    <option value = "c">C</option>
+    <option value = "d">D</option>
+  </select>
   <br>
 
-  <fieldset>
-    <label>Car:</label>
-    <br>
-    <input type="checkbox"  formControlName="car">
+  <label>Reason for Travel</label>
+  <select id = "reasonForTravelList">
+    <option value = "a">A</option>
+    <option value = "b">B</option>
+    <option value = "c">C</option>
+    <option value = "d">D</option>
+  </select>
 
-  </fieldset>
+  <label>Credit Card</label>
+  <br>
+  <input type="text" name="creditCard" [(ngModel)]="creditcard">
   <br>
 
-  <fieldset>
-    <label>Pickup Date:</label>
-    <br>
-    <input type="Date" formControlName="pickupdate">
-  </fieldset>
   <br>
-
-  <fieldset>
-    <label>Drop Off Date:</label>
-    <br>
-    <input type="Date" formControlName="dropdate">
-
-  </fieldset>
-  <br>
-
-
-
-  <fieldset>
-    <label>Return to:</label>
-    <br>
-    <input type="Text" formControlName="returnto">
-    <span class="error-msg"
-          *ngIf="travelForm.controls.returnto.errors">
-            Please enter where the car is being returned to
-        </span>
-  </fieldset>
-  <br>
-
-  <fieldset>
-    <label>Cost per Day:</label>
-    <br>
-    <input type="number" min="0" formControlName="costperday">
-    <span class="error-msg"
-          *ngIf="travelForm.controls.cost.errors">
-            Please enter the cost
-        </span>
-  </fieldset>
-
-  <br>
-
-
-
-  <fieldset>
-    <input type="submit" [disabled]="!travelForm.valid" value="Update Flight"/>
-  </fieldset>
+  <button type="button" class = "btn" (click)="updateTravel()" routerLink = "/trainingPaymentDetails"> Continue </button>
 
 </form>
+</body>
+
+<!--<form [formGroup]="travelForm" (ngSubmit)="updateTravel()">-->
+
+<!--  <fieldset>-->
+<!--    <label>Unit Name:</label>-->
+<!--    <br>-->
+<!--    <input type="text" formControlName="unitname">-->
+<!--    <span class="error-msg"-->
+<!--          *ngIf="travelForm.controls.unitname.errors">-->
+<!--            The Unit Name is Required-->
+<!--        </span>-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+<!--  <fieldset>-->
+<!--    <label>SDL:</label>-->
+<!--    <br>-->
+<!--    <input type="text" formControlName="SDL">-->
+<!--    <span class="error-msg"-->
+<!--          *ngIf="travelForm.controls.SDL.errors">-->
+<!--            The Senior Dev Lead is Required-->
+<!--        </span>-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+
+<!--  <fieldset>-->
+<!--    <label>Departure Date:</label>-->
+<!--    <br>-->
+<!--    <input type="Date" formControlName="Departure Date">-->
+<!--    <span class="error-msg"-->
+<!--          *ngIf="travelForm.controls.departuredate.errors">-->
+<!--            Please enter the date in DD/MM/YY format-->
+<!--        </span>-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+
+<!--  <fieldset>-->
+<!--    <label>Number of Passengers:</label>-->
+<!--    <br>-->
+<!--    <input type="number" min="0" formControlName="Cost">-->
+<!--    <span class="error-msg"-->
+<!--          *ngIf="travelForm.controls.numberofpassengers.errors">-->
+<!--            Please enter the cost-->
+<!--        </span>-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+<!--  <fieldset>-->
+<!--    <label>Enterprise Car:</label>-->
+<!--    <br>-->
+<!--    <input type="checkbox" formControlName="enterprisecar">-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+<!--  <fieldset>-->
+<!--    <label>Car:</label>-->
+<!--    <br>-->
+<!--    <input type="checkbox"  formControlName="car">-->
+
+<!--  </fieldset>-->
+<!--  <br>-->
+
+<!--  <fieldset>-->
+<!--    <label>Pickup Date:</label>-->
+<!--    <br>-->
+<!--    <input type="Date" formControlName="pickupdate">-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+<!--  <fieldset>-->
+<!--    <label>Drop Off Date:</label>-->
+<!--    <br>-->
+<!--    <input type="Date" formControlName="dropdate">-->
+
+<!--  </fieldset>-->
+<!--  <br>-->
+
+
+
+<!--  <fieldset>-->
+<!--    <label>Return to:</label>-->
+<!--    <br>-->
+<!--    <input type="Text" formControlName="returnto">-->
+<!--    <span class="error-msg"-->
+<!--          *ngIf="travelForm.controls.returnto.errors">-->
+<!--            Please enter where the car is being returned to-->
+<!--        </span>-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+<!--  <fieldset>-->
+<!--    <label>Cost per Day:</label>-->
+<!--    <br>-->
+<!--    <input type="number" min="0" formControlName="costperday">-->
+<!--    <span class="error-msg"-->
+<!--          *ngIf="travelForm.controls.cost.errors">-->
+<!--            Please enter the cost-->
+<!--        </span>-->
+<!--  </fieldset>-->
+
+<!--  <br>-->
+
+
+
+<!--  <fieldset>-->
+<!--    <input type="submit" [disabled]="!travelForm.valid" value="Update Flight"/>-->
+<!--  </fieldset>-->

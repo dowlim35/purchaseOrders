@@ -1,0 +1,8 @@
+export enum ReasonforTravel {
+  BUSINESS,
+  TRAINING,
+  LEADTRAINING,
+  CONFERENCE,
+  SECONDMENT,
+  OTHER
+}

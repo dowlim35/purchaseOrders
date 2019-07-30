@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {TrainingService} from '../../../services/training.service';
+import {AccountType} from '../../../../assets/enums/AccountType';
 
 @Component({
   selector: 'app-submission-overview',
@@ -29,7 +30,7 @@ export class SubmissionOverviewComponent {
 
   // Payment details
   creditCard: string;
-  subAccount: string;
+  subAccount: AccountType;
   delegatesPaid: number;
 
   constructor(private tService: TrainingService) {
