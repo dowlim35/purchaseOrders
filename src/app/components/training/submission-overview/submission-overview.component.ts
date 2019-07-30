@@ -56,6 +56,4 @@ export class SubmissionOverviewComponent {
     this.delegatesPaid = tService.delegatesPaid;
 
   }
-
-
 }

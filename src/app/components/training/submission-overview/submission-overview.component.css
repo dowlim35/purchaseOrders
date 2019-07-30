@@ -1,0 +1,38 @@
+h3 {
+  position: absolute;
+  left: 35%;
+  top: 15%;
+}
+.companyDetails {
+  position: absolute;
+  left: 10%;
+  top: 35%;
+}
+.courseDetails {
+  position: absolute;
+  left: 35%;
+  top: 35%;
+}
+
+.paymentDetails {
+  position: absolute;
+  left: 75%;
+  top: 35%;
+}
+button {
+  background-color:cornflowerblue;
+  border: gray();
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 12px;
+  cursor: pointer;
+  position: absolute;
+  left: 45%;
+  bottom: 10%;
+}
+
