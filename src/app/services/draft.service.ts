@@ -8,8 +8,14 @@ import {DATA} from '../../assets/mock/mockDraftData';
 })
 export class DraftService {
 
+
   constructor() { }
   getDraftHistory(): Observable<any[]> {
     return of(DATA);
+  }
+
+  addDraft()
+  {
+    // Data.push()
   }
 }

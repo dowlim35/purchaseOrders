@@ -1,59 +1,89 @@
-<h1>
+<h1 class="infoMsg">
   Purchase Order Request
 </h1>
 
-<body>
+<div class="borderyeet">
 
 <form name="purchaseOrderForm">
-  <div>
-    <label>Supplier name:</label><br>
-    <input type="text" size="20" name="supplier name" [(ngModel)]="supplierName"/>
+
+  <div class="row">
+    <div class="col">
+
+      <label>Supplier name:</label><br>
+      <input type="text" size="40" name="supplier name" [(ngModel)]="supplierName"/>
+
+    </div>
+
+    <div class="col blank">
+      <br>
+
+    </div>
+
+    <div class="col">
+      <input type="checkbox" name="credit card" value="Company Credit Card" (check) = "setCompanyCreditCardUsedTrue()"> Company credit card<br><br>
+
+    </div>
   </div>
 
   <div class="row">
-
   <div class="col itemName">
     Item name:<br>
-    <input type="text" size="20" name ="item name" [(ngModel)]="itemName" />
+    <input type="text" size="40" name ="item name" [(ngModel)]="itemName" />
   </div>
+    <div class="col blank2">
+      <br>
 
-  <div class="col quantity">
-    Quantity:<br>
-    <input type="number" size="20" name = "quantity" required  min ="0" max="1000" [(ngModel)]="quantity"/>
-  </div>
+    </div>
+
+    <div class = "col subAccount">
+      <p>
+        <label>Sub Account: </label><br>
+        <select id = "subAccountList">
+          <option value = "a">A</option>
+          <option value = "b">B</option>
+          <option value = "c">C</option>
+          <option value = "d">D</option>
+        </select>
+      </p>
+    </div>
+
   </div>
   <div class = "row">
-  <div class="col currency">
-    Currency:<br>
-    <input value="€" type="button" (click)="inEuro()" />
-    <input value="$" type="button" (click)="inDollar()" />
-    <input value="£" type="button" (click)="inPound()" />
+    <div class = "col price">
+      Unit price: <br>
+      <input type="number" size="20" name = "price" [(ngModel)]="price" />
+    </div>
+    <div class="col quantity">
+      Quantity:<br>
+      <input type="number" size="40" name = "quantity" required  min ="0" max="10000" [(ngModel)]="quantity"/>
+    </div>
+    <div class="col blank2">
+      <br>
+    </div>
+
+
+    <div class="col currency">
+      Currency:<br>
+      <input value="€" type="button"  (click)="updatePaymentDetailsEuro()" />
+      <input value="$" type="button" (click)="updatePaymentDetailsDollar()" />
+      <input value="£" type="button" (click)="updatePaymentDetailsPound()" />
+
+    </div>
   </div>
-
-  <div class = "col price">
-    Price: <br>
-    <input type="number" size="20" name = "price" [(ngModel)]="price" />
-  </div>
-
-  </div>
-
-
-<div>
-  <p>
-    <label>Sub Account: </label><br>
-    <select id = "subAccountList">
-      <option value = "a">A</option>
-      <option value = "b">B</option>
-      <option value = "c">C</option>
-      <option value = "d">D</option>
-    </select>
-  </p>
+<div class ="row 2">
+  <a>
+    Total Amount:
+    {{totalAmount}}
+  </a>
 </div>
-  <input type="checkbox" name="credit card" value="Company Credit Card" (check) = "setCompanyCreditCardUsedTrue()"> Company credit card<br><br>
+
+
+
 
   <div>
-    <input value="Submit Purchase Order" type="button" (click)="updatePurchaseOrder()" routerLink="/purchaseOrderSummary"/>
+    <input value="Submit Purchase Order" type="button" CLASS="btn btn-primary" (click)="updatePurchaseOrder()" routerLink="/purchaseOrderSummary"/>
   </div>
 
 </form>
-</body>
+</div>
+

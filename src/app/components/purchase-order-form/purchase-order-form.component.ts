@@ -18,29 +18,44 @@ export class PurchaseOrderFormComponent implements OnInit {
   itemName: string;
   date: Date;
   currency: string;
-  price: number;
+  unitPrice: number;
   companyCreditCardUsed: boolean;
+  totalAmount: number;
 
   name = "PurchaseOrderUpdateForm";
 
 
   constructor(private poService: PurchaseOrdersService) {
-
-  this.supplierName = poService.getSupplierName();
-  this.itemName = poService.getItemName();
-  this.quantity = poService.getQuantity();
-  this.currency = poService.getCurrency();
-  this.date = poService.getDate();
-  this.price = poService.getPrice();
-  this.companyCreditCardUsed = poService.getCompanyCreditCardUsed();
+  this.poService.setDetails(this.supplierName, this.itemName, this.quantity, this.unitPrice, this.currency, this.date, this.companyCreditCardUsed);
   }
 
   ngOnInit() {
 
     };
+  setPaymentDetails(currency, unitPrice, quantity)
+  {
+    this.currency = currency;
+    this.unitPrice = unitPrice;
+    this.quantity = quantity;
+  }
+    updatePaymentDetailsEuro()
+    {
+      // this.inEuro();
+      this.totalAmount = this.poService.getQuantity() * this.poService.getUnitPrice();
+    }
+  updatePaymentDetailsPound()
+  {
+    this.inPound();
+    this.getTotalAmount();
+  }
+  updatePaymentDetailsDollar()
+  {
+    this.inDollar();;
+    this.getTotalAmount();
+  }
 
     updatePurchaseOrder(){
-    this.poService.setDetails(this.supplierName, this.itemName, this.quantity, this.price, this.currency, this.date, this.companyCreditCardUsed);
+    this.poService.setDetails(this.supplierName, this.itemName, this.quantity, this.unitPrice, this.currency, this.date, this.companyCreditCardUsed);
     }
 
     inEuro() {
@@ -54,10 +69,15 @@ export class PurchaseOrderFormComponent implements OnInit {
     inPound() {
       this.poService.setCurrency("£");
     }
-
     setCompanyCreditCardUsedTrue()
     {
       this.poService.setCompanyCreditCardUsed(true);
     }
+
+    getTotalAmount()
+    {
+      this.totalAmount = this.quantity * this.unitPrice;
+    }
+
 
 }

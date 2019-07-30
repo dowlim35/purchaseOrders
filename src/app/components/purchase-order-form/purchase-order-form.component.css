@@ -8,17 +8,22 @@ body {
   font-family: ital;
 
 }
-
+input
+{
+  border-width: 5px;
+  border-color: #e6e6e6;
+}
 form{
   border-color: yellow;
 }
 
-button
+.btn
 {
-  background-color: yellow;
+  margin-left: 400px;
   color: #00c;
   visited: #ccc;
-
+  font-size:20pt;
+  background: linear-gradient(190deg, #FFD000 0%, rgba(255,218,0,1) 47%, #FFD000 100%);
 }
 
 h2{
@@ -31,9 +36,19 @@ h1{
   font-family: ital;
   text-align:center;
 }
-/*.quantity{*/
-/*  top: 29.5%;*/
-/*  left:50%;*/
-/*  position: relative;*/
-/*}*/
 
+.borderyeet{
+
+  color: black;
+  margin-top: 100px;
+  margin-bottom: 250px;
+  margin-right: 250px;
+  margin-left: 250px;
+  font-size: 20pt;
+  font-family: ital;
+  padding: 50px 75px;
+  border-color: rgb(93,157,186);
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 20px;
+}
