@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import {TrainingService} from '../../../services/training.service';
 
+
 @Component({
   selector: 'app-training',
   templateUrl: './company-details.component.html',

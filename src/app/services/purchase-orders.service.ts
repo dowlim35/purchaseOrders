@@ -9,19 +9,39 @@ export class PurchaseOrdersService {
 supplierName: ' ';
 itemName: ' ';
 quantity: number;
-price: number;
+unitPrice: number;
 currency:' ';
 date: Date;
 companyCreditCardUsed: boolean;
+totalAmount: number;
 
-setDetails(supplierName, itemName, quantity, price, currency, date, companyCreditCardUsed)
+setPaymentDetails(quantity, unitPrice, totalAmount)
+{
+  this.quantity = quantity;
+  this.unitPrice = unitPrice;
+}
+setDetails(supplierName, itemName, quantity, unitPrice, currency, date, companyCreditCardUsed)
 {
   this.supplierName = supplierName;
   this.itemName = itemName;
   this.quantity = quantity;
-  this.price = price;
+  this.unitPrice = unitPrice;
   this.date = date;
   this.companyCreditCardUsed = companyCreditCardUsed;
+}
+setQuantity(quantity)
+{
+  this.quantity = quantity;
+}
+
+setUnitPrice(unitPrice)
+{
+  this.unitPrice = unitPrice;
+}
+getTotalAmount()
+{
+  this.totalAmount = this.quantity * this.unitPrice;
+  return this.totalAmount;
 }
 
   getSupplierName()
@@ -55,9 +75,9 @@ setDetails(supplierName, itemName, quantity, price, currency, date, companyCredi
     return this.date;
   }
 
-  getPrice()
+  getUnitPrice()
   {
-    return this.price;
+    return this.unitPrice;
   }
 
   getCompanyCreditCardUsed()

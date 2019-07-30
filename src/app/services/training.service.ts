@@ -57,48 +57,4 @@ export class TrainingService {
   }
 
 
-  // setContactName(contactName) {
-    //   this.companyName = contactName;
-    // }
-    // getContactName() {
-    //   return this.contactName;
-    // }
-    // setCompanyName(companyName) {
-    //   this.companyName = companyName;
-    // }
-    // getCompanyName() {
-    //   return this.companyName;
-    // }
-    // setAddress(address) {
-    //   this.address = address;
-    // }
-    // getAddress() {
-    //   return this.address;
-    // }
-    // setEmail(email) {
-    //   this.email = email;
-    // }
-    // getEmail() {
-    //   return this.email;
-    // }
-    // setTelephoneNo(telephoneNo) {
-    //   this.telephoneNo = telephoneNo;
-    // }
-    // getTelephoneNo() {
-    //   return this.telephoneNo;
-    // }
-    // setMobileNo(mobileNo) {
-    //   this.mobileNo = mobileNo;
-    // }
-    // getMobileNo() {
-    //   return this.mobileNo;
-    // }
-    // setWebsite(website) {
-    //   this.website = website;
-    // }
-    // getWebsite() {
-    //   return this.website;
-    // }
-
-
 }

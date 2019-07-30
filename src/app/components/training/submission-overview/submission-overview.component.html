@@ -1,8 +1,9 @@
 <h3>
-  Training Form - Submission Overview
+Please Confirm Training Details
 </h3>
 
-<h4>
+<div class="companyDetails">
+  <h4>
   Company Details
 </h4>
 Contact Name: {{contactName}} <br>
@@ -12,22 +13,87 @@ Email: {{email}} <br>
 Telephone: {{telephoneNo}} <br>
 Mobile No: {{mobileNo}} <br>
 Website: {{website}} <br>
+</div>
+<div class="courseDetails">
 <h4>
   Course Details
 </h4>
 Course Name: {{courseName}} <br>
 Start Date: {{startDate}} <br>
 End Date: {{endDate}} <br>
-Location {{location}} <br>
+<!--  Start Date: {{startDate.getDate()}} / {{startDate.getMonth()}} / {{startDate.getFullYear()}} <br>-->
+<!--  End Date: {{endDate.getDate()}} / {{endDate.getMonth()}} / {{endDate.getFullYear()}} <br>-->
+  Location: {{location}} <br>
 <div *ngIf="hotelFee > 0" >
   Hotel Fee: {{hotelFee}} <br>
 </div>
 Delegates: {{delegates}} <br>
 Unit Cost: {{unitCost}} <br>
 Total Cost: {{totalCost}} <br>
-<h4>
+</div>
+<div class="paymentDetails">
+  <h4>
   Payment Details
 </h4>
 Company Credit Card: {{creditCard}} <br>
-Sub Account {{subAccount}} <br>
+Sub Account: {{subAccount}} <br>
 Delegates Charged to Card: {{delegatesPaid}} <br>
+</div>
+
+<!--<div class="popup">-->
+<!--  &lt;!&ndash;  <button class="closeButton" type="button" pButton icon="pi pi-info-circle" label="X"></button>&ndash;&gt;-->
+<!--  <h3>-->
+<!--    Training Form - Submission Overview-->
+<!--  </h3>-->
+
+<!--  <table style="width:100%">-->
+<!--    <tr>-->
+<!--      <th>Company Details</th>-->
+<!--      <th>Course Details</th>-->
+<!--      <th>Payment Details</th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>Contact Name: {{contactName}}</td>-->
+<!--      <td>Course Name: {{courseName}} </td>-->
+<!--      <td>Company Credit Card: {{creditCard}}</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>Company Name: {{companyName}}</td>-->
+<!--      <td>Start Date: {{startDate}}</td>-->
+<!--      <td>Sub Account: {{subAccount}}</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>Address: {{address}}</td>-->
+<!--      <td>End Date: {{endDate}}</td>-->
+<!--      <td>Delegates Charged to Card: {{delegatesPaid}}</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>Email: {{email}}</td>-->
+<!--      <td>Location: {{location}}</td>-->
+<!--      <td></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>Telephone: {{telephoneNo}}</td>-->
+<!--      <td>-->
+<!--        Hotel Fee: £{{hotelFee}}-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>Mobile No: {{mobileNo}}</td>-->
+<!--      <td>Delegates: {{delegates}}</td>-->
+<!--      <td></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>Website: {{website}}</td>-->
+<!--      <td>Unit Cost: £{{unitCost}}</td>-->
+<!--      <td></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td></td>-->
+<!--      Total Cost: £{{totalCost}}-->
+<!--      <td></td>-->
+<!--    </tr>-->
+<!--  </table>-->
+
+  <button type="button" pButton icon="pi pi-info-circle" routerLink = "" label="Confirm"></button>
+
+<!--</div>-->

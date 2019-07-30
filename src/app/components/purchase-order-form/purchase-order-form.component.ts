@@ -20,6 +20,7 @@ export class PurchaseOrderFormComponent implements OnInit {
   currency: string;
   price: number;
   companyCreditCardUsed: boolean;
+  totalAmount: number;
 
   name = "PurchaseOrderUpdateForm";
 
@@ -31,7 +32,7 @@ export class PurchaseOrderFormComponent implements OnInit {
   this.quantity = poService.getQuantity();
   this.currency = poService.getCurrency();
   this.date = poService.getDate();
-  this.price = poService.getPrice();
+  this.price = poService.getUnitPrice();
   this.companyCreditCardUsed = poService.getCompanyCreditCardUsed();
   }
 
@@ -44,20 +45,32 @@ export class PurchaseOrderFormComponent implements OnInit {
     }
 
     inEuro() {
+      this.currency = "€";
       this.poService.setCurrency("€");
+      this.getTotalAmount();
     }
 
    inDollar() {
+      this.currency = "$";
       this.poService.setCurrency("$");
+     this.getTotalAmount();
     }
 
     inPound() {
+      this.currency = "£";
       this.poService.setCurrency("£");
+      this.getTotalAmount();
     }
 
     setCompanyCreditCardUsedTrue()
     {
       this.poService.setCompanyCreditCardUsed(true);
     }
+
+    getTotalAmount()
+    {
+      this.totalAmount = this.quantity * this.price;
+    }
+
 
 }
