@@ -28,6 +28,7 @@ import { DraftArchiveRowComponent } from './components/draft-archive/draft-archi
 import { SubmissionOverviewComponent } from './components/training/submission-overview/submission-overview.component';
 import { ArchivePreviewComponent } from './components/archive-preview/archive-preview.component';
 import { ArchivePreviewRowComponent } from './components/archive-preview/archive-preview-row/archive-preview-row.component';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HistoryService} from './services/history.service';
 import {HistoryServiceHttp} from './services/history.service.http';
 
@@ -63,7 +64,8 @@ import {HistoryServiceHttp} from './services/history.service.http';
     RouterModule.forRoot(routes),
     HttpClientModule,
     ReactiveFormsModule,
-    MatRadioModule
+    MatRadioModule,
+    BrowserAnimationsModule
   ],
   providers: [{provide: HistoryService, useClass: HistoryServiceHttp}],
   bootstrap: [AppComponent]
