@@ -64,16 +64,16 @@
 
     <div class="col currency">
       Currency:<br>
-      <input value="€" type="button"  (click)="updatePaymentDetailsEuro()" />
-      <input value="$" type="button" (click)="updatePaymentDetailsDollar()" />
-      <input value="£" type="button" (click)="updatePaymentDetailsPound()" />
+      <input value="€" type="button"  (click)="inEuro()" />
+      <input value="$" type="button" (click)="inDollar()" />
+      <input value="£" type="button" (click)="inPound()" />
 
     </div>
   </div>
 <div class ="row 2">
   <a>
     Total Amount:
-    {{totalAmount}}
+    {{currency}}{{totalAmount}}
   </a>
 </div>
 

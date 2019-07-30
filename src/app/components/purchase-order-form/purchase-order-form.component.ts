@@ -18,7 +18,7 @@ export class PurchaseOrderFormComponent implements OnInit {
   itemName: string;
   date: Date;
   currency: string;
-  unitPrice: number;
+  price: number;
   companyCreditCardUsed: boolean;
   totalAmount: number;
 
@@ -26,49 +26,42 @@ export class PurchaseOrderFormComponent implements OnInit {
 
 
   constructor(private poService: PurchaseOrdersService) {
-  this.poService.setDetails(this.supplierName, this.itemName, this.quantity, this.unitPrice, this.currency, this.date, this.companyCreditCardUsed);
+
+  this.supplierName = poService.getSupplierName();
+  this.itemName = poService.getItemName();
+  this.quantity = poService.getQuantity();
+  this.currency = poService.getCurrency();
+  this.date = poService.getDate();
+  this.price = poService.getUnitPrice();
+  this.companyCreditCardUsed = poService.getCompanyCreditCardUsed();
   }
 
   ngOnInit() {
 
     };
-  setPaymentDetails(currency, unitPrice, quantity)
-  {
-    this.currency = currency;
-    this.unitPrice = unitPrice;
-    this.quantity = quantity;
-  }
-    updatePaymentDetailsEuro()
-    {
-      // this.inEuro();
-      this.totalAmount = this.poService.getQuantity() * this.poService.getUnitPrice();
-    }
-  updatePaymentDetailsPound()
-  {
-    this.inPound();
-    this.getTotalAmount();
-  }
-  updatePaymentDetailsDollar()
-  {
-    this.inDollar();;
-    this.getTotalAmount();
-  }
 
     updatePurchaseOrder(){
-    this.poService.setDetails(this.supplierName, this.itemName, this.quantity, this.unitPrice, this.currency, this.date, this.companyCreditCardUsed);
+    this.poService.setDetails(this.supplierName, this.itemName, this.quantity, this.price, this.currency, this.date, this.companyCreditCardUsed);
     }
 
     inEuro() {
+      this.currency = "€";
       this.poService.setCurrency("€");
+      this.getTotalAmount();
     }
 
    inDollar() {
+      this.currency = "$";
       this.poService.setCurrency("$");
+     this.getTotalAmount();
     }
 
     inPound() {
+      this.currency = "£";
       this.poService.setCurrency("£");
+      this.getTotalAmount();
     }
+
     setCompanyCreditCardUsedTrue()
     {
       this.poService.setCompanyCreditCardUsed(true);
@@ -76,7 +69,7 @@ export class PurchaseOrderFormComponent implements OnInit {
 
     getTotalAmount()
     {
-      this.totalAmount = this.quantity * this.unitPrice;
+      this.totalAmount = this.quantity * this.price;
     }
 
 
