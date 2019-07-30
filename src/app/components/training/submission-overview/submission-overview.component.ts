@@ -33,6 +33,7 @@ export class SubmissionOverviewComponent {
   delegatesPaid: number;
 
   constructor(private tService: TrainingService) {
+
     // Company details
     this.contactName = tService.contactName;
     this.companyName = tService.companyName;
