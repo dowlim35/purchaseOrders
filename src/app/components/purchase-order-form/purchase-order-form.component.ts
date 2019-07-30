@@ -20,7 +20,7 @@ export class PurchaseOrderFormComponent implements OnInit {
   currency: string;
   price: number;
   companyCreditCardUsed: boolean;
-  pageName : string;
+  totalAmount: number;
 
   name = "PurchaseOrderUpdateForm";
 
@@ -32,38 +32,45 @@ export class PurchaseOrderFormComponent implements OnInit {
   this.quantity = poService.getQuantity();
   this.currency = poService.getCurrency();
   this.date = poService.getDate();
-  this.price = poService.getPrice();
+  this.price = poService.getUnitPrice();
   this.companyCreditCardUsed = poService.getCompanyCreditCardUsed();
   }
 
   ngOnInit() {
 
+    };
 
-  };
-
-  // public getPageName()
-  // {
-  //   return this.pageName;
-  // }
     updatePurchaseOrder(){
     this.poService.setDetails(this.supplierName, this.itemName, this.quantity, this.price, this.currency, this.date, this.companyCreditCardUsed);
     }
 
     inEuro() {
+      this.currency = "€";
       this.poService.setCurrency("€");
+      this.getTotalAmount();
     }
 
    inDollar() {
+      this.currency = "$";
       this.poService.setCurrency("$");
+     this.getTotalAmount();
     }
 
     inPound() {
+      this.currency = "£";
       this.poService.setCurrency("£");
+      this.getTotalAmount();
     }
 
     setCompanyCreditCardUsedTrue()
     {
       this.poService.setCompanyCreditCardUsed(true);
     }
+
+    getTotalAmount()
+    {
+      this.totalAmount = this.quantity * this.price;
+    }
+
 
 }

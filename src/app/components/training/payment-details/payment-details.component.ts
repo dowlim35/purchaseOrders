@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TrainingService} from '../../../services/training.service';
 
 @Component({
@@ -20,12 +20,8 @@ export class PaymentDetailsComponent implements OnInit {
 
   ngOnInit() {
   }
-
   saveContactDetails() {
     this.tService.setPaymentDetails(this.creditCard, this.subAccount, this.delegates);
   }
-  // getNumOfCreditCards() {
-  //   return document.getElementById('numOfCreditCards');
-  // }
 
 }
