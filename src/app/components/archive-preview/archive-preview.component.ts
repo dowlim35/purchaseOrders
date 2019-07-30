@@ -5,6 +5,7 @@ import {HistoryService} from '../../services/history.service';
 import {FormType} from '../../../assets/enums/FormType';
 import {AccountType} from '../../../assets/enums/AccountType';
 import {ArchiveStatus} from '../../../assets/enums/ArchiveStatus';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-archive-preview',
@@ -23,8 +24,9 @@ export class ArchivePreviewComponent implements OnInit {
     this.dataService.fetchHistory()
       .subscribe(history => this.history = history);
   }
-
   addData(): void {
-    this.dataService.putHistory();
+    this.dataService
+      .putHistory()
+      .subscribe(history => this.history.push(history));
   }
 }
