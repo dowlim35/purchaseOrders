@@ -6,4 +6,3 @@
 <td *ngIf="history.status.toString()=='Approved' " style="background: green">{{history.status}}</td>
 <td *ngIf="history.status.toString()=='Denied'" style="background: red">{{history.status}}</td>
 <td *ngIf ="history.status.toString()=='Pending'" style="background: yellow">{{history.status}}</td>
-<td class ="btn-block" routerLink = "/{{history.formType}}">View</td>
