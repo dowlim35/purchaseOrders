@@ -5,7 +5,7 @@ import {PurchaseOrdersService} from '../../services/purchase-orders.service';
 import {HistoryService} from '../../services/history.service';
 import {History} from '../../model/history';
 import {FormType} from '../../../assets/enums/FormType';
-import {ArchiveStatus} from '../../../assets/enums/ArchiveStatus';
+
 import {AccountType} from '../../../assets/enums/AccountType';
 
 @Component({
@@ -84,7 +84,11 @@ export class PurchaseOrderFormComponent implements OnInit {
     this.results = this.poService.getDetails();
     this.poService.postPurchaseOrders(this.results)
       .subscribe(purchases => this.purchases.push(purchases));
+<<<<<<< HEAD
     this.details = {pNo: 1, formType: this.form, details: this.results, status: ArchiveStatus.PENDING, date: new Date(), desc: (this.supplierName + ' ' + this.itemName + ' ' + this.currency + this.price), subAccount: this.subacc, details2: null};
+=======
+    this.details = {pNo: 1, formType: this.form, details: this.results, status:"PENDING", date: new Date(), desc: (this.supplierName + ' ' + this.itemName + ' ' + this.currency + this.price), subAccount: this.subacc};
+>>>>>>> 921abcaef59cadbc70a26054f848fac6ed3ea459
     this.archiveService.putHistory(this.details)
       .subscribe(archive => this.archive.push(archive));
   }
