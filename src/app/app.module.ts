@@ -31,6 +31,8 @@ import { ArchivePreviewRowComponent } from './components/archive-preview/archive
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HistoryService} from './services/history.service';
 import {HistoryServiceHttp} from './services/history.service.http';
+import {PurchaseOrdersService} from './services/purchase-orders.service';
+import {PurchaseOrdersServiceHttp} from './services/purchaseOrders.service.http';
 
 @NgModule({
   declarations: [
@@ -67,7 +69,8 @@ import {HistoryServiceHttp} from './services/history.service.http';
     MatRadioModule,
     BrowserAnimationsModule
   ],
-  providers: [{provide: HistoryService, useClass: HistoryServiceHttp}],
+  providers: [{provide: HistoryService, useClass: HistoryServiceHttp},
+    { provide: PurchaseOrdersService, useClass: PurchaseOrdersServiceHttp}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
