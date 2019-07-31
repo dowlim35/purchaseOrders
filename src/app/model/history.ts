@@ -1,5 +1,5 @@
 import {FormType} from '../../assets/enums/FormType';
-import {ArchiveStatus} from '../../assets/enums/ArchiveStatus';
+
 import {AccountType} from '../../assets/enums/AccountType';
 import {PurchaseOrder} from './purchaseOrder';
 
@@ -9,7 +9,7 @@ export interface History {
   subAccount: AccountType;
   desc: string;
   date: Date;
-  status: ArchiveStatus;
+  status: string;
   details: PurchaseOrder;
 
   // static fromJson(obj: any): History {

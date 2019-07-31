@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import {MockService} from '../../services/mock.service';
 import { History} from '../../model/history';
 import {HistoryService} from '../../services/history.service';
-import {FormType} from '../../../assets/enums/FormType';
-import {AccountType} from '../../../assets/enums/AccountType';
-import {ArchiveStatus} from '../../../assets/enums/ArchiveStatus';
-import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-archive-preview',
