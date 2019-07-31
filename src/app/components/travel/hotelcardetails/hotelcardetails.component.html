@@ -28,16 +28,16 @@
 <br>
 <label>Enterprise Car</label>
 <br>
-<input type="button" class='enterpriseButton' id="yesEnterpriseButton" (click)="toggleEnterpriseIncluded()">Yes
-<input type="button" class='enterpriseButton' id="noEnterpriseButton" (click)="toggleEnterpriseIncluded()">No<br>
+<input type="checkbox" class='enterpriseButton' id="yesEnterpriseButton" (click)="toggleEnterpriseIncluded()"><br>
+<!--<input type="button" class='enterpriseButton' id="noEnterpriseButton" (click)="toggleEnterpriseIncluded()">No<br>-->
 
 <br>
 <label>Car</label>
 <br>
-<input type="button" class='carButton' id="yescarButton" (click)="toggleCarIncluded()">Yes
-<input type="button" class='carButton' id="nocarButton" (click)="toggleCarIncluded()">No<br>
+<input type="checkbox" class='carButton' id="yescarButton" (click)="toggleCarIncluded()"><br>
+<!--<input type="button" class='carButton' id="nocarButton" (click)="toggleCarIncluded()">No<br>-->
 
-<div *ngIf="!enterpriseIncluded || !carIncluded">
+<div *ngIf="enterpriseIncluded || carIncluded">
   <br>
 <label>Pickup Date</label>
 <br>
