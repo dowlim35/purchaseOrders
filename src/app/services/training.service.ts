@@ -1,11 +1,11 @@
 import {Training} from '../model/training';
 import {Injectable} from '@angular/core';
-import {del} from 'selenium-webdriver/http';
+import {Observable} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 
-export class TrainingService {
+export abstract class TrainingService {
   // Company details
   contactName = '';
   companyName = '';
@@ -27,10 +27,35 @@ export class TrainingService {
   creditCard = '';
   subAccount = '';
   delegatesPaid = 0;
+  results: Training;
+  abstract fetchTraining(): Observable<Training[]>;
+  abstract postTraining(training): Observable<Training>;
 
+  getAllDetails() {
+    this.results = {
+      contactName: this.contactName,
+      companyName: this.companyName,
+      address: this.address,
+      email: this.email,
+      telephoneNo: this.telephoneNo,
+      mobileNo: this.mobileNo,
+      website: this.website,
+      courseName: this.courseName,
+      startDate: this.startDate,
+      endDate: this.endDate,
+      location: this.location,
+      hotelFee: this.hotelFee,
+      delegates: this.delegates,
+      unitCost: this.unitCost,
+      totalCost: this.totalCost,
+      creditCard: this.creditCard,
+      subAccount: this.subAccount,
+      delegatesPaid: this.delegatesPaid};
+    return this.results;
+  }
 
   setCompanyDetails(contactName, companyName, address, email, telephoneNo, mobileNo, website) {
-    this.companyName = contactName;
+    this.contactName = contactName;
     this.companyName = companyName;
     this.address = address;
     this.email = email;

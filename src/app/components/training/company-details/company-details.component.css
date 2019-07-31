@@ -1,6 +1,8 @@
 button {
-  background-color:cornflowerblue;
-  border: gray();
+  background-color: limegreen;
+  border: solid;
+  border-width: 5;
+  border-color: green;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -10,23 +12,39 @@ button {
   margin: 4px 2px;
   border-radius: 12px;
   cursor: pointer;
+  position: relative;
+  left: 70%;
+  top: 6%;
 }
 
 
 form {
   border-radius: 5%;
-  background: #F7F74C;
+  background: lightblue;
   padding: 2%;
+  padding-top: 5%;
   width: 25%;
-  height: 75%;
-
+  height: 65%;
+  font-size: 15pt;
+  position: absolute;
+  left: 35%;
+  border-style: solid;
+  border-color: darkslateblue;
+  position: absolute;
+  margin-top: 5%;
 }
 
 input {
-  height: 8%;
+  height: 5%;
   width: 70%;
 }
 
 .numberField {
   width: 35%;
+}
+h2 {
+  position: absolute;
+  left: 40%;
+  top: 25%;
+  z-index: 100;
 }

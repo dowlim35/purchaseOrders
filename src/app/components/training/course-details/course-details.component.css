@@ -1,6 +1,8 @@
 button {
-  background-color:cornflowerblue;
-  border: gray();
+  background-color: limegreen;
+  border: solid;
+  border-width: thin;
+  border-color: green;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -10,25 +12,35 @@ button {
   margin: 4px 2px;
   border-radius: 12px;
   cursor: pointer;
+  position: relative;
+  left: 70%;
+  top: 20%;
 }
-
 form {
   border-radius: 5%;
-  background: #F7F74C;
+  background: lightblue;
   padding: 2%;
+  padding-top: 5%;
   width: 25%;
-  height: 75%;
-
+  height: 90%;
+  font-size: 15pt;
+  position: absolute;
+  left: 35%;
+  border-style: solid;
+  border-color: darkslateblue;
+  position: absolute;
+  margin-top: 5%;
 }
 
+
 input {
-  height: 8%;
+  height: 5%;
   width: 70%;
 }
 
 .courseDates {
   height: 35%;
-  width: 90%;
+  width: 50%;
 }
 
 .numberField {
@@ -37,11 +49,17 @@ input {
 
 .hotelButton {
   border-radius: 30%;
-  width: 10%;
-  height: 10%;
+  width: 8%;
+  height: 5%;
 }
 
 .note {
   font-size: 10pt;
 
+}
+h2 {
+  position: absolute;
+  left: 40%;
+  top: 23%;
+  z-index: 100;
 }

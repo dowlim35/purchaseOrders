@@ -1,9 +1,10 @@
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 
 import {Training} from '../model/training';
 import {Observable} from 'rxjs';
 import {TrainingService} from './training.service';
+import {PurchaseOrder} from '../model/purchaseOrder';
 
 @Injectable()
 export class TrainingServiceHttp extends TrainingService {
@@ -11,10 +12,13 @@ export class TrainingServiceHttp extends TrainingService {
     super();
   }
 
-  // fetchTraining(): Observable<Training[]> {
-  //   console.log('Fetching training via service...');
-  //
-  //   // change json
-  //   return this.http.get<Training[]>('assets/data/training.json');
-  // }
+  header = new HttpHeaders({'Content-Type' : 'application/json'});
+
+  fetchTraining(): Observable<Training[]> {
+    return this.http.get<Training[]>('http://localhost:8080/training');
+  }
+
+  postTraining(training: Training): Observable<Training> {
+    return this.http.post<Training>('http://localhost:8080/training', training, {headers: this.header});
+  }
 }
