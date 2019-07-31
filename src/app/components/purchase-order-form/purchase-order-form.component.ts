@@ -23,7 +23,7 @@ export class PurchaseOrderFormComponent implements OnInit {
   date: Date;
   currency: string;
   price: number;
-  subacc: AccountType;
+  subacc: string;
   companyCreditCardUsed: boolean;
   totalAmount: number;
   purchases: PurchaseOrder[];
@@ -84,7 +84,7 @@ export class PurchaseOrderFormComponent implements OnInit {
     this.results = this.poService.getDetails();
     this.poService.postPurchaseOrders(this.results)
       .subscribe(purchases => this.purchases.push(purchases));
-    this.details = {pNo: 1, formType: this.form, details: this.results, status: ArchiveStatus.PENDING, date: new Date(), desc: (this.supplierName + ' ' + this.itemName + ' ' + this.currency + this.price), subAccount: this.subacc};
+    this.details = {pNo: 1, formType: this.form, details: this.results, status: ArchiveStatus.PENDING, date: new Date(), desc: (this.supplierName + ' ' + this.itemName + ' ' + this.currency + this.price), subAccount: this.subacc, details2: null};
     this.archiveService.putHistory(this.details)
       .subscribe(archive => this.archive.push(archive));
   }

@@ -2,7 +2,10 @@ import {Component} from '@angular/core';
 import {TrainingService} from '../../../services/training.service';
 import {Training} from '../../../model/training';
 import {AccountType} from '../../../../assets/enums/AccountType';
-
+import {ArchiveStatus} from '../../../../assets/enums/ArchiveStatus';
+import {FormType} from '../../../../assets/enums/FormType';
+import { History} from '../../../model/history';
+import {HistoryService} from '../../../services/history.service';
 
 @Component({
   selector: 'app-submission-overview',
@@ -11,6 +14,9 @@ import {AccountType} from '../../../../assets/enums/AccountType';
   providers: [SubmissionOverviewComponent]
 })
 export class SubmissionOverviewComponent {
+  form = FormType.TRAINING;
+  details: History;
+  archive: History[];
   // Company details
   contactName: string;
   companyName: string;
@@ -38,7 +44,7 @@ export class SubmissionOverviewComponent {
   trainings: Training[];
   results;
 
-  constructor(private tService: TrainingService) {
+  constructor(private tService: TrainingService, private archiveService: HistoryService) {
 
     // Company details
     this.contactName = tService.contactName;
@@ -68,5 +74,8 @@ export class SubmissionOverviewComponent {
     this.results = this.tService.getAllDetails();
     this.tService.postTraining(this.results)
       .subscribe(training => this.trainings.push(training));
+    this.details = {pNo: 4, formType: this.form, details: null, details2: this.results, status: ArchiveStatus.PENDING, date: new Date(), desc: (this.companyName + ' ' + this.courseName + ' Delegates ' + this.delegates + this.totalCost), subAccount: this.subAccount};
+    this.archiveService.putHistory(this.details)
+      .subscribe(archive => this.archive.push(archive));
   }
 }
