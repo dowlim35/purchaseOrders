@@ -29,13 +29,7 @@ export class HistoryServiceHttp extends HistoryService {
     console.log('Data Called From service');
     return this.http.get<History[]>('http://localhost:8080/archive');
   }
-  putHistory(history: History = {
-    pNo: 10, formType: FormType.TRAINING,
-    subAccount: AccountType.MISC,
-    desc: 'This is dummy Data',
-    date: new Date() ,
-    status: ArchiveStatus.ACCEPTED
-  }): Observable<History> {
+  putHistory(history: History): Observable<History> {
     return this.http.post<History>('http://localhost:8080/archive',
       history, {headers: this.header});
 

@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
 import {TrainingService} from '../../../services/training.service';
 import {Training} from '../../../model/training';
+import {AccountType} from '../../../../assets/enums/AccountType';
+
 
 @Component({
   selector: 'app-submission-overview',

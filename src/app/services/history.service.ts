@@ -11,6 +11,6 @@ import {ArchiveStatus} from '../../assets/enums/ArchiveStatus';
 export abstract class HistoryService {
 
   abstract fetchHistory(): Observable<History[]>;
-  abstract putHistory(): Observable<History>;
+  abstract putHistory(item): Observable<History>;
 
 }
