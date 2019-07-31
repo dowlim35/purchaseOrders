@@ -30,7 +30,7 @@ export class SubmissionOverviewComponent {
 
   // Payment details
   creditCard: string;
-  subAccount: AccountType;
+  subAccount: string;
   delegatesPaid: number;
 
   constructor(private tService: TrainingService) {

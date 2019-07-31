@@ -8,6 +8,7 @@
   <input type="text" name="unitName" [(ngModel)]="unitname">
   <br>
 
+
   <label>SDL</label>
   <br>
   <input type="text" name="SDL" [(ngModel)]="SDL">
@@ -18,10 +19,13 @@
   <input type="number" name="numberPassengers" min="0" placeholder="1" [(ngModel)]="numberofpassengers">
   <br>
 
+
+
   <label>Payment Method</label>
   <br>
   <input type="text" name="paymentMethod" [(ngModel)]="paymentmethod">
   <br>
+
 
   <label>Sub Account</label>
   <br>
@@ -31,15 +35,18 @@
     <option value = "c">C</option>
     <option value = "d">D</option>
   </select>
+
   <br>
 
   <label>Reason for Travel</label>
+  <br>
   <select id = "reasonForTravelList">
     <option value = "a">A</option>
     <option value = "b">B</option>
     <option value = "c">C</option>
     <option value = "d">D</option>
   </select>
+  <br>
 
   <label>Credit Card</label>
   <br>
@@ -47,7 +54,7 @@
   <br>
 
   <br>
-  <button type="button" class = "btn" (click)="updateTravel()" routerLink = "/trainingPaymentDetails"> Continue </button>
+  <button type="button" class = "btn" (click)="updateTravel()" routerLink = "/hotelcardetails"> Continue </button>
 
 </form>
 </body>

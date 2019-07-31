@@ -1,39 +1,49 @@
 <hr/>
 <h2>Use the form below to update input your flight details</h2>
-<body>
-<form>
 
 
 
 
-<!--&lt;!&ndash;<form [formGroup]="flightForm" (ngSubmit)="updateFlight()">&ndash;&gt;-->
-<!--  <fieldset>-->
+
+  <!--&lt;!&ndash;<form [formGroup]="flightForm" (ngSubmit)="updateFlight()">&ndash;&gt;-->
+  <!--  <fieldset>-->
 
   <label>Departure Airport:</label>
   <br>
   <input type="text" name="departureAirport" [(ngModel)]="departureairport">
 
-
+<br>
+<br>
   <label>Arrival Airport</label>
   <br>
   <input type="text" name="arrivalAirport" [(ngModel)]="arrivalairport">
 
+<br>
+<br>
   <label>Departure Date</label>
   <br>
   <input type="date" class="flightdates" name="departureDate"
-         placeholder="yyyy-MM-dd" min="2019-01-01" max="2020-12-31" [(ngModel)]="departuredateflight"
+         placeholder="yyyy-MM-dd" min="2019-01-01" max="2020-12-31" [(ngModel)]="departuredateflight">
 
+<br>
+<br>
   <label>Arrival Date</label>
   <br>
-  <input type="date" class="flightdates" name="arrivalDate"
-       placeholder="yyyy-MM-dd" min="2019-01-01" max="2020-12-31" [(ngModel)]="arrivaldateflight"
 
+  <input type="date" class="flightdates" name="arrivalDate"
+         placeholder="yyyy-MM-dd" min="2019-01-01" max="2020-12-31" [(ngModel)]="arrivaldateflight">
+
+<br>
+<br>
   <label>Cost of Flight</label>
   <br>
   <input type="number" name="flightCost" min="0" placeholder="0.00" [(ngModel)]="costflight">
+<br>
 
+<br>
   <label>Least Expensive Option</label>
   <br>
+<br>
   <input type="button" class='expensiveButton' id="yesButton" (click)="toggleLeastExpensive()">Yes
   <input type="button" class='expensiveButton' id="noButton" (click)="toggleLeastExpensive()">No<br>
 
@@ -42,8 +52,10 @@
     <br>
     <input type="text" name="Explanation" [(ngModel)]="explanation">
 
+  </div>
+
     <br>
-    <button type="button" class = "btn" (click)="saveFlightDetails()" routerLink = "/trainingPaymentDetails"> Continue </button>
+    <button type="button" class = "btn" (click)="saveFlightDetails()" routerLink = "/traveloverview"> Save Details </button>
 
 
 <!--    <input type="text" formControlName="departureairport">-->
@@ -126,5 +138,4 @@
 <!--  <fieldset>-->
 <!--    <input type="submit" [disabled]="!flightForm.valid" value="Update Flight"/>-->
 <!--  </fieldset>-->
-</form>
-</body>
+

@@ -74,5 +74,16 @@ export class TravelService {
    this.explanation = explanation;
   }
 
+  // resetFlightDetails(departureairport, arrivalairport, departuredateflight, arrivaldateflight, costflight, leastexpensive, explanation)
+  // {
+  //   this.departureairport = ;
+  //   this.arrivalairport = ;
+  //   this.departuredateflight = ;
+  //   this.arrivaldateflight = ;
+  //   this.costflight = ;
+  //   this.leastexpensive = ;
+  //   this.explanation = ;
+  // }
+
 
 }

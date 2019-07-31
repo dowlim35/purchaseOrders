@@ -6,7 +6,9 @@
 <input type="text" name="hotelName" [(ngModel)]="hotelname">
 <br>
 
+<br>
 <label>Cost</label>
+<br>
 <input type="number" name="hotelCost" min="0" placeholder="0.00" [(ngModel)]="cost"><br>
 <br>
 
@@ -16,46 +18,51 @@
        placeholder="yyyy-MM-dd" min="2019-01-01" max="2020-12-31"  [(ngModel)]="arrivaldate" />
 <br>
 
+<br>
 <label>Departure Date</label>
 <br>
 <input type="date" class="hotelDates" name="departureArrivalDate"
        placeholder="yyyy-MM-dd" min="2019-01-01" max="2020-12-31"  [(ngModel)]="departuredate" />
 <br>
 
+<br>
 <label>Enterprise Car</label>
 <br>
 <input type="button" class='enterpriseButton' id="yesEnterpriseButton" (click)="toggleEnterpriseIncluded()">Yes
 <input type="button" class='enterpriseButton' id="noEnterpriseButton" (click)="toggleEnterpriseIncluded()">No<br>
 
-
+<br>
 <label>Car</label>
+<br>
 <input type="button" class='carButton' id="yescarButton" (click)="toggleCarIncluded()">Yes
 <input type="button" class='carButton' id="nocarButton" (click)="toggleCarIncluded()">No<br>
 
 <div *ngIf="!enterpriseIncluded || !carIncluded">
+  <br>
 <label>Pickup Date</label>
 <br>
 <input type="date" class="carDates" name="carPickupDate"
        placeholder="yyyy-MM-dd" min="2019-01-01" max="2020-12-31"  [(ngModel)]="pickupdate" />
 <br>
-
+<br>
 <label>Drop Date</label>
 <br>
 <input type="date" class="carDates" name="carDropoffDate"
        placeholder="yyyy-MM-dd" min="2019-01-01" max="2020-12-31"  [(ngModel)]="dropdate" />
 <br>
-
+<br>
 <label>Return To</label>
 <br>
 <input type="text" name="returnTo" [(ngModel)]="returnto">
 <br>
 
 <label>Cost per Day</label>
+  <br>
 <input type="number" name="carCost" min="0" placeholder="0.00" [(ngModel)]="costperday"><br>
 <br>
 </div>
 
-<button type="button" class = "btn" (click)="updateHotel()" routerLink = "/trainingPaymentDetails"> Continue </button>
+<button type="button" class = "btn" (click)="updateHotel()" routerLink = "/flightdetails"> Continue </button>
 <!--<form [formGroup]="hotelForm" (ngSubmit)="updateHotel()">-->
 
 <!--  <fieldset>-->
