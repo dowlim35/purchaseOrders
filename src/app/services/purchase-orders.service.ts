@@ -90,5 +90,15 @@ getTotalAmount() {
   setCompanyCreditCardUsed(companyCreditCardUsed) {
     this.companyCreditCardUsed = companyCreditCardUsed;
   }
-
+  // resetForm(){
+  //   this.supplierName = ' ';
+  //   this.itemName: ' ';
+  //   quantity: number;
+  //   unitPrice: number;
+  //   currency: ' ';
+  //   date: Date;
+  //   companyCreditCardUsed: boolean;
+  //   totalAmount: number;
+  //   results: PurchaseOrder;
+  // }
 }

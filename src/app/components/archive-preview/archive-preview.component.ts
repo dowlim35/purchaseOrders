@@ -24,9 +24,9 @@ export class ArchivePreviewComponent implements OnInit {
     this.dataService.fetchHistory()
       .subscribe(history => this.history = history);
   }
-  addData(): void {
-    this.dataService
-      .putHistory()
-      .subscribe(history => this.history.push(history));
-  }
+  // addData(): void {
+  //   this.dataService
+  //     .putHistory()
+  //     .subscribe(history => this.history.push(history));
+  // }
 }
