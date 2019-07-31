@@ -1,80 +1,141 @@
-<html>
-<style>
-  button {
-    background-color:cornflowerblue;
-    border: gray();
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    border-radius: 12px;
-    cursor: pointer;
-  }
-</style>
-
-<body>
-<form>
-  <div>
-    <fieldset>
-      <legend>Flight Details
-      </legend>
-
-      Departure Airport:
-      <br><input type="text"><br>
-      <br>
-
-      Arrival Airport:
-      <br><input type="text"><br>
-      <br>
-
-      Airline:
-      <br><input type="text"><br>
-      <br>
-
-      Cost:
-      <br><input type="text"><br>
-      <br>
-
-      Dates:
-      <br><input type="text"><br>
-      <br>
+<hr/>
+<h2>Use the form below to update input your flight details</h2>
 
 
-      Least Expensive Option:
-
-      <br><select>
-      <option value="1">Yes</option>
-      <option value="2">No</option>
-      </select>
-      <br>
-      <br>
-
-      Brief Explanation for No:
-      <br><input type="text"><br>
-      <br>
-
-      Add Passengers to Flight:
-      <table>
-        passenger 1
-        passenger 2
-        passenger 3
-        passenger 4
-      </table>
-
-      <button class = "btn" routerLink = "/flightdetails"> Add Passengers </button>
-
-      <div class = "container">
-        <button class = "btn" routerLink = "/hotelcardetails"> Continue </button>
-
-        <button class = "btn" routerLink = "/flightdetails"> New Flight </button>
-      </div>
 
 
-    </fieldset>
+
+  <!--&lt;!&ndash;<form [formGroup]="flightForm" (ngSubmit)="updateFlight()">&ndash;&gt;-->
+  <!--  <fieldset>-->
+
+  <label>Departure Airport:</label>
+  <br>
+  <input type="text" name="departureAirport" [(ngModel)]="departureairport">
+
+<br>
+<br>
+  <label>Arrival Airport</label>
+  <br>
+  <input type="text" name="arrivalAirport" [(ngModel)]="arrivalairport">
+
+<br>
+<br>
+  <label>Departure Date</label>
+  <br>
+  <input type="date" class="flightdates" name="departureDate"
+         placeholder="yyyy-MM-dd" min="2019-01-01" max="2020-12-31" [(ngModel)]="departuredateflight">
+
+<br>
+<br>
+  <label>Arrival Date</label>
+  <br>
+
+  <input type="date" class="flightdates" name="arrivalDate"
+         placeholder="yyyy-MM-dd" min="2019-01-01" max="2020-12-31" [(ngModel)]="arrivaldateflight">
+
+<br>
+<br>
+  <label>Cost of Flight</label>
+  <br>
+  <input type="number" name="flightCost" min="0" placeholder="0.00" [(ngModel)]="costflight">
+<br>
+
+<br>
+  <label>Least Expensive Option</label>
+  <br>
+<br>
+  <input type="button" class='expensiveButton' id="yesButton" (click)="toggleLeastExpensive()">Yes
+  <input type="button" class='expensiveButton' id="noButton" (click)="toggleLeastExpensive()">No<br>
+
+  <div *ngIf="!leastExpensive">
+    <label>Explanation</label>
+    <br>
+    <input type="text" name="Explanation" [(ngModel)]="explanation">
+
   </div>
-</form>
-</body>
-</html>
+
+    <br>
+    <button type="button" class = "btn" (click)="saveFlightDetails()" routerLink = "/traveloverview"> Save Details </button>
+
+
+<!--    <input type="text" formControlName="departureairport">-->
+<!--    <span class="error-msg"-->
+<!--          *ngIf="flightForm.controls.departureairport.errors">-->
+<!--            The Departure Airport is Required-->
+<!--        </span>-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+<!--  <fieldset>-->
+<!--    <label>Arrival Airport:</label>-->
+<!--    <br>-->
+<!--    <input type="text" formControlName="arrivalairport">-->
+<!--    <span class="error-msg"-->
+<!--          *ngIf="flightForm.controls.arrivalairport.errors">-->
+<!--            The Arrival Airport is Required-->
+<!--        </span>-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+<!--  <fieldset>-->
+<!--    <label>Departure Date:</label>-->
+<!--    <br>-->
+<!--    <input type="Date" formControlName="Departure Date">-->
+<!--    <span class="error-msg"-->
+<!--          *ngIf="flightForm.controls.departuredate.errors">-->
+<!--            Please enter the date in DD/MM/YY format-->
+<!--        </span>-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+<!--  <fieldset>-->
+<!--    <label>Arrival Date:</label>-->
+<!--    <br>-->
+<!--    <input type="Date" formControlName="Arrival Date">-->
+<!--    <span class="error-msg"-->
+<!--          *ngIf="flightForm.controls.arrivaldate.errors">-->
+<!--            Please enter the date in DD/MM/YY format-->
+<!--        </span>-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+<!--  <fieldset>-->
+<!--    <label>Cost:</label>-->
+<!--    <br>-->
+<!--    <input type="number" min="0" formControlName="Cost">-->
+<!--    <span class="error-msg"-->
+<!--          *ngIf="flightForm.controls.cost.errors">-->
+<!--            Please enter the cost-->
+<!--        </span>-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+<!--  <fieldset>-->
+<!--    <label>Is this the least expensive option?:</label>-->
+<!--    <br>-->
+<!--    <select formControlName="leastexpensive">-->
+<!--      <option *ngFor="let type of leastExpensive" [value]="type.value">{{type.name}}</option>-->
+<!--    </select>-->
+<!--    <span class="error-msg"-->
+<!--          *ngIf="flightForm.controls.leastexpensive.errors">-->
+<!--            Please select an option-->
+<!--        </span>-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+<!--  <fieldset>-->
+<!--    <label>Explanation:</label>-->
+<!--    <br>-->
+<!--    <input type="text" formControlName="explanation">-->
+<!--    <span class="error-msg"-->
+<!--          *ngIf="flightForm.controls.explanation.errors">-->
+<!--            Please give an explanation-->
+<!--        </span>-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+
+<!--  <fieldset>-->
+<!--    <input type="submit" [disabled]="!flightForm.valid" value="Update Flight"/>-->
+<!--  </fieldset>-->
+
