@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {TrainingService} from '../../../services/training.service';
 import {Training} from '../../../model/training';
 import {AccountType} from '../../../../assets/enums/AccountType';
-import {ArchiveStatus} from '../../../../assets/enums/ArchiveStatus';
+// import {ArchiveStatus} from '../../../../assets/enums/ArchiveStatus';
 import {FormType} from '../../../../assets/enums/FormType';
 import { History} from '../../../model/history';
 import {HistoryService} from '../../../services/history.service';
@@ -74,7 +74,8 @@ export class SubmissionOverviewComponent {
     this.results = this.tService.getAllDetails();
     this.tService.postTraining(this.results)
       .subscribe(training => this.trainings.push(training));
-    this.details = {pNo: 4, formType: this.form, details: null, details2: this.results, status: ArchiveStatus.PENDING, date: new Date(), desc: (this.companyName + ' ' + this.courseName + ' Delegates ' + this.delegates + this.totalCost), subAccount: this.subAccount};
+    // tslint:disable-next-line:max-line-length
+    this.details = {pNo: 4, formType: this.form, details: null, details2: this.results, status: "PENDING", date: new Date(), desc: (this.companyName + ' ' + this.courseName + ' Delegates ' + this.delegates + this.totalCost), subAccount: this.subAccount};
     this.archiveService.putHistory(this.details)
       .subscribe(archive => this.archive.push(archive));
   }

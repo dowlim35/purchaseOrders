@@ -4,7 +4,6 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {History} from '../model/history';
 import {FormType} from '../../assets/enums/FormType';
-import {ArchiveStatus} from '../../assets/enums/ArchiveStatus';
 import {AccountType} from '../../assets/enums/AccountType';
 import {catchError} from 'rxjs/operators';
 import {error} from 'util';
