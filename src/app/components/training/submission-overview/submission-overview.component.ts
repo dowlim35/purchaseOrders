@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {TrainingService} from '../../../services/training.service';
+import {Training} from '../../../model/training';
 
 @Component({
   selector: 'app-submission-overview',
@@ -32,6 +33,9 @@ export class SubmissionOverviewComponent {
   subAccount: string;
   delegatesPaid: number;
 
+  trainings: Training[];
+  results;
+
   constructor(private tService: TrainingService) {
 
     // Company details
@@ -56,5 +60,11 @@ export class SubmissionOverviewComponent {
     this.subAccount = tService.subAccount;
     this.delegatesPaid = tService.delegatesPaid;
 
+  }
+
+  postData(): void {
+    this.results = this.tService.getAllDetails();
+    this.tService.postTraining(this.results)
+      .subscribe(training => this.trainings.push(training));
   }
 }
