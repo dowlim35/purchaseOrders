@@ -1,91 +1,174 @@
+<hr/>
+<h2>Use the form below to update input your hotel details</h2>
 
-<form>
-  <div>
-    <fieldset>
-      <legend>Hotel and Car Details
-      </legend>
+<label>Hotel Name</label>
+<br>
+<input type="text" name="hotelName" [(ngModel)]="hotelname">
+<br>
 
-      Hotel Name:
-      <br><input type="text"><br>
-      <br>
+<br>
+<label>Cost</label>
+<br>
+<input type="number" name="hotelCost" min="0" placeholder="0.00" [(ngModel)]="cost"><br>
+<br>
 
-      Cost:
-      <br><input type="text"><br>
-      <br>
+<label>Arrival Date</label>
+<br>
+<input type="date" class="hotelDates" name="hotelArrivalDate"
+       placeholder="yyyy-MM-dd" min="2019-01-01" max="2020-12-31"  [(ngModel)]="arrivaldate" />
+<br>
 
-      Dates:
-      <br><input type="text"><br>
-      <br>
+<br>
+<label>Departure Date</label>
+<br>
+<input type="date" class="hotelDates" name="departureArrivalDate"
+       placeholder="yyyy-MM-dd" min="2019-01-01" max="2020-12-31"  [(ngModel)]="departuredate" />
+<br>
 
-      Add Guests to Hotel:
-      <table>
-        passenger 1
-        passenger 2
-        passenger 3
-        passenger 4
-      </table>
+<br>
+<label>Enterprise Car</label>
+<br>
+<input type="button" class='enterpriseButton' id="yesEnterpriseButton" (click)="toggleEnterpriseIncluded()">Yes
+<input type="button" class='enterpriseButton' id="noEnterpriseButton" (click)="toggleEnterpriseIncluded()">No<br>
 
-      <button class = "btn"  routerLink = "/flightdetails"> Add to Hotel </button>
+<br>
+<label>Car</label>
+<br>
+<input type="button" class='carButton' id="yescarButton" (click)="toggleCarIncluded()">Yes
+<input type="button" class='carButton' id="nocarButton" (click)="toggleCarIncluded()">No<br>
 
-      <br>
-      <br>
-      Enterprise Car:
-      <br><input type="button" class='test' id="enterprise" (click)="toggleEnterpriseCar()"><br>
-      <br>
-      <div *ngIf="enterpriseCar">
+<div *ngIf="!enterpriseIncluded || !carIncluded">
+  <br>
+<label>Pickup Date</label>
+<br>
+<input type="date" class="carDates" name="carPickupDate"
+       placeholder="yyyy-MM-dd" min="2019-01-01" max="2020-12-31"  [(ngModel)]="pickupdate" />
+<br>
+<br>
+<label>Drop Date</label>
+<br>
+<input type="date" class="carDates" name="carDropoffDate"
+       placeholder="yyyy-MM-dd" min="2019-01-01" max="2020-12-31"  [(ngModel)]="dropdate" />
+<br>
+<br>
+<label>Return To</label>
+<br>
+<input type="text" name="returnTo" [(ngModel)]="returnto">
+<br>
+
+<label>Cost per Day</label>
+  <br>
+<input type="number" name="carCost" min="0" placeholder="0.00" [(ngModel)]="costperday"><br>
+<br>
+</div>
+
+<button type="button" class = "btn" (click)="updateHotel()" routerLink = "/flightdetails"> Continue </button>
+<!--<form [formGroup]="hotelForm" (ngSubmit)="updateHotel()">-->
+
+<!--  <fieldset>-->
+<!--    <label>Hotel Name:</label>-->
+<!--    <br>-->
+<!--    <input type="text" formControlName="hotelname">-->
+<!--    <span class="error-msg"-->
+<!--          *ngIf="hotelForm.controls.hotelname.errors">-->
+<!--            The Hotel Name is Required-->
+<!--        </span>-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+<!--  <fieldset>-->
+<!--    <label>Arrival Date:</label>-->
+<!--    <br>-->
+<!--    <input type="Date" formControlName="Arrival Date">-->
+<!--    <span class="error-msg"-->
+<!--          *ngIf="hotelForm.controls.arrivaldate.errors">-->
+<!--            Please enter the date in DD/MM/YY format-->
+<!--        </span>-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+<!--  <fieldset>-->
+<!--    <label>Departure Date:</label>-->
+<!--    <br>-->
+<!--    <input type="Date" formControlName="Departure Date">-->
+<!--    <span class="error-msg"-->
+<!--          *ngIf="hotelForm.controls.departuredate.errors">-->
+<!--            Please enter the date in DD/MM/YY format-->
+<!--        </span>-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+
+<!--  <fieldset>-->
+<!--    <label>Cost:</label>-->
+<!--    <br>-->
+<!--    <input type="number" min="0" formControlName="Cost">-->
+<!--    <span class="error-msg"-->
+<!--          *ngIf="hotelForm.controls.cost.errors">-->
+<!--            Please enter the cost-->
+<!--        </span>-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+<!--  <fieldset>-->
+<!--    <label>Enterprise Car:</label>-->
+<!--    <br>-->
+<!--    <input type="checkbox" formControlName="enterprisecar">-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+<!--  <fieldset>-->
+<!--    <label>Car:</label>-->
+<!--    <br>-->
+<!--    <input type="checkbox"  formControlName="car">-->
+
+<!--  </fieldset>-->
+<!--  <br>-->
+
+<!--  <fieldset>-->
+<!--    <label>Pickup Date:</label>-->
+<!--    <br>-->
+<!--    <input type="Date" formControlName="pickupdate">-->
+<!--  </fieldset>-->
+<!--  <br>-->
+
+<!--  <fieldset>-->
+<!--    <label>Drop Off Date:</label>-->
+<!--    <br>-->
+<!--    <input type="Date" formControlName="dropdate">-->
+
+<!--  </fieldset>-->
+<!--  <br>-->
 
 
 
-        Collection at:
-        <br><input type="text"><br>
-        <br>
+<!--  <fieldset>-->
+<!--    <label>Return to:</label>-->
+<!--    <br>-->
+<!--    <input type="Text" formControlName="returnto">-->
+<!--    <span class="error-msg"-->
+<!--          *ngIf="hotelForm.controls.returnto.errors">-->
+<!--            Please enter where the car is being returned to-->
+<!--        </span>-->
+<!--  </fieldset>-->
+<!--  <br>-->
 
-        Dates:
-        <br><input type="text"><br>
-        <br>
+<!--  <fieldset>-->
+<!--    <label>Cost per Day:</label>-->
+<!--    <br>-->
+<!--    <input type="number" min="0" formControlName="costperday">-->
+<!--    <span class="error-msg"-->
+<!--          *ngIf="hotelForm.controls.cost.errors">-->
+<!--            Please enter the cost-->
+<!--        </span>-->
+<!--  </fieldset>-->
 
-        Return to:
-        <br><input type="text"><br>
-        <br>
-
-        Cost per Day:
-        <br><input type="text"><br>
-        <br>
-      </div>
-
-      Other Car:
-      <br><input class='test' type="button" id="othercar" (click)="toggleOtherCar()"><br>
-      <br>
-
-      <div *ngIf="otherCar">
-
-
-
-      Collection at:
-      <br><input type="text"><br>
-      <br>
-
-      Dates:
-      <br><input type="text"><br>
-      <br>
-
-      Return to:
-      <br><input type="text"><br>
-      <br>
-
-      Cost per Day:
-      <br><input type="text"><br>
-      <br>
-      </div>
+<!--  <br>-->
 
 
-      <div class = "container">
-        <button class = "btn" routerLink = "/traveloverview"> Continue </button>
 
-        <button class = "btn" routerLink = "/hotelcardetails"> New Hotel </button>
-      </div>
+<!--  <fieldset>-->
+<!--    <input type="submit" [disabled]="!hotelForm.valid" value="Update Flight"/>-->
+<!--  </fieldset>-->
 
-
-    </fieldset>
-  </div>
-</form>
+<!--</form>-->

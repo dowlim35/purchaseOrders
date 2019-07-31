@@ -33,5 +33,4 @@ export const routes: Routes = [
   {path: 'draft-archive', component: DraftArchiveComponent},
   {path: 'trainingSubmission', component: SubmissionOverviewComponent},
 
-
 ];
