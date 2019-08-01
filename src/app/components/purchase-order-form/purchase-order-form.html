@@ -71,7 +71,9 @@
     </div>
   </div>
 <div class ="row 2">
+
   <a>
+    <br>
     Total Amount:
     {{currency}}{{totalAmount}}
   </a>
@@ -81,9 +83,17 @@
 
 
   <div>
-    <input value="Submit Purchase Order" type="button" CLASS="btn btn-primary" (click)="updatePurchaseOrder()" routerLink="/purchaseOrderSummary"/>
+    <br>
   </div>
 
 </form>
 </div>
 
+<div class = "row row1">
+  <div class = "col col1">
+  <app-previous-button></app-previous-button>
+</div>
+<div class="col col2">
+  <button type="button" class="btn btn-success" (click)="updatePurchaseOrder()" routerLink = "/purchaseOrderSummary" >Continue</button>
+</div>
+</div>

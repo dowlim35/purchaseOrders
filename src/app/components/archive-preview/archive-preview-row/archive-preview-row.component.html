@@ -3,6 +3,7 @@
 <td>{{history.subAccount}}</td>
 <td>{{history.desc}}</td>
 <td>{{history.date}}</td>
-<td *ngIf="history.status.toString()=='Approved' " style="background: green">{{history.status}}</td>
-<td *ngIf="history.status.toString()=='Denied'" style="background: red">{{history.status}}</td>
-<td *ngIf ="history.status.toString()=='Pending'" style="background: yellow">{{history.status}}</td>
+<td *ngIf="history.status=='DENIED'" style="background: red">{{history.status}}</td>
+<td *ngIf ="history.status=='PENDING'" style="background: yellow">{{history.status}}</td>
+<td *ngIf ="history.status=='ACCEPTED'" style="background: green">{{history.status}}</td>
+

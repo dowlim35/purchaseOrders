@@ -1,3 +1,4 @@
+
 <h2>
   Company Details
 </h2>
@@ -19,8 +20,17 @@
   <input type="text" name="website" [(ngModel)]="website"><br>
 
 
-  <button type="button" class = "btn" (click)="saveContactDetails()" routerLink = "/trainingCourseDetails"> Continue </button>
 
 </form>
 </body>
+
+<div class = "row row1">
+  <div class = "col col2">
+<app-previous-button></app-previous-button>
+  </div>
+
+<div class="col col2">
+  <button type="button" class="btn btn-success" (click)="saveContactDetails()" routerLink = "/trainingCourseDetails">Continue</button>
+</div>
+</div>
 

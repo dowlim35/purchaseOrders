@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnDestroy} from '@angular/core';
 import {PurchaseOrder} from "../../model/purchaseOrder";
 import {PurchaseOrdersService} from 'src/app/services/purchase-orders.service';
 
@@ -9,7 +9,7 @@ import {PurchaseOrdersService} from 'src/app/services/purchase-orders.service';
   styleUrls: ['./purchase-order-viewer.component.css'],
   providers: [PurchaseOrderViewerComponent]
 })
-export class PurchaseOrderViewerComponent {
+export class PurchaseOrderViewerComponent implements OnDestroy{
   supplierName: string;
   itemName: string;
   quantity: number;
@@ -27,6 +27,10 @@ export class PurchaseOrderViewerComponent {
     this.unitPrice = poService.unitPrice;
     this.companyCreditCardUsed = poService.companyCreditCardUsed;
 
+  }
+  ngOnDestroy(): void {
+    this.poService.resetForm();
+    console.log('Form reset');
   }
 
 

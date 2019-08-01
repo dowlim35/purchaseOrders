@@ -25,7 +25,7 @@ export abstract class TrainingService {
   totalCost = 0;
   // Payment details
   creditCard = '';
-  subAccount = '';
+  subAccount: string;
   delegatesPaid = 0;
   results: Training;
   abstract fetchTraining(): Observable<Training[]>;
