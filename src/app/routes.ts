@@ -16,6 +16,7 @@ import {DraftArchiveComponent} from './components/draft-archive/draft-archive.co
 import {SubmissionOverviewComponent} from './components/training/submission-overview/submission-overview.component';
 import {ContractorViewerComponent} from './components/contractorViewer/contractorViewer.component';
 import {LoginComponent} from './components/login/login.component';
+import {AdminComponent} from './components/admin/admin-viewer/admin.component';
 
 export const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -34,6 +35,7 @@ export const routes: Routes = [
   {path: 'trainingPaymentDetails', component: PaymentDetailsComponent},
   {path: 'draft-archive', component: DraftArchiveComponent},
   {path: 'trainingSubmission', component: SubmissionOverviewComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'admin', component: AdminComponent},
   {path: 'contractorViewer', component: ContractorViewerComponent}
-  {path: 'login', component: LoginComponent}
 ];

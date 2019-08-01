@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import {PurchaseOrder} from 'src/app/model/purchaseOrder';
 import {FlightDetailsComponent} from '../travel/flightdetails/flightdetails.component';
 import {HotelCarDetailsComponent} from '../travel/hotelcardetails/hotelcardetails.component';
-import {PurchaseOrdersService} from "../../services/purchase-orders.service";
+import {PurchaseOrdersService} from '../../services/purchase-orders.service';
 
 @Component({
   selector: 'app-navbar',
@@ -18,39 +18,35 @@ export class NavbarComponent implements OnInit {
 
 
 
-  constructor()
-  {
-  this.pageName = "Welcome";
+  constructor() {
+  this.pageName = 'Welcome';
   }
 
   ngOnInit() {
   }
-  updateNameToWelcome(name)
-  {
-    this.pageName = "Welcome";
+  updateNameToWelcome() {
+    this.pageName = 'Welcome';
   }
-  updateNameToTravel(name)
-  {
-    this.pageName = "Travel";
+  updateNameToTravel() {
+    this.pageName = 'Travel';
   }
 
-  updateNameToPO(name)
-  {
-    this.pageName = "Purchase Order";
+  updateNameToPO() {
+    this.pageName = 'Purchase Order';
   }
 
-  updateNameToContractor(name)
-  {
-    this.pageName = "Contractor";
+  updateNameToContractor() {
+    this.pageName = 'Contractor';
   }
 
-  updateNameToTraining(name)
-  {
-    this.pageName = "Training";
+  updateNameToTraining() {
+    this.pageName = 'Training';
   }
 
-  updateNameToArchive(name)
-  {
-    this.pageName = "Archive";
+  updateNameToArchive() {
+    this.pageName = 'Archive';
+  }
+  updateNameToAdmin() {
+    this.pageName = 'Admin';
   }
 }

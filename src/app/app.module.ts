@@ -38,6 +38,8 @@ import {TrainingServiceHttp} from './services/training.service.http';
 import {PreviousButtonComponent} from "./components/previous-button.component.html/previous-button.component";
 import {ContractorViewerComponent} from './components/contractorViewer/contractorViewer.component';
 import { LoginComponent } from './components/login/login.component';
+import {AdminComponent} from './components/admin/admin-viewer/admin.component';
+import { AdminRowComponent } from './components/admin/admin-row/admin-row.component';
 
 @NgModule({
   declarations: [
@@ -63,9 +65,11 @@ import { LoginComponent } from './components/login/login.component';
     SubmissionOverviewComponent,
     ArchivePreviewComponent,
     ArchivePreviewRowComponent,
+    LoginComponent,
+    AdminComponent,
+    AdminRowComponent,
     PreviousButtonComponent,
-    LoginComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     NgbModule,
