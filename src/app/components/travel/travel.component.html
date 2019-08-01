@@ -41,10 +41,12 @@
   <label>Reason for Travel</label>
   <br>
   <select id = "reasonForTravelList">
-    <option value = "a">A</option>
-    <option value = "b">B</option>
-    <option value = "c">C</option>
-    <option value = "d">D</option>
+    <option value = "A">BUSINESS</option>
+    <option value = "B">TRAINING</option>
+    <option value = "C">LEAD TRAINING</option>
+    <option value = "D">CONFERENCE</option>
+    <option value = "E">SECONDMENT</option>
+    <option value = "F">OTHER</option>
   </select>
   <br>
 
@@ -53,9 +55,19 @@
   <input type="text" name="creditCard" [(ngModel)]="creditcard">
   <br>
 
+
+
+
+  <div class="col currency">
+    Currency:<br>
+    <input value="€" type="button"  (click)="inEuro()" />
+    <input value="$" type="button" (click)="inDollar()" />
+    <input value="£" type="button" (click)="inPound()" />
+
+  </div>
+
   <br>
   <button type="button" class = "btn" (click)="updateTravel()" routerLink = "/hotelcardetails"> Continue </button>
-
 </form>
 </body>
 

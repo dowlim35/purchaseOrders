@@ -1,0 +1,22 @@
+<div class="btn-group buttonMiddle" >
+  <button type="button" class="btn btn-lg btn-primary" routerLink="/archive">Form History</button>
+  <button type="button" class="btn btn-lg btn-outline-primary disabled" routerLink="/draft-archive">Form Drafts</button>
+</div>
+<br/>
+<table class="table table-bordered table-hover table-striped">
+  <thead>
+  <tr>
+    <th scope="col" *ngFor="let head of header">{{head}}</th>
+  </tr>
+  </thead>
+  <tbody><tr *ngFor="let item of history"
+             app-archive-row [history]="item"></tr>
+  </tbody>
+</table>
+<br/>
+
+
+<form>
+  <button type="button" class = "btn" (click)="approveExpense()" routerLink = "/hotelcardetails"> Approve Expense </button>
+  <button type="button" class = "btn" (click)="denyExpense()" routerLink = "/hotelcardetails"> Deny Expense </button>
+</form>

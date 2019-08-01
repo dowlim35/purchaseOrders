@@ -22,6 +22,7 @@ export class HotelCarDetailsComponent implements OnInit {
   dropdate: Date;
   returnto: string;
   costperday: number;
+  numberofdays: number;
 
   enterpriseIncluded = false;
   carIncluded = false;
@@ -41,6 +42,7 @@ export class HotelCarDetailsComponent implements OnInit {
     this.departuredate = toService.departuredate;
     this.enterprisecar = toService.enterprisecar;
     this.car = toService.car;
+    this.numberofdays = toService.numberofdays;
   }
 
   ngOnInit() {}

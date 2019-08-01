@@ -35,6 +35,8 @@ import {PurchaseOrdersService} from './services/purchase-orders.service';
 import {PurchaseOrdersServiceHttp} from './services/purchaseOrders.service.http';
 import {TrainingService} from './services/training.service';
 import {TrainingServiceHttp} from './services/training.service.http';
+import {AdminComponent} from './components/adminpage/admin.component';
+import {AdminRowComponent} from './components/adminpage/admin-row/admin-row.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,8 @@ import {TrainingServiceHttp} from './services/training.service.http';
     SubmissionOverviewComponent,
     ArchivePreviewComponent,
     ArchivePreviewRowComponent,
+    AdminComponent,
+    AdminRowComponent
   ],
   imports: [
     BrowserModule,

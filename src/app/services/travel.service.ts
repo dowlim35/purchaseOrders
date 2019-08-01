@@ -16,6 +16,7 @@ export class TravelService {
   subaccount = AccountType;
   reasonfortravel = ReasonforTravel;
   creditcard = ' ';
+  currency = '';
 
   // Hotel and Car Details
   hotelname = ' ';
@@ -28,6 +29,8 @@ export class TravelService {
   dropdate = new Date();
   returnto = ' ';
   costperday = 0;
+  numberofdays = 0;
+  totalcarcost = 0;
 
   // Flight Details
   departureairport: ' ';
@@ -38,7 +41,7 @@ export class TravelService {
   leastexpensive = false;
   explanation = ' ';
 
-  setTravelDetails(unitname, SDL, numberofpassengers, paymentmethod, subaccount, reasonfortravel, creditcard)
+  setTravelDetails(unitname, SDL, numberofpassengers, paymentmethod, subaccount, reasonfortravel, creditcard, currency)
   {
    this.unitname = unitname;
    this.SDL = SDL;
@@ -47,9 +50,10 @@ export class TravelService {
    this.subaccount = subaccount;
    this.reasonfortravel = reasonfortravel;
    this.creditcard = creditcard;
+   this.currency = currency;
   }
 
-  setHotelDetails(hotelname, cost, arrivaldate, departuredate, entreprisecar, car, pickupdate, dropdate, returnto, costperday)
+  setHotelDetails(hotelname, cost, arrivaldate, departuredate, entreprisecar, car, pickupdate, dropdate, returnto, costperday, numberofdays)
   {
     this.hotelname = hotelname;
     this.cost = cost;
@@ -61,6 +65,7 @@ export class TravelService {
     this.dropdate = dropdate;
     this.returnto = returnto;
     this.costperday = costperday;
+    this.numberofdays = numberofdays;
   }
 
   setFlightDetails(departureairport, arrivalairport, departuredateflight, arrivaldateflight, costflight, leastexpensive, explanation)
@@ -72,6 +77,19 @@ export class TravelService {
    this.costflight = costflight;
    this.leastexpensive = leastexpensive;
    this.explanation = explanation;
+  }
+
+  getCurrency() {
+    return this.currency;
+  }
+
+  setCurrency(currency) {
+    this.currency = currency;
+  }
+
+  costOfCar(){
+    this.totalcarcost = this.numberofdays * this.costperday;
+    return this.costOfCar();
   }
 
   // resetFlightDetails(departureairport, arrivalairport, departuredateflight, arrivaldateflight, costflight, leastexpensive, explanation)
