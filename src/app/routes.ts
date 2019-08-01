@@ -35,7 +35,7 @@ export const routes: Routes = [
   {path: 'trainingCourseDetails', component: CourseDetailsComponent},
   {path: 'trainingPaymentDetails', component: PaymentDetailsComponent},
   {path: 'draft-archive', component: DraftArchiveComponent},
-  {path: 'trainingSubmission', component: SubmissionOverviewComponent}
+  {path: 'trainingSubmission', component: SubmissionOverviewComponent},
   {path: 'trainingSubmission', component: SubmissionOverviewComponent},
   {path: 'login', component: LoginComponent},
   {path: 'admin', component: AdminComponent},
