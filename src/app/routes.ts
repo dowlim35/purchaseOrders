@@ -14,6 +14,7 @@ import {CourseDetailsComponent} from './components/training/course-details/cours
 import {PaymentDetailsComponent} from './components/training/payment-details/payment-details.component';
 import {DraftArchiveComponent} from './components/draft-archive/draft-archive.component';
 import {SubmissionOverviewComponent} from './components/training/submission-overview/submission-overview.component';
+import {ContractorViewerComponent} from './components/contractorViewer/contractorViewer.component';
 
 export const routes: Routes = [
   {path: '', component: WelcomeComponent},
@@ -32,5 +33,6 @@ export const routes: Routes = [
   {path: 'trainingPaymentDetails', component: PaymentDetailsComponent},
   {path: 'draft-archive', component: DraftArchiveComponent},
   {path: 'trainingSubmission', component: SubmissionOverviewComponent},
+  {path: 'contractorViewer', component: ContractorViewerComponent}
 
 ];
