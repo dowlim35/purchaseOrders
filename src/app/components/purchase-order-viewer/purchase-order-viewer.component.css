@@ -12,7 +12,13 @@ h1{
   font-family: ital;
 }
 
-button{
-  background-color: yellow;
-  font-family: ital;
+/*button{*/
+/*  background-color: yellow;*/
+/*  font-family: ital;*/
+/*}*/
+
+button.btn{
+  background-color: green;
+  margin-left: 700px;
+  margin-bottom: 200px;
 }

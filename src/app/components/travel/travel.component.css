@@ -18,3 +18,11 @@ button {
   border-radius: 12px;
   cursor: pointer;
 }
+app-next-button{
+  text-align: right;
+}
+
+app-previous-button{
+  text-align: left;
+
+}

@@ -35,6 +35,8 @@ import {PurchaseOrdersService} from './services/purchase-orders.service';
 import {PurchaseOrdersServiceHttp} from './services/purchaseOrders.service.http';
 import {TrainingService} from './services/training.service';
 import {TrainingServiceHttp} from './services/training.service.http';
+import {PreviousButtonComponent} from "./components/previous-button.component.html/previous-button.component";
+import {ContractorViewerComponent} from './components/contractorViewer/contractorViewer.component';
 import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
@@ -42,6 +44,7 @@ import { LoginComponent } from './components/login/login.component';
     AppComponent,
     WelcomeComponent,
     ContractorComponent,
+    ContractorViewerComponent,
     PurchaseOrderFormComponent,
     TravelComponent,
     CompanyDetailsComponent,
@@ -60,7 +63,8 @@ import { LoginComponent } from './components/login/login.component';
     SubmissionOverviewComponent,
     ArchivePreviewComponent,
     ArchivePreviewRowComponent,
-    LoginComponent,
+    PreviousButtonComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
