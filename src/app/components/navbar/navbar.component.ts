@@ -25,7 +25,10 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  updateNameToWelcome(name)
+  {
+    this.pageName = "Welcome";
+  }
   updateNameToTravel(name)
   {
     this.pageName = "Travel";

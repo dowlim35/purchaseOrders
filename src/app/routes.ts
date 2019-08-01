@@ -15,9 +15,10 @@ import {PaymentDetailsComponent} from './components/training/payment-details/pay
 import {DraftArchiveComponent} from './components/draft-archive/draft-archive.component';
 import {SubmissionOverviewComponent} from './components/training/submission-overview/submission-overview.component';
 import {ContractorViewerComponent} from './components/contractorViewer/contractorViewer.component';
+import {LoginComponent} from './components/login/login.component';
 
 export const routes: Routes = [
-  {path: '', component: WelcomeComponent},
+  {path: '', component: LoginComponent},
   {path: 'welcome', component: WelcomeComponent},
   {path: 'contractor', component: ContractorComponent},
   {path: 'purchaseOrders', component: PurchaseOrderFormComponent},
@@ -34,5 +35,5 @@ export const routes: Routes = [
   {path: 'draft-archive', component: DraftArchiveComponent},
   {path: 'trainingSubmission', component: SubmissionOverviewComponent},
   {path: 'contractorViewer', component: ContractorViewerComponent}
-
+  {path: 'login', component: LoginComponent}
 ];

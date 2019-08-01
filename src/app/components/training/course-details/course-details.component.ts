@@ -20,8 +20,17 @@ export class CourseDetailsComponent implements OnInit {
 
   hotelIncluded = true;
   constructor(private tService: TrainingService) {
-    this.tService.setCourseDetails(this.courseName, this.startDate, this.endDate, this.location,
-      this.hotelFee, this.delegates, this.unitCost, this.totalCost);
+
+    this.courseName = tService.courseName;
+    this.startDate = tService.startDate;
+    this.endDate = tService.endDate;
+    this.location = tService.location;
+    this.hotelFee = tService.hotelFee;
+    this.delegates = tService.delegates;
+    this.unitCost = tService.unitCost;
+    this.totalCost = tService.totalCost;
+    // this.tService.setCourseDetails(this.courseName, this.startDate, this.endDate, this.location,
+    //   this.hotelFee, this.delegates, this.unitCost, this.totalCost);
   }
 
   ngOnInit() {

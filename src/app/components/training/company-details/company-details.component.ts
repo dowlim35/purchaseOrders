@@ -19,8 +19,16 @@ export class CompanyDetailsComponent implements OnInit {
   website: string;
 
   constructor(private tService: TrainingService) {
-    this.tService.setCompanyDetails(this.contactName, this.companyName, this.address, this.email,
-      this.telephoneNo, this.mobileNo, this.website);
+    this.contactName = tService.contactName;
+    this.companyName = tService.companyName;
+    this.address = tService.address;
+    this.email = tService.email;
+    this.telephoneNo = tService.telephoneNo;
+    this.mobileNo = tService.mobileNo;
+    this.website = tService.website;
+
+    // this.tService.setCompanyDetails(this.contactName, this.companyName, this.address, this.email,
+    //   this.telephoneNo, this.mobileNo, this.website);
   }
 
   ngOnInit() {
