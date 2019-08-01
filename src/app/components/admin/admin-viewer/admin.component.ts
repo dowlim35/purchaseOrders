@@ -8,14 +8,10 @@ import {HistoryService} from '../../../services/history.service';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-  header = ['PO Number', 'Form Type', 'Sub-account', 'Description', 'Date', '', ''];
+  header = ['PO Number', 'Form Type', 'Sub-account', 'Description', 'Date'];
   history: History[];
   constructor(private dataService: HistoryService) { }
-  // statusType: any = [
-  //   {name: 'Approved', value: 'APPROVED'},
-  //   {name: 'Pending', value: 'PENDING'},
-  //   {name: 'Denied ', value: 'DENIED'},
-  // ]
+
    ngOnInit() {
      this.getData();
    }

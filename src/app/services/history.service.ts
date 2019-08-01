@@ -10,7 +10,13 @@ import {AccountType} from '../../assets/enums/AccountType';
 //})
 export abstract class HistoryService {
 
+
+  stat;
   abstract fetchHistory(): Observable<History[]>;
   abstract putHistory(item): Observable<History>;
 
+
+  updateStatus(newStatus) {
+    this.stat = newStatus;
+  }
 }

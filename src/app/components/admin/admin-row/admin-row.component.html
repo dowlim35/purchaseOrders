@@ -4,7 +4,7 @@
 <td *ngIf="history.status == 'PENDING'">{{history.desc}}</td>
 <td *ngIf="history.status == 'PENDING'">{{history.date}}</td>
 <td *ngIf="history.status == 'PENDING'">
-  <button class="btn btn-sm btn-primary"><!--(click)="selectedDraft()"--> Approve</button></td>
+  <button class="btn btn-sm btn-primary" (click)="approveForm()">Approve</button></td>
 <td *ngIf="history.status == 'PENDING'">
   <button class="btn btn-sm btn-primary"><!--(click)="selectedDraft()"--> Deny</button></td>
 
