@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TravelService} from '../../../services/travel.service';
 import {AccountType} from '../../../../assets/enums/AccountType';
 import {ReasonforTravel} from '../../../../assets/enums/ReasonforTravel';
@@ -9,12 +9,14 @@ import {ReasonforTravel} from '../../../../assets/enums/ReasonforTravel';
   styleUrls: ['./traveloverview.component.css'],
   providers: [TravelOverviewComponent]
 })
-export class TravelOverviewComponent  {
-
+export class TravelOverviewComponent implements OnInit {
+  totalprice: number;
   // Overview
   unitname: string;
   SDL: string;
   numberofpassengers: number;
+  nnumber: string;
+  passengername: string;
   paymentmethod: string;
   subaccount: AccountType;
   reasonfortravel: ReasonforTravel;
@@ -42,12 +44,16 @@ export class TravelOverviewComponent  {
   explanation: string;
   leastExpensive = true;
 
+  ngOnInit() {
+  }
 
 
   constructor(private toService: TravelService) {
-
+    this.totalprice = this.toService.getTotalPrice();
     // Overview
     this.unitname = toService.unitname;
+    this.passengername = toService.passengername;
+    this.nnumber = toService.nnumber;
     this.SDL = toService.SDL;
     this.numberofpassengers = toService.numberofpassengers;
     this.paymentmethod = toService.paymentmethod;

@@ -11,12 +11,15 @@ export class TravelService {
   // Travel Details
   unitname = '';
   SDL: ' ';
+  nnumber: '';
+  passengername: '';
   numberofpassengers = 0;
   paymentmethod = ' ';
   subaccount = AccountType;
   reasonfortravel = ReasonforTravel;
   creditcard = ' ';
   currency = '';
+  total: number;
 
   // Hotel and Car Details
   hotelname = ' ';
@@ -30,7 +33,6 @@ export class TravelService {
   returnto = ' ';
   costperday = 0;
   numberofdays = 0;
-  totalcarcost = 0;
 
   // Flight Details
   departureairport: ' ';
@@ -41,11 +43,18 @@ export class TravelService {
   leastexpensive = false;
   explanation = ' ';
 
-  setTravelDetails(unitname, SDL, numberofpassengers, paymentmethod, subaccount, reasonfortravel, creditcard, currency)
+  getTotalPrice() {
+    this.total = this.cost + (this.costperday * this.numberofdays) + this.costflight;
+    return this.total;
+  }
+
+  setTravelDetails(unitname, SDL, numberofpassengers, paymentmethod, subaccount, reasonfortravel, creditcard, currency, passengername, nnumber)
   {
    this.unitname = unitname;
    this.SDL = SDL;
    this.numberofpassengers = numberofpassengers;
+   this.nnumber = nnumber;
+   this.passengername = passengername;
    this.paymentmethod = paymentmethod;
    this.subaccount = subaccount;
    this.reasonfortravel = reasonfortravel;
@@ -87,10 +96,9 @@ export class TravelService {
     this.currency = currency;
   }
 
-  costOfCar(){
-    this.totalcarcost = this.numberofdays * this.costperday;
-    return this.costOfCar();
-  }
+
+
+
 
   // resetFlightDetails(departureairport, arrivalairport, departuredateflight, arrivaldateflight, costflight, leastexpensive, explanation)
   // {
