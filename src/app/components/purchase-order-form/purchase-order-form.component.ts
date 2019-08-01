@@ -50,8 +50,8 @@ export class PurchaseOrderFormComponent implements OnInit {
 
   updatePurchaseOrder() {
     // tslint:disable-next-line:max-line-length
-    this.poService.setDetails(this.supplierName, this.itemName, this.quantity, this.price, this.currency, this.date, this.companyCreditCardUsed);
-    this.postData();
+     this.poService.setDetails(this.supplierName, this.itemName, this.quantity, this.price, this.currency, this.date, this.companyCreditCardUsed);
+    // this.postData();
   }
 
   inEuro() {
@@ -79,6 +79,16 @@ export class PurchaseOrderFormComponent implements OnInit {
   getTotalAmount() {
     this.totalAmount = this.quantity * this.price;
   }
+
+
+  // postData(): void {
+  //   this.results = this.poService.getDetails();
+  //   this.poService.postPurchaseOrders(this.results)
+  //     .subscribe(purchases => this.purchases.push(purchases));
+  //   this.details = {pNo: 1, formType: this.form, details: this.results, status: ArchiveStatus.PENDING, date: new Date(), desc: (this.supplierName + ' ' + this.itemName + ' ' + this.currency + this.price), subAccount: this.subacc};
+  //   this.archiveService.putHistory(this.details)
+  //     .subscribe(archive => this.archive.push(archive));
+  // }
 
   postData(): void {
     this.results = this.poService.getDetails();
