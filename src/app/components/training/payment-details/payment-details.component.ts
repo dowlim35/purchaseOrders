@@ -16,8 +16,11 @@ export class PaymentDetailsComponent implements OnInit {
 
 
   constructor(private tService: TrainingService) {
-    this.tService.setPaymentDetails(this.creditCard, this.subAccount, this.delegates);
+    this.creditCard = tService.creditCard;
+    this.subAccount = tService.subAccount;
+    this.delegates = tService.delegatesPaid;
 
+    // this.tService.setPaymentDetails(this.creditCard, this.subAccount, this.delegates);
   }
 
   ngOnInit() {
