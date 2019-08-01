@@ -18,6 +18,7 @@ import {ContractorViewerComponent} from './components/contractorViewer/contracto
 import {LoginComponent} from './components/login/login.component';
 import {AdminComponent} from './components/admin/admin-viewer/admin.component';
 
+
 export const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'welcome', component: WelcomeComponent},
@@ -34,6 +35,7 @@ export const routes: Routes = [
   {path: 'trainingCourseDetails', component: CourseDetailsComponent},
   {path: 'trainingPaymentDetails', component: PaymentDetailsComponent},
   {path: 'draft-archive', component: DraftArchiveComponent},
+  {path: 'trainingSubmission', component: SubmissionOverviewComponent}
   {path: 'trainingSubmission', component: SubmissionOverviewComponent},
   {path: 'login', component: LoginComponent},
   {path: 'admin', component: AdminComponent},

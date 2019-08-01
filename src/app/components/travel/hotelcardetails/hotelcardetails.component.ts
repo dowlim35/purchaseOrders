@@ -22,6 +22,10 @@ export class HotelCarDetailsComponent implements OnInit {
   dropdate: Date;
   returnto: string;
   costperday: number;
+  numberofdays: number;
+  totalhotelcarcost: number;
+  totalcarcost: number;
+  totalprice: number;
 
   enterpriseIncluded = false;
   carIncluded = false;
@@ -41,10 +45,14 @@ export class HotelCarDetailsComponent implements OnInit {
     this.departuredate = toService.departuredate;
     this.enterprisecar = toService.enterprisecar;
     this.car = toService.car;
+    this.numberofdays = toService.numberofdays;
+    // this.totalprice = toService.tot
   }
 
   ngOnInit() {}
-  updateHotel() {this.toService.setHotelDetails(this.hotelname, this.cost, this.arrivaldate, this.departuredate,this.enterprisecar, this.car, this.pickupdate, this.dropdate, this.returnto, this.costperday)}
+  updateHotel() {this.toService.setHotelDetails
+  (this.hotelname, this.cost, this.arrivaldate, this.departuredate, this.enterprisecar, this.car, this.pickupdate, this.dropdate,
+    this.returnto, this.costperday, this.totalhotelcarcost);}
 
   toggleEnterpriseIncluded() {
     if ( this.enterpriseIncluded === false) {
@@ -70,6 +78,14 @@ export class HotelCarDetailsComponent implements OnInit {
       document.getElementById('yesButton').style.backgroundColor = 'white';
     }
 
+  }
+
+  gettotalHotelCarCost(){
+    this.totalhotelcarcost = this.totalcarcost + this.cost;
+  }
+
+  getcostOfCar() {
+    this.totalcarcost = this.numberofdays * this.costperday;
   }
 
   // {

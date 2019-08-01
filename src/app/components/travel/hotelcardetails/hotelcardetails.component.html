@@ -50,6 +50,11 @@
 <input type="date" class="carDates" name="carDropoffDate"
        placeholder="yyyy-MM-dd" min="2019-01-01" max="2020-12-31"  [(ngModel)]="dropdate" />
 <br>
+  <br>
+  <label>Number of Days</label>
+  <br>
+  <input type="number" name="nodays" [(ngModel)]="numberofdays">
+  <br>
 <br>
 <label>Return To</label>
 <br>
@@ -61,6 +66,7 @@
 <input type="number" name="carCost" min="0" placeholder="0.00" [(ngModel)]="costperday"><br>
 <br>
 </div>
+<br>
 
 <button type="button" class = "btn" (click)="updateHotel()" routerLink = "/flightdetails"> Continue </button>
 <app-previous-button></app-previous-button>

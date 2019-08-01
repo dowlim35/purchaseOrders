@@ -17,10 +17,14 @@ export class TravelComponent implements OnInit {
   unitname: string;
   SDL: string;
   numberofpassengers: number;
+  passengername: string;
+  nnumber: string;
   paymentmethod: string;
   subaccount: AccountType;
   reasonfortravel: ReasonforTravel;
   creditcard: string;
+  currency: string;
+  totalprice: number
 
 
   @Input() travel: TravelModel;
@@ -28,12 +32,16 @@ export class TravelComponent implements OnInit {
 
   name = 'TheTravelForm';
 
-  constructor(private toService: TravelService){
+  constructor(private toService: TravelService) {
+
     this.unitname = toService.unitname;
     this.SDL = toService.SDL;
+    this.nnumber = toService.nnumber;
+    this.passengername = toService.passengername;
     this.numberofpassengers = toService.numberofpassengers;
     this.paymentmethod = toService.paymentmethod;
     this.creditcard = toService.creditcard;
+    this.currency = toService.getCurrency();
 
   }
 
@@ -48,13 +56,28 @@ export class TravelComponent implements OnInit {
   //     creditcard: ['', Validators.required],
   //   });
   // }
-  ngOnInit() {};
+  ngOnInit() {
+  }
 
-  updateTravel(){this.toService.setTravelDetails(this.unitname, this.SDL, this.numberofpassengers, this.paymentmethod, this.subaccount, this.reasonfortravel, this.creditcard )
-  }}
+  updateTravel() {
+    this.toService.setTravelDetails(this.unitname, this.SDL, this.numberofpassengers, this.paymentmethod, this.subaccount, this.reasonfortravel, this.creditcard, this.currency, this.nnumber, this.passengername);
+  }
 
+  inEuro() {
+    this.currency = '€';
+    this.toService.setCurrency('€');
+  }
 
+  inDollar() {
+    this.currency = '$';
+    this.toService.setCurrency('$');
+  }
 
+  inPound() {
+    this.currency = '£';
+    this.toService.setCurrency('£');
+  }
+}
 // paymentMethod: any = [
 //   {name: 'Credit Card', value: 'CREDIT'},
 //   {name: 'Debit Card', value: 'DEBIT'},
