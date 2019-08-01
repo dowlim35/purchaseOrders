@@ -15,6 +15,7 @@ import {PaymentDetailsComponent} from './components/training/payment-details/pay
 import {DraftArchiveComponent} from './components/draft-archive/draft-archive.component';
 import {SubmissionOverviewComponent} from './components/training/submission-overview/submission-overview.component';
 import {LoginComponent} from './components/login/login.component';
+import {AdminComponent} from './components/admin/admin-viewer/admin.component';
 
 export const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -34,5 +35,6 @@ export const routes: Routes = [
   {path: 'draft-archive', component: DraftArchiveComponent},
   {path: 'trainingSubmission', component: SubmissionOverviewComponent},
   {path: 'login', component: LoginComponent},
+  {path: 'admin', component: AdminComponent},
 
 ];

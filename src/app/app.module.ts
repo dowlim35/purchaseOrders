@@ -36,6 +36,8 @@ import {PurchaseOrdersServiceHttp} from './services/purchaseOrders.service.http'
 import {TrainingService} from './services/training.service';
 import {TrainingServiceHttp} from './services/training.service.http';
 import { LoginComponent } from './components/login/login.component';
+import {AdminComponent} from './components/admin/admin-viewer/admin.component';
+import { AdminRowComponent } from './components/admin/admin-row/admin-row.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,8 @@ import { LoginComponent } from './components/login/login.component';
     ArchivePreviewComponent,
     ArchivePreviewRowComponent,
     LoginComponent,
+    AdminComponent,
+    AdminRowComponent,
   ],
   imports: [
     BrowserModule,
