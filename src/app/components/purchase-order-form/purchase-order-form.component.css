@@ -17,15 +17,6 @@ form{
   border-color: yellow;
 }
 
-/*.btn*/
-/*{*/
-/*  margin-left: 400px;*/
-/*  color: #00c;*/
-/*  visited: #ccc;*/
-/*  font-size:20pt;*/
-/*  background: linear-gradient(190deg, #FFD000 0%, rgba(255,218,0,1) 47%, #FFD000 100%);*/
-
-/*}*/
 h2{
   color: blue;
 }
@@ -37,20 +28,21 @@ h1{
   text-align:center;
 }
 
-.borderyeet{
+.border{
 
   color: black;
   margin-top: 100px;
   margin-bottom: 250px;
   margin-right: 250px;
   margin-left: 250px;
-  font-size: 20pt;
+  font-size: 22pt;
   font-family: ital;
   padding: 50px 75px;
   border-color: rgb(93,157,186);
   border-width: 10px;
   border-style: solid;
   border-radius: 20px;
+
 }
 
 button.btn{

@@ -17,6 +17,13 @@ export class PurchaseOrderViewerComponent implements OnDestroy{
   date: Date;
   unitPrice: number;
   companyCreditCardUsed: boolean;
+  contactName: String;
+  companyName: String;
+  address: String;
+  email: String;
+  telephoneNum: number;
+  faxNum: number;
+  mobileNum: number;
 
   constructor(private poService: PurchaseOrdersService) {
     this.supplierName = poService.supplierName;
@@ -26,6 +33,13 @@ export class PurchaseOrderViewerComponent implements OnDestroy{
     this.date = poService.date;
     this.unitPrice = poService.unitPrice;
     this.companyCreditCardUsed = poService.companyCreditCardUsed;
+    this.contactName = poService.contactName;
+    this.companyName = poService.companyName;
+    this.address = poService.address;
+    this.email = poService.email;
+    this.telephoneNum = poService.telephoneNum;
+    this.faxNum = poService.faxNum;
+    this.mobileNum = poService.mobileNum;
 
   }
   ngOnDestroy(): void {
