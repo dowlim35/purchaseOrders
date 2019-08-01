@@ -1,3 +1,118 @@
 <h2>
   Contractor component
 </h2>
+
+<h1 class="infoMsg">
+  Purchase Order Request
+</h1>
+
+<div>
+
+  <form name="ContractorForm">
+
+
+
+      <div>
+        <label>Contact name:</label><br>
+        <input type="text" size="40" name="contact name" [(ngModel)]="contactName"/>
+      </div>
+
+      <div>
+        <label>Company name:</label><br>
+        <input type="text" size="40" name="company name" [(ngModel)]="companyName"/>
+      </div>
+    <div>
+      <label>Website:</label><br>
+      <input type="text" size="40" name="website" [(ngModel)]="website"/>
+    </div>
+
+      <div>
+        <label>Address:</label><br>
+        <input type="text" size="40" name="address" [(ngModel)]="address"/>
+      </div>
+
+    <div>
+      <label>Email:</label><br>
+      <input type="text" size="40" name="email" [(ngModel)]="email"/>
+    </div>
+
+    <div>
+      <label>Telephone number:</label><br>
+      <input type="number" size="40" name="telephone number" [(ngModel)]="telephoneNumber"/>
+    </div>
+
+    <div>
+      <label>Fax number:</label><br>
+      <input type="number" size="40" name="fax number" [(ngModel)]="faxNo"/>
+    </div>
+
+    <div>
+      <label>Mobile number:</label><br>
+      <input type="number" size="40" name="mobile number" [(ngModel)]="mobileNumber"/>
+    </div>
+
+<div>
+  <label>Contractor name:</label><br>
+  <input type="text" size="40" name="contractor name" [(ngModel)]="contractorName"/>
+</div>
+
+    <div>
+      <label>Start date of contract:</label><br>
+      <input type="date" size="40" name="contract start date" [(ngModel)]="startDateOfContract"/>
+    </div>
+
+    <div>
+      <label>Start date of PO:</label><br>
+      <input type="date" size="40" name="PO start date" [(ngModel)]="startDateOfPO"/>
+    </div>
+
+      <div>
+        Contract working days:<br>
+        <input type="text" size="40" name ="contract working days" [(ngModel)]="contractWorkingDays" />
+      </div>
+
+
+
+
+
+
+    <div class="row">
+      <div class="col POWorkingDays">
+        PO working days:<br>
+        <input type="text" size="40" name ="PO Working Days" [(ngModel)]="POWorkingDays" />
+      </div>
+
+      <div class="col dailyCostToLIT">
+        Daily Cost to LIT:<br>
+        <input type="text" size="40" name ="daily cost to LIT" [(ngModel)]="dailyCostToLIT" />
+      </div>
+
+      <div class="col workingHoursPerDay">
+        Working Hours Per Day:<br>
+        <input type="text" size="40" name ="working hours per day" [(ngModel)]="workingHoursPerDay" />
+      </div>
+    </div>
+
+      <div class = "row">
+        <br>
+        <br>
+        <div class="col projectName">
+
+          Project name:<br>
+          <input type="text" size="40" name ="project Name" [(ngModel)]="projectName" />
+        </div>
+
+        <div class="col SDLName">
+          SDL Name:<br>
+          <input type="text" size="40" name ="SDL Name" [(ngModel)]="SDLName" />
+        </div>
+      </div>
+
+
+
+    <button type="button" class="btn btn-success" routerLink = "/contractorViewer" (click)="updateContractorPO()" >Continue</button>
+
+
+
+
+
