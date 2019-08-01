@@ -12,7 +12,7 @@
 
 .dropDownMenu {
   position: fixed;
-  left: 94%;
+  left: 50%;
   top: 2.7%;
   z-index:1;
 }
