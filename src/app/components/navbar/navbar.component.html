@@ -12,6 +12,7 @@
     <div ngbDropdown class="d-inline-block">
       <button class="btn btn-primary" id="dropdownBasic1" ngbDropdownToggle>Menu</button>
       <div class="options" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem routerLink="/welcome" (click) = "updateNameToWelcome()">Home</button>
         <button ngbDropdownItem routerLink="/travel" (click) = "updateNameToTravel()">Travel </button>
         <button ngbDropdownItem routerLink="/purchaseOrders" (click) = "updateNameToPO()">Purchase Orders</button>
         <button ngbDropdownItem routerLink="/training" (click) = "updateNameToTraining()">Training</button>
