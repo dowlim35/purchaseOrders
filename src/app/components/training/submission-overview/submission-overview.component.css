@@ -1,6 +1,6 @@
 h3 {
   position: absolute;
-  left: 35%;
+  left: 40%;
   top: 15%;
 }
 .companyDetails {
@@ -10,7 +10,7 @@ h3 {
 }
 .courseDetails {
   position: absolute;
-  left: 35%;
+  left: 40%;
   top: 35%;
 }
 
@@ -20,7 +20,7 @@ h3 {
   top: 35%;
 }
 button {
-  background-color:cornflowerblue;
+  background-color:green;
   border: gray();
   color: white;
   padding: 15px 32px;

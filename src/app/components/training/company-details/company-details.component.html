@@ -1,28 +1,49 @@
 
-<h2>
+<h1>
   Company Details
-</h2>
-<body>
+</h1>
+<div class="border">
 <form>
+  <div class="row">
+    <div class="col">
   Contact Name:<br>
   <input type="text" name="contactName" [(ngModel)]="contactName"><br>
+    </div>
+    <div class="col">
+      Telephone No:<br>
+      <input type="text" class="numberField" name="telephoneNo" [(ngModel)]="telephoneNo"><br>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col">
   Company Name:<br>
   <input type="text" name="companyName" [(ngModel)]="companyName"><br>
+      </div>
+      <div class="col">
+        Mobile No:<br>
+        <input type="text" class="numberField" name="mobileNo" [(ngModel)]="mobileNo"><br>
+    </div>
+    </div>
+      <div class="row">
+        <div class="col">
   Address:<br>
   <input type="text" name="address" [(ngModel)]="address"><br>
+        </div>
+        <div class="col">
+          Website:<br>
+          <input type="text" name="website" [(ngModel)]="website"><br>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col">
   Email:<br>
   <input type="email" name="email" placeholder="name@example.com" [(ngModel)]="email"><br>
-  Telephone No:<br>
-  <input type="text" class="numberField" name="telephoneNo" [(ngModel)]="telephoneNo"><br>
-  Mobile No:<br>
-  <input type="text" class="numberField" name="mobileNo" [(ngModel)]="mobileNo"><br>
-  Website:<br>
-  <input type="text" name="website" [(ngModel)]="website"><br>
-
+  </div>
+        </div>
 
 
 </form>
-</body>
+</div>
 
 <div class = "row row1">
   <div class = "col col2">
