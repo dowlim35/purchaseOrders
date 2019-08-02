@@ -1,99 +1,125 @@
+
 <h1 class="infoMsg">
   Purchase Order Request
 </h1>
 
-<div class="borderyeet">
+<div class="border">
+  <form name="purchaseOrderForm">
+    <div class = "row">
+      <div class = "col">
+        <label>Contact name</label><br>
+        <input type="text" size="40" name="contact name" [(ngModel)]="contactName"/>
+      </div>
+    </div>
+    <div class = "row"></div>
+      <div class = "col">
+        <label>Company name</label><br>
+        <input type="text" size="40" name="company name" [(ngModel)]="companyName"/>
+      </div>
+      <div class = "col">
+        <label>Address:</label><br>
+        <input type="text" size="40" name="address" [(ngModel)]="address"/>
+      </div>
+      <div class = "col">
+        <label>Email:</label><br>
+        <input type="text" size="40" name="email" [(ngModel)]="email"/>
+      </div>
+      <div class = "col">
+        <label>Telephone Number:</label><br>
+        <input type="text" size="40" name="telephoneNum" [(ngModel)]="telephoneNum"/>
+      </div>
+      <div class = "col">
+        <label>Fax Number:</label><br>
+        <input type="text" size="40" name="faxNum" [(ngModel)]="faxNum"/>
+      </div>
+      <div class = "col">
+        <label>Mobile Number:</label><br>
+        <input type="text" size="40" name="mobileNum" [(ngModel)]="mobileNum"/>
+      </div>
 
-<form name="purchaseOrderForm">
+    <div>
+    <div class="row">
+      <div class="col">
 
-  <div class="row">
-    <div class="col">
+        <label>Supplier name:</label><br>
+        <input type="text" size="40" name="supplier name" [(ngModel)]="supplierName"/>
 
-      <label>Supplier name:</label><br>
-      <input type="text" size="40" name="supplier name" [(ngModel)]="supplierName"/>
+      </div>
 
+      <div class="col blank">
+        <br>
+
+      </div>
+
+      <div class="col">
+        <input type="checkbox" name="credit card" value="Company Credit Card" (check) = "setCompanyCreditCardUsedTrue()"> Company credit card<br><br>
+
+      </div>
     </div>
 
-    <div class="col blank">
+    <div class="row">
+      <div class="col itemName">
+        Item name:<br>
+        <input type="text" size="40" name ="item name" [(ngModel)]="itemName" />
+      </div>
+      <div class="col blank2">
+        <br>
+
+      </div>
+
+      <div class = "col subAccount">
+        <p>
+          <label>Sub Account: </label><br>
+          <select id = "subAccountList">
+            <option value = "a">A</option>
+            <option value = "b">B</option>
+            <option value = "c">C</option>
+            <option value = "d">D</option>
+          </select>
+        </p>
+      </div>
+
+    </div>
+    <div class = "row">
+      <div class = "col price">
+        Unit price: <br>
+        <input type="number" size="20" name = "price" [(ngModel)]="price" />
+      </div>
+      <div class="col quantity">
+        Quantity:<br>
+        <input type="number" size="40" name = "quantity" required  min ="0" max="10000" [(ngModel)]="quantity"/>
+      </div>
+  
+
+      <div class="col currency">
+        Currency:<br>
+        <input value="€" type="button"  (click)="inEuro()" />
+        <input value="$" type="button" (click)="inDollar()" />
+        <input value="£" type="button" (click)="inPound()" />
+
+      </div>
+    </div>
+    <div class ="row 2">
+
+      <a>
+        <br>
+        Total Amount:
+        {{currency}}{{totalAmount}}
+      </a>
+    </div>
+
+    <div>
       <br>
-
     </div>
-
-    <div class="col">
-      <input type="checkbox" name="credit card" value="Company Credit Card" (check) = "setCompanyCreditCardUsedTrue()"> Company credit card<br><br>
-
     </div>
-  </div>
-
-  <div class="row">
-  <div class="col itemName">
-    Item name:<br>
-    <input type="text" size="40" name ="item name" [(ngModel)]="itemName" />
-  </div>
-    <div class="col blank2">
-      <br>
-
-    </div>
-
-    <div class = "col subAccount">
-      <p>
-        <label>Sub Account: </label><br>
-        <select id = "subAccountList">
-          <option value = "a">A</option>
-          <option value = "b">B</option>
-          <option value = "c">C</option>
-          <option value = "d">D</option>
-        </select>
-      </p>
-    </div>
-
-  </div>
-  <div class = "row">
-    <div class = "col price">
-      Unit price: <br>
-      <input type="number" size="20" name = "price" [(ngModel)]="price" />
-    </div>
-    <div class="col quantity">
-      Quantity:<br>
-      <input type="number" size="40" name = "quantity" required  min ="0" max="10000" [(ngModel)]="quantity"/>
-    </div>
-    <div class="col blank2">
-      <br>
-    </div>
-
-
-    <div class="col currency">
-      Currency:<br>
-      <input value="€" type="button"  (click)="inEuro()" />
-      <input value="$" type="button" (click)="inDollar()" />
-      <input value="£" type="button" (click)="inPound()" />
-
-    </div>
-  </div>
-<div class ="row 2">
-
-  <a>
-    <br>
-    Total Amount:
-    {{currency}}{{totalAmount}}
-  </a>
-</div>
-
-
-
-
-  <div>
-    <br>
-  </div>
-
-</form>
+  </form>
 </div>
 
 <div class = "row row1">
   <div class = "col col1">
-  <app-previous-button></app-previous-button>
-</div>
-<div class="col col2">
-  <button type="button" class="btn btn-success" (click)="updatePurchaseOrder()" routerLink = "/purchaseOrderSummary" >Continue</button>
-</div>
+    <app-previous-button></app-previous-button>
+  </div>
+  <div class="col col2">
+    <button type="button" class="btn btn-success" (click)="updatePurchaseOrder()" routerLink = "/purchaseOrderSummary" >Continue</button>
+  </div>
 </div>
