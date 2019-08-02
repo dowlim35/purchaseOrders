@@ -1,5 +1,4 @@
 import {Component, Input, OnDestroy} from '@angular/core';
-import {PurchaseOrder} from "../../model/purchaseOrder";
 import {PurchaseOrdersService} from 'src/app/services/purchase-orders.service';
 
 
@@ -33,13 +32,13 @@ export class PurchaseOrderViewerComponent implements OnDestroy{
     this.date = poService.date;
     this.unitPrice = poService.unitPrice;
     this.companyCreditCardUsed = poService.companyCreditCardUsed;
-    this.contactName = poService.contactName;
-    this.companyName = poService.companyName;
-    this.address = poService.address;
-    this.email = poService.email;
-    this.telephoneNum = poService.telephoneNum;
-    this.faxNum = poService.faxNum;
-    this.mobileNum = poService.mobileNum;
+    // this.contactName = poService.contactName;
+    // this.companyName = poService.companyName;
+    // this.address = poService.address;
+    // this.email = poService.email;
+    // this.telephoneNum = poService.telephoneNum;
+    // this.faxNum = poService.faxNum;
+    // this.mobileNum = poService.mobileNum;
 
   }
   ngOnDestroy(): void {
