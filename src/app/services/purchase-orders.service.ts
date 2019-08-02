@@ -6,13 +6,13 @@ import {Injectable} from '@angular/core';
   providedIn: 'root'})
 
 export abstract class PurchaseOrdersService {
-  contactName: String;
-  companyName: String;
-  address: String;
-  email: String;
-  telephoneNum: number;
-  faxNum: number;
-  mobileNum: number;
+  // contactName: String;
+  // companyName: String;
+  // address: String;
+  // email: String;
+  // telephoneNum: number;
+  // faxNum: number;
+  // mobileNum: number;
 
   supplierName: ' ';
   itemName: ' ';
@@ -38,90 +38,90 @@ export abstract class PurchaseOrdersService {
       quantity: this.quantity,
       currency: this.currency,
       dates: new Date(),
-      price: this.unitPrice,
-      contactName: this.contactName,
-      companyName: this.companyName,
-      address: this.address,
-      email: this.email,
-      telephoneNum: this.telephoneNum,
-      faxNum: this.faxNum,
-      mobileNum: this.mobileNum};
+      price: this.unitPrice
+    }
+      // contactName: this.contactName,
+      // companyName: this.companyName,
+      // address: this.address,
+      // email: this.email,
+      // telephoneNum: this.telephoneNum,
+      // faxNum: this.faxNum,
+      // mobileNum: this.mobileNum};
 
     return this.results;
   }
-  setDetails(supplierName, itemName, quantity, unitPrice, currency, date, companyCreditCardUsed,contactName, companyName,
-             address, email, telephoneNum, faxNum, mobileNum) {
+  setDetails(supplierName, itemName, quantity, unitPrice, currency, date, companyCreditCardUsed) {
     this.supplierName = supplierName;
     this.itemName = itemName;
     this.quantity = quantity;
     this.unitPrice = unitPrice;
     this.date = date;
     this.companyCreditCardUsed = companyCreditCardUsed;
-    this.contactName = contactName;
-    this.companyName = companyName;
-    this.telephoneNum = telephoneNum;
-    this.faxNum = faxNum;
-    this.mobileNum = mobileNum;
-    this.email = email;
-    this.address = address;
+    // this.contactName = contactName;
+    // this.companyName = companyName;
+    // this.telephoneNum = telephoneNum;
+    // this.faxNum = faxNum;
+    // this.mobileNum = mobileNum;
+    // this.email = email;
+    // this.address = address;
   }
-  setEmail(email)
-  {
-    this.email = email;
-  }
-  setCompanyName(companyName)
-  {
-    this.companyName = companyName;
-  }
-  setTelephoneNum(telephoneNum)
-  {
-    this.telephoneNum = telephoneNum;
-  }
-
-  setFaxNumber(faxNum)
-  {
-    this.faxNum = faxNum;
-  }
-
-  setMobileNum(mobileNum)
-  {
-    this.mobileNum = mobileNum;
-  }
-  setContactName(contactName)
-  {
-    this.contactName = contactName;
-  }
-  getAddress()
-  {
-    return this.address;
-  }
-  getEmail()
-  {
-    return this.email;
-  }
-  getContactName()
-  {
-    return this.contactName;
-  }
-  getCompanyName()
-  {
-    return this.companyName;
-  }
-
-  getTelephoneNum()
-  {
-    return this.telephoneNum;
-  }
-
-  getFaxNumber()
-  {
-    return this.faxNum;
-  }
-
-  getMobileNum()
-  {
-    return this.mobileNum;
-  }
+  // setEmail(email)
+  // {
+  //   this.email = email;
+  // }
+  // setCompanyName(companyName)
+  // {
+  //   this.companyName = companyName;
+  // }
+  // setTelephoneNum(telephoneNum)
+  // {
+  //   this.telephoneNum = telephoneNum;
+  // }
+  //
+  // setFaxNumber(faxNum)
+  // {
+  //   this.faxNum = faxNum;
+  // }
+  //
+  // setMobileNum(mobileNum)
+  // {
+  //   this.mobileNum = mobileNum;
+  // }
+  // setContactName(contactName)
+  // {
+  //   this.contactName = contactName;
+  // }
+  // getAddress()
+  // {
+  //   return this.address;
+  // }
+  // getEmail()
+  // {
+  //   return this.email;
+  // }
+  // getContactName()
+  // {
+  //   return this.contactName;
+  // }
+  // getCompanyName()
+  // {
+  //   return this.companyName;
+  // }
+  //
+  // getTelephoneNum()
+  // {
+  //   return this.telephoneNum;
+  // }
+  //
+  // getFaxNumber()
+  // {
+  //   return this.faxNum;
+  // }
+  //
+  // getMobileNum()
+  // {
+  //   return this.mobileNum;
+  // }
   setQuantity(quantity) {
     this.quantity = quantity;
   }
@@ -171,13 +171,13 @@ export abstract class PurchaseOrdersService {
     this.companyCreditCardUsed = companyCreditCardUsed;
   }
   resetForm() {
-    this.contactName='';
-    this.companyName='';
-    this.address='';
-    this.email='';
-    this.telephoneNum =0;
-    this.faxNum=0;
-    this.mobileNum=0;
+    // this.contactName='';
+    // this.companyName='';
+    // this.address='';
+    // this.email='';
+    // this.telephoneNum =0;
+    // this.faxNum=0;
+    // this.mobileNum=0;
     this.supplierName = ' ';
     this.itemName = ' ';
     this.quantity = null;

@@ -51,13 +51,13 @@ export class PurchaseOrderFormComponent implements OnInit {
     this.date = poService.getDate();
     this.price = poService.getUnitPrice();
     this.companyCreditCardUsed = poService.getCompanyCreditCardUsed();
-    this.contactName = poService.getContactName();
-    this.companyName = poService.getCompanyName();
-    this.address = poService.getAddress();
-    this.email = poService.getEmail();
-    this.faxNum = poService.getFaxNumber();
-    this.mobileNum = poService.getMobileNum();
-    this.telephoneNum = poService.getTelephoneNum();
+    // this.contactName = poService.getContactName();
+    // this.companyName = poService.getCompanyName();
+    // this.address = poService.getAddress();
+    // this.email = poService.getEmail();
+    // this.faxNum = poService.getFaxNumber();
+    // this.mobileNum = poService.getMobileNum();
+    // this.telephoneNum = poService.getTelephoneNum();
   }
 
   ngOnInit() {
@@ -67,9 +67,11 @@ export class PurchaseOrderFormComponent implements OnInit {
   updatePurchaseOrder() {
     // tslint:disable-next-line:max-line-length
     this.poService.setDetails(this.supplierName, this.itemName, this.quantity, this.price, this.currency,
-      this.date, this.companyCreditCardUsed,this.contactName,this.companyName,this.address,this.email,
-      this.faxNum,this.mobileNum,this.telephoneNum);
-    // this.postData();
+        this.date, this.companyCreditCardUsed);
+      // ,this.contactName,this.companyName,this.address,this.email,
+      // this.faxNum,this.mobileNum,this.telephoneNum
+
+    this.postData();
   }
 
   inEuro() {
