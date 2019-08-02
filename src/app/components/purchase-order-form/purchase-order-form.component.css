@@ -16,10 +16,15 @@ input
   border-width: 5px;
   border-color: #e6e6e6;
 }
-
+/*app-previous-button*/
+/*{*/
+/*  font-size: 60px;*/
+/*  margin-right: 700px;*/
+/*  margin-bottom: 200px;*/
+/*}*/
 form{
   margin-top: 100px;
-  margin-bottom: 250px;
+  margin-bottom: 100px;
   margin-right: 250px;
   margin-left: 250px;
   font-size: 22pt;
@@ -59,8 +64,10 @@ h1{
 
 }
 
-button.btn{
-  background-color: green;
-  margin-left: 700px;
-  margin-bottom: 200px;
+button.previousButton{
+  background-color:red;
+}
+
+button.continueButton{
+  background-color:green;
 }

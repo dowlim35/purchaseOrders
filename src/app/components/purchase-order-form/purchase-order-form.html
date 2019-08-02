@@ -106,16 +106,35 @@
         Total Amount:
         {{currency}}{{totalAmount}}
       </a>
-    </div>
-        <button type="button" class="btn btn-success" (click)="updatePurchaseOrder()" routerLink = "/purchaseOrderSummary" >
-          Submit Purchase Order</button>
+
       </div>
+
+    </div>
+
   </form>
 </div>
 
 <div class = "row row1">
   <div class = "col col1">
-    <app-previous-button></app-previous-button>
+    <div class="previousButton">
+      <button class="previousButton" routerLink = "purchaseOrders">Previous</button>
+    </div>
+    <div>
+      <a>       </a>
+    </div>
   </div>
 
+  <div class = "col col5">
+<a></a>
+  </div>
+  <div class = "col col6">
+<a></a>
+  </div>
+  <div class = "col col8">
+<a></a>
+  </div>
+  <div class="col col2">
+    <button class="continueButton" (click)="updatePurchaseOrder()" routerLink = "/purchaseOrderSummary">Continue </button>
+  </div>
 </div>
+
