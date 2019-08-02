@@ -1,40 +1,82 @@
-button {
-  background-color:cornflowerblue;
-  border: gray();
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  border-radius: 12px;
-  cursor: pointer;
-}
+/*button {*/
+/*  background-color:cornflowerblue;*/
+/*  border: gray();*/
+/*  color: white;*/
+/*  padding: 15px 32px;*/
+/*  text-align: center;*/
+/*  text-decoration: none;*/
+/*  display: inline-block;*/
+/*  font-size: 16px;*/
+/*  margin: 4px 2px;*/
+/*  border-radius: 12px;*/
+/*  cursor: pointer;*/
+/*}*/
 
 
-form {
-  border-radius: 5%;
-  background: #F7F74C;
-  padding: 2%;
-  width: 25%;
-  height: 75%;
+/*form {*/
+/*  border-radius: 5%;*/
+/*  background: #F7F74C;*/
+/*  padding: 2%;*/
+/*  width: 25%;*/
+/*  height: 75%;*/
+
+/*}*/
+
+/*input {*/
+/*  height: 8%;*/
+/*  width: 70%;*/
+/*}*/
+
+/*.numberField {*/
+/*  width: 15%;*/
+/*}*/
+/*.col-md-1{*/
+/*  left: 20%;*/
+/*}*/
+/*.col-md-2{*/
+/*  margin-right: 80%;*/
+/*  left: 50%;*/
+/*}*/
+
+input
+{
+  border-width: 5px;
+  border-color: #e6e6e6;
+}
+form{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-right: 200px;
+  margin-left: 200px;
+  font-size: 20pt;
+  font-family: ital;
+  padding: 50px 75px;
+  border-color: rgb(93,157,186);
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 20px;
+}
+h2{
+  color: blue;
+}
+
+h1{
+  font-family: ital;
+  text-align:center;
+}
+
+.border{
+  margin-top: 100px;
+  margin-bottom: 250px;
+  margin-right: 250px;
+  margin-left: 250px;
 
 }
 
-input {
-  height: 8%;
-  width: 70%;
+button.btn{
+  background-color: green;
+  margin-left: 700px;
+  margin-bottom: 200px;
 }
 
-.numberField {
-  width: 15%;
-}
-.col-md-1{
-  left: 20%;
-}
-.col-md-2{
-  margin-right: 80%;
-  left: 50%;
-}
 
