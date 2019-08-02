@@ -1,5 +1,16 @@
-.border{
-  color: black;
+/*.border{*/
+/*  !*margin-top: 100px;*!*/
+/*  !*margin-bottom: 250px;*!*/
+/*  !*margin-right: 250px;*!*/
+/*  !*margin-left: 250px;*!*/
+/*  !*font-size: 22pt;*!*/
+/*  !*font-family: ital;*!*/
+/*  !*padding: 50px 75px;*!*/
+/*  !*border-width: 40px;*!*/
+/*  !*border-style: solid;*!*/
+/*  !*border-radius: 40px;*!*/
+/*}*/
+form{
   margin-top: 100px;
   margin-bottom: 250px;
   margin-right: 250px;
@@ -7,12 +18,11 @@
   font-size: 22pt;
   font-family: ital;
   padding: 50px 75px;
-  border-color: rgb(93,157,186);
   border-width: 20px;
   border-style: solid;
   border-radius: 40px;
+  border-color: rgb(93,157,186);
 }
-
 input
 {
   border-width: 5px;

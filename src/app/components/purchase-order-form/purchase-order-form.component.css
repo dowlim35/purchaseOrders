@@ -13,8 +13,19 @@ input
   border-width: 5px;
   border-color: #e6e6e6;
 }
+
 form{
-  border-color: yellow;
+  margin-top: 100px;
+  margin-bottom: 250px;
+  margin-right: 250px;
+  margin-left: 250px;
+  font-size: 22pt;
+  font-family: ital;
+  padding: 50px 75px;
+  border-width: 20px;
+  border-style: solid;
+  border-radius: 40px;
+  border-color: rgb(93,157,186);
 }
 
 h2{
