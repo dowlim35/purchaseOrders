@@ -1,6 +1,9 @@
 <hr/>
+<div class="infoMsg">
 <h2>Use the form below to update input your hotel details</h2>
-
+</div>
+<div class="border">
+  <form>
 <label>Hotel Name</label>
 <br>
 <input type="text" name="hotelName" [(ngModel)]="hotelname">
@@ -67,7 +70,8 @@
 <br>
 </div>
 <br>
-
+  </form>
+</div>
 <button type="button" class = "btn" (click)="updateHotel()" routerLink = "/flightdetails"> Continue </button>
 <app-previous-button></app-previous-button>
 <!--<form [formGroup]="hotelForm" (ngSubmit)="updateHotel()">-->

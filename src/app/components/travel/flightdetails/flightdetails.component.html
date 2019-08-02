@@ -1,13 +1,15 @@
 <hr/>
+<div class="infoMsg">
 <h2>Use the form below to update input your flight details</h2>
-
+</div>
 
 
 
 
   <!--&lt;!&ndash;<form [formGroup]="flightForm" (ngSubmit)="updateFlight()">&ndash;&gt;-->
   <!--  <fieldset>-->
-
+<div class="border">
+  <form>
   <label>Departure Airport:</label>
   <br>
   <input type="text" name="departureAirport" [(ngModel)]="departureairport">
@@ -53,6 +55,9 @@
     <input type="text" name="Explanation" [(ngModel)]="explanation">
 
   </div>
+  </form>
+</div>
+
 
     <br>
     <button type="button" class = "btn" (click)="saveFlightDetails()" routerLink = "/traveloverview"> Save Details </button>

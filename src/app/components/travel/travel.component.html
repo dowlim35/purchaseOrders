@@ -1,7 +1,11 @@
 <hr/>
-<h2>Use the form below to update input your travel details</h2>
+<div class="infoMsg">
+<h2>Use the Form Below to Input Your Travel Details</h2>
+</div>
 <body>
-<form>
+
+  <div class="border">
+    <form>
 
   <label>Unit Name</label>
   <br>
@@ -76,9 +80,12 @@
 
   </div>
 
+    </form>
+    <button type="button" class = "btn" (click)="updateTravel()" routerLink = "/hotelcardetails"> Continue </button>
+  </div>
   <br>
-  <button type="button" class = "btn" (click)="updateTravel()" routerLink = "/hotelcardetails"> Continue </button>
-</form>
+
+
 </body>
 <app-previous-button></app-previous-button>
 
