@@ -6,53 +6,85 @@
 
   <form name="ContractorForm">
 
-      <div>
-        <label>Contact name:</label><br>
-        <input type="text" size="40" name="contact name" [(ngModel)]="contactName"/>
+    <div class = "row">
+
+      <div class="col projectName">
+
+        Project name:<br>
+        <input type="text" size="40" name ="project Name" [(ngModel)]="projectName" />
       </div>
 
-      <div>
+      <div class="col SDLName">
+        SDL Name:<br>
+        <input type="text" size="40" name ="SDL Name" [(ngModel)]="SDLName" />
+      </div>
+    </div>
+
+
+    <div class = "row row1">
+      <div class ="col contactName">
+        <label>
+          <br><br> Contact name:</label><br>
+        <input type="text" size="40" name="contact name" [(ngModel)]="contactName"/>
+      </div>
+      <div class = "col telephoneNumber">
+        <label><br><br>Telephone number:</label><br>
+        <input type="number" size="40" name="telephone number" [(ngModel)]="telephoneNumber"/>
+      </div>
+    </div>
+
+
+<div class = row row3>
+      <div class = "col companyName">
         <label>Company name:</label><br>
         <input type="text" size="40" name="company name" [(ngModel)]="companyName"/>
       </div>
-    <div>
+    <div class = "col address">
+      <label>Address:</label><br>
+      <input type="text" size="40" name="address" [(ngModel)]="address"/>
+    </div>
+</div>
+
+    <div class = row row6>
+    <div class = "col website">
       <label>Website:</label><br>
       <input type="text" size="40" name="website" [(ngModel)]="website"/>
     </div>
+    </div>
 
-      <div>
-        <label>Address:</label><br>
-        <input type="text" size="40" name="address" [(ngModel)]="address"/>
-      </div>
 
-    <div>
+
+    <div class = "row row5">
+    <div class = "col email">
       <label>Email:</label><br>
       <input type="text" size="40" name="email" [(ngModel)]="email"/>
     </div>
 
-    <div>
-      <label>Telephone number:</label><br>
-      <input type="number" size="40" name="telephone number" [(ngModel)]="telephoneNumber"/>
-    </div>
-
-    <div>
+    <div class = "col faxNumber">
       <label>Fax number:</label><br>
       <input type="number" size="40" name="fax number" [(ngModel)]="faxNo"/>
     </div>
+    </div>
 
-    <div>
+    <div class = "row row6">
+    <div class = "col mobileNumber">
       <label>Mobile number:</label><br>
       <input type="number" size="40" name="mobile number" [(ngModel)]="mobileNumber"/>
     </div>
+    </div>
 
-<div>
-  <label>Contractor name:</label><br>
+    <div class = "row row7">
+<div class = "col contractName">
+  <label><br>Contractor name:</label><br>
   <input type="text" size="40" name="contractor name" [(ngModel)]="contractorName"/>
 </div>
+    </div>
 
-    <div>
+    <div class = "row row8">
+    <div class = "col startDateContract">
       <label>Start date of contract:</label><br>
       <input type="date" size="40" name="contract start date" [(ngModel)]="startDateOfContract"/>
+    </div>
     </div>
 
     <div>
@@ -76,27 +108,14 @@
         Daily Cost to LIT:<br>
         <input type="text" size="40" name ="daily cost to LIT" [(ngModel)]="dailyCostToLIT" />
       </div>
-
-      <div class="col workingHoursPerDay">
-        Working Hours Per Day:<br>
-        <input type="text" size="40" name ="working hours per day" [(ngModel)]="workingHoursPerDay" />
-      </div>
+    </div>
+    <div class = "row">
+    <div class="col workingHoursPerDay">
+      Working Hours Per Day:<br>
+      <input type="text" size="40" name ="working hours per day" [(ngModel)]="workingHoursPerDay" />
+    </div>
     </div>
 
-      <div class = "row">
-        <br>
-        <br>
-        <div class="col projectName">
-
-          Project name:<br>
-          <input type="text" size="40" name ="project Name" [(ngModel)]="projectName" />
-        </div>
-
-        <div class="col SDLName">
-          SDL Name:<br>
-          <input type="text" size="40" name ="SDL Name" [(ngModel)]="SDLName" />
-        </div>
-      </div>
 
 
 
