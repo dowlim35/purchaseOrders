@@ -8,6 +8,9 @@
 /*  font-family: ital;*/
 
 /*}*/
+button{
+  font-size: 30px;
+}
 input
 {
   border-width: 5px;
